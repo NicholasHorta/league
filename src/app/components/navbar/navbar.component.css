@@ -1,0 +1,14 @@
+.nav__nav {
+    padding: 5rem 10rem 0;
+    font-family: title;
+    color: var(--green);
+}
+
+.nav__title {
+    font-size: 2.25rem;
+}
+
+.nav__about {
+    font-family: script;
+    margin-top: 1rem;
+}

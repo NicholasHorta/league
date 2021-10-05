@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    padding: 0 8rem;
+    background-color: var(--bk);
+}
+
+:root {
+    /* Colors */
+    --blue: #2C6C9D;
+    --green: #27a770 ;
+    --yellow: #F4A439;
+    --orange: #F46E39;
+    --red: #ED3744;
+    --purple: #BE2C88;
+    --white: #fff;
+    --grey: #504847;
+    --grey50: #50484799;
+    /* Technicals */
+    --radius: 5px;
+    --section-pad: 3rem 2rem;
+}
+
+.fx_x-c {
+    display: flex;
+    justify-content: center;
+}
+
+.fx_x-b_y-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fx_x-a_y-c {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('./assets/font/Bungee_Shade/BungeeShade-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'script';
+    src: url('./assets/font/Nunito/Nunito-Regular.ttf');
+}
+
+/* @font-face {
+    font-family: 'script';
+    src: url('./assets/font/Stick_No_Bills/StickNoBills-VariableFont_wght.ttf');
+} */
