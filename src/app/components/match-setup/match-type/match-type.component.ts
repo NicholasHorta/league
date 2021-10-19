@@ -9,15 +9,19 @@ import { MatchSetupService } from '../../../services/match-setup.service'
 
 export class MatchTypeComponent implements OnInit {
 
-  constructor(private matchSetupSVC: MatchSetupService) {}
+  constructor(public matchSetupSVC: MatchSetupService) {}
 
-  matchTypeValue: number = this.matchSetupSVC.matchTypeValue;
+  leagueTypeValue: number = this.matchSetupSVC.leagueTypeValue;
 
   ngOnInit(): void {
-    this.matchSetupSVC.matchTypeHandler(this.matchTypeValue)
+    this.matchSetupSVC.matchTypeHandler(this.leagueTypeValue);
+    this.matchSetupSVC.quickMatchSetupHandler();
   }
   
-  matchTypeSvcHandler(type: number){
-    this.matchTypeValue = this.matchSetupSVC.matchTypeHandler(type)
+  matchTypeSvcHandler(matchType: number){
+    this.leagueTypeValue = this.matchSetupSVC.matchTypeHandler(matchType);
+    matchType === 2 ? 
+    this.matchSetupSVC.quickMatchSetupHandler() 
+    : this.matchSetupSVC.leagueSetupHandler();
   }
 }

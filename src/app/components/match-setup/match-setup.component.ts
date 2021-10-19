@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-match-setup',
   templateUrl: './match-setup.component.html',
@@ -10,6 +11,7 @@ export class MatchSetupComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

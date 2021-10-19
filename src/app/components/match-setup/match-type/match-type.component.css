@@ -1,9 +1,11 @@
 .match-setup {
     font-family: 'script';
-    margin-top: 5rem;
     padding: var(--section-pad);
     background-color: var(--grey50);
     border-radius: var(--radius);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5rem;
 }
 
 .match-setup__match-type div > input {

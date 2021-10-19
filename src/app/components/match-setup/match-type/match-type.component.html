@@ -2,17 +2,20 @@
     <div class="match-setup__match-type fx_x-a_y-c">
         <div class="match-type__quick-match">
             <label for="quick-match" (click)="matchTypeSvcHandler(2)"
-                [ngClass]="{'match-type__selected': matchTypeValue === 2 ? true : false}">
+                [ngClass]="{'match-type__selected': leagueTypeValue === 2 ? true : false}">
                 Quick Match
             </label>
             <input type="radio" name="match-type" id="quick-match" checked>
         </div>
         <div class="match-type__cup-run">
             <label for="cup-run" (click)="matchTypeSvcHandler(4)"
-                [ngClass]="{'match-type__selected': matchTypeValue === 4 ? true : false}">
+                [ngClass]="{'match-type__selected': leagueTypeValue === 4 ? true : false}">
                 Cup Run
             </label>
             <input type="radio" name="match-type" id="cup-run">
         </div>
     </div>
+    <ul>
+        <li *ngFor="let item of matchSetupSVC.generatedTeamsArray">{{item}}</li>
+    </ul>
 </div>
