@@ -1,4 +1,30 @@
 {
+    "keeper": [
+        {
+            "name": "Ederson Moraes",
+            "club": "Manchester City",
+            "country": "Brazil",
+            "rating": "89"
+        },
+        {
+            "name": "Manuel Neuer",
+            "club": "Bayern Munich",
+            "country": "Germany",
+            "rating": "90"
+        },
+        {
+            "name": "Jan Oblak",
+            "club": "Atletico Madrid",
+            "country": "Slovenia",
+            "rating": "91"
+        },
+        {
+            "name": "Marc-Andre ter Stegen",
+            "club": "Barcelona",
+            "country": "Germany",
+            "rating": "90"
+        }
+    ],
     "def": [
         {
             "name": "Sergio Ramos",
