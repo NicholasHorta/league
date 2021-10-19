@@ -47,17 +47,16 @@ export class MatchSetupService {
     const asd = [keeper, defence, defensiveMid, attackingMid, attack];
     let arr: Object[] = [];
     const teamSheetPlayerAmt: number[] = [1, 5, 4, 3, 2];
-    
+
     for (let x = 0; x < teamsAmount; x++) {
       for (let i = 0; i < teamSheetPlayerAmt.length; i++) {
         for (let j = 0; j < teamSheetPlayerAmt[i]; j++) {
-          arr.push(asd[i][j])
+          // arr.push(asd[i][j])
+          arr.push(asd[i].splice(Math.floor(Math.random() * asd[i].length), 1))
         }
       }
     }
     console.log('%cmatch-setup.service.ts line:58 arr', 'color: #007acc;', arr);
-
-    // this.genKeepers();
   }
   // const keeper = { posts: [...playersListJSON['keeper']]};
   // const defence = { def: [...playersListJSON['def']]};
