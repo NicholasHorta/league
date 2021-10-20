@@ -1,7 +1,6 @@
 .match-setup {
     font-family: 'script';
     padding: var(--section-pad);
-    background-color: var(--grey50);
     border-radius: var(--radius);
     max-width: 800px;
     margin: 0 auto;
@@ -12,21 +11,21 @@
     display: none;
 }
 
-.match-setup__match-type div > label {
-    border: 3px solid var(--white);
-    border-radius: var(--radius);
+.match-type__quick-match > #quick-match-btn, 
+.match-type__cup-run > #cup-run-btn {
+    background-color: var(--grey50);
     padding: 1rem 2rem;
     font-size: 1.25rem;
     color: var(--white);
     cursor: pointer;
+    box-shadow: 10px 10px 0px var(--grey);
+    transform: rotate(100deg);
 }
 
-.match-type__quick-match, 
-.match-type__cup-run {
+.match-type__quick-match .match-type__selected, 
+.match-type__cup-run .match-type__selected {
+    background-color: var(--green) !important;
+    box-shadow: 10px 10px 0px var(--grey) !important;
+    transform: rotate(100deg);
 
-}
-
-.match-type__selected {
-    background-color: var(--green);
-    color: var(--green);
 }

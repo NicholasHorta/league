@@ -12,8 +12,13 @@ export class MatchSetupService {
   leagueTeamsArray: string[] = [
     'Iberia FC', 'White Isles Utd', 'Bavaria Stark', 'Clube Europa'
   ];
-
   generatedTeamsArray: string[] = [];
+  generatePlayersArray: {}[] = [];
+  playersTeam1: any;
+  playersTeam2: any;
+  playersTeam3: any;
+  playersTeam4: any;
+
 
   matchTypeHandler(matchType: number) {
     this.leagueTypeValue = matchType;
@@ -39,31 +44,38 @@ export class MatchSetupService {
   }
 
   generateTeamLists(teamsAmount: number) {
-    const keeper = [...playersListJSON['keeper']];
-    const defence = [...playersListJSON['def']];
-    const defensiveMid = [...playersListJSON['def-mid']];
-    const attackingMid = [...playersListJSON['att-mid']];
-    const attack = [...playersListJSON['att']];
-    const asd = [keeper, defence, defensiveMid, attackingMid, attack];
-    let arr: Object[] = [];
-    const teamSheetPlayerAmt: number[] = [1, 5, 4, 3, 2];
+    const availablePlayersArray = [
+      [...playersListJSON['keeper']],
+      [...playersListJSON['def']],
+      [...playersListJSON['def-mid']],
+      [...playersListJSON['att-mid']],
+      [...playersListJSON['att']]
+    ];
+   
+    const perTeamPositionAllocation: number[] = [1, 5, 4, 3, 2];
 
     for (let x = 0; x < teamsAmount; x++) {
-      for (let i = 0; i < teamSheetPlayerAmt.length; i++) {
-        for (let j = 0; j < teamSheetPlayerAmt[i]; j++) {
-          // arr.push(asd[i][j])
-          arr.push(asd[i].splice(Math.floor(Math.random() * asd[i].length), 1))
+      for (let i = 0; i < perTeamPositionAllocation.length; i++) {
+        for (let j = 0; j < perTeamPositionAllocation[i]; j++) {
+          this.generatePlayersArray.push(
+            ...availablePlayersArray[i].splice(Math.floor(Math.random() * availablePlayersArray[i].length), 1)
+          );
         }
       }
     }
-    console.log('%cmatch-setup.service.ts line:58 arr', 'color: #007acc;', arr);
+    this.allocateTeamPlayersHandler(this.generatePlayersArray, teamsAmount)
   }
-  // const keeper = { posts: [...playersListJSON['keeper']]};
-  // const defence = { def: [...playersListJSON['def']]};
-  // const defensiveMid = { defMid: [...playersListJSON['def-mid']]}; 
-  // const attackingMid = { attMid: [...playersListJSON['att-mid']]};
-  // const attack = { att: [...playersListJSON['att']]};
 
-
+  allocateTeamPlayersHandler(generatedPlayersArray: {}[], teamsAmount: number){
+    if(teamsAmount === 2){
+      this.playersTeam1 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam2 = generatedPlayersArray.splice(0, 15);
+    } else {
+      this.playersTeam1 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam2 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam3 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam4 = generatedPlayersArray.splice(0, 15);
+    }
+  }
 
 }

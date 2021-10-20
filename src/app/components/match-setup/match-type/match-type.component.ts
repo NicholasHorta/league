@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 @Component({
@@ -24,4 +24,5 @@ export class MatchTypeComponent implements OnInit {
     this.matchSetupSVC.quickMatchSetupHandler() 
     : this.matchSetupSVC.leagueSetupHandler();
   }
+
 }
