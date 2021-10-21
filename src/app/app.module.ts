@@ -8,6 +8,7 @@ import { AllFourComponent } from './components/all-four/all-four.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatchSetupComponent } from './components/match-setup/match-setup.component';
 import { MatchTypeComponent } from './components/match-setup/match-type/match-type.component';
+import { MatchTeamsDisplayComponent } from './components/match-setup/match-teams-display/match-teams-display.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatchTypeComponent } from './components/match-setup/match-type/match-ty
     AllFourComponent,
     NavbarComponent,
     MatchSetupComponent,
-    MatchTypeComponent
+    MatchTypeComponent,
+    MatchTeamsDisplayComponent
   ],
   imports: [
     BrowserModule,

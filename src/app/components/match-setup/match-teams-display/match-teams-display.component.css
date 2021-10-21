@@ -1,0 +1,58 @@
+.team__team-sheet {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-sheet__team-1, 
+.team-sheet__team-2 {
+    padding: 1rem;
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+}
+
+.team-1__player-listing,
+.team-2__player-listing {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.team-1__player-positions,
+.team-2__player-positions {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+.player-positions__keeper,
+.player-positions__att {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-positions__def,
+.player-positions__def-mid,
+.player-positions__att-mid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.keeper ,
+.defence ,
+.defensive-mid, 
+.attacking-mid ,
+.attack {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+} 
+
+.team-1__player-positions i, 
+.team-2__player-positions i {
+    font-size: 2rem;
+} 
