@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchSetupService } from '../../../services/match-setup.service'
 
 @Component({
   selector: 'app-match-teams-display',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchTeamsDisplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(public matchSetupSVC: MatchSetupService) { }
 
   ngOnInit(): void {
   }
