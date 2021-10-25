@@ -27,6 +27,10 @@ html, body {
     --section-pad: 3rem 2rem;
 }
 
+ul {
+    list-style: none;
+}
+
 .fx_x-c {
     display: flex;
     justify-content: center;
