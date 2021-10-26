@@ -7,8 +7,9 @@
 }
 
 html, body {
-    padding: 0 3rem;
     background-color: var(--bk);
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 :root {
@@ -24,7 +25,9 @@ html, body {
     --grey50: #50484799;
     /* Technicals */
     --radius: 5px;
-    --section-pad: 3rem 2rem;
+    --section-space: 8rem 2rem;
+    --inner-section-space-y: 4rem 0;
+    --max-width: 800px;
 }
 
 ul {
@@ -34,6 +37,10 @@ ul {
 .fx_x-c {
     display: flex;
     justify-content: center;
+}
+.fx_x-b {
+    display: flex;
+    justify-content: space-between;
 }
 
 .fx_x-b_y-c {

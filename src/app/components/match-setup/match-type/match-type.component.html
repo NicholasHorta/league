@@ -1,22 +1,48 @@
 <div class="match-setup">
     <div class="match-setup__match-type fx_x-a_y-c">
         <div class="match-type__quick-match">
-            <label for="quick-match" class="quick-match__btn" 
-                (click)="matchTypeSvcHandler(2);"
-                [ngClass]="{'match-type__selected': leagueTypeValue === 2 }"
-                >
+            <label for="quick-match" class="quick-match__btn" (click)="matchTypeSvcHandler(2);"
+                [ngClass]="{'match-type__selected': leagueTypeValue === 2 }">
                 Quick Match
             </label>
             <input type="radio" name="match-type" id="quick-match" checked>
         </div>
         <div class="match-type__cup-run">
-            <label for="cup-run" class="cup-run__btn" 
-                (click)="matchTypeSvcHandler(4);"
-                [ngClass]="{'match-type__selected': leagueTypeValue === 4 }"
-                >
+            <label for="cup-run" class="cup-run__btn" (click)="matchTypeSvcHandler(4);"
+                [ngClass]="{'match-type__selected': leagueTypeValue === 4 }">
                 Cup Run
             </label>
             <input type="radio" name="match-type" id="cup-run">
+        </div>
+    </div>
+    <div class="match-setup__team-bars">
+        <div class="team-bars__two-team-setup fx_x-b_y-c" *ngIf="matchSetupSVC.leagueTypeValue === 2">
+            <p class="two-team-setup__team left">{{matchSetupSVC.generatedTeamsArray[0]}}</p>
+            <p class="two-team-setup__team success">🏆</p>
+            <p class="two-team-setup__team right">{{matchSetupSVC.generatedTeamsArray[1]}}</p>
+        </div>
+        <div class="team-bars__four-team-setup fx_x-b_y-c" *ngIf="matchSetupSVC.leagueTypeValue === 4">
+            <div class="four-team-setup">
+                <div class="four-team-setup__teams fx_x-b_y-c">
+                    <p class="four-team-setup__team left">{{matchSetupSVC.generatedTeamsArray[0]}}</p>
+                    <p class="four-team-setup__team vs">
+                        vs
+                    </p>
+                    <p class="four-team-setup__team right">{{matchSetupSVC.generatedTeamsArray[2]}}</p>
+                </div>
+                <div class="four-team-setup__teams fx_x-b_y-c">
+                    <p class="four-team-setup__team left">{{matchSetupSVC.generatedTeamsArray[1]}}</p>
+                    <p class="four-team-setup__team vs">
+                        vs
+                    </p>
+                    <p class="four-team-setup__team right">{{matchSetupSVC.generatedTeamsArray[3]}}</p>
+                </div>
+            </div>
+            <div class="four-team-setup__final fx_x-b_y-c">
+                <p class="four-team-setup__team left tbd">Semi Final Winner</p>
+                <p class="two-team-setup__team success">🏆</p>
+                <p class="four-team-setup__team right tbd">Semi Final Winner</p>
+            </div>
         </div>
     </div>
 </div>

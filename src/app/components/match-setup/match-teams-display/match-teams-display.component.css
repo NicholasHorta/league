@@ -1,21 +1,24 @@
-.team__team-sheet {
+.teams__team-sheets {
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: 5rem;
 }
 
-.team-sheet__team-1, 
-.team-sheet__team-2 {
+.team-sheet__team, 
+.team-sheet__team {
     padding: 1rem;
     flex-direction: row-reverse;
     margin-bottom: 2rem;
     position: relative;
     /* background-color: gray; */
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.team-sheet__team-1::before, 
-.team-sheet__team-2::before,
-.team-sheet__team-1::after,
-.team-sheet__team-2::after {
+.team-sheet__team::before, 
+.team-sheet__team::before,
+.team-sheet__team::after,
+.team-sheet__team::after {
     content: '';
     clip-path: polygon(100% 0, 0 0, 0 100%);
     padding: 3rem;
@@ -26,8 +29,8 @@
     cursor: pointer;
 }
 
-.team-sheet__team-1::after,
-.team-sheet__team-2::after {
+.team-sheet__team::after,
+.team-sheet__team::after {
     background-color: var(--grey);
     z-index: -5;
     left: 5px;
@@ -49,6 +52,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
+    max-width: 300px;
     /* background-color: rgb(236, 236, 236); */
     flex-grow: 1;
     font-family: 'script';
@@ -74,6 +78,8 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .player-positions__keeper,
@@ -98,6 +104,7 @@
 
 .player-icon {
     font-size: 2rem;
+    color: var(--blue);
 } 
 
 

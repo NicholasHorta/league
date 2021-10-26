@@ -1,5 +1,6 @@
 .nav__nav {
-    padding: 5rem 10rem 0;
+    padding: var(--section-space);
+    padding-bottom: 0;
     font-family: title;
     color: var(--green);
 }
@@ -8,7 +9,23 @@
     font-size: 2.25rem;
 }
 
-.nav__about {
-    font-family: script;
-    margin-top: 1rem;
+.nav__floating-page-decor {
+    position: absolute;
+    width: 740px;
+    height: 50px;
+    background-color: var(--orange);
+    opacity: 0.5;
+    left: -200px;
+    top: 0;
+    transform: rotate(-25deg);
+}
+.nav__floating-page-decor:last-of-type {
+    position: absolute;
+    width: 50vw;
+    height: 50px;
+    background-color: var(--blue);
+    opacity: 0.5;
+    left: -200px;
+    top: 100px;
+    transform: rotate(-25deg);
 }

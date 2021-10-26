@@ -13,6 +13,7 @@ export class MatchSetupService {
     'Iberia FC', 'White Isles Utd', 'Bavaria Stark', 'Clube Europa'
   ];
   generatedTeamsArray: string[] = [];
+  // Sub position array decreases with every number due to splice reduction
   subPositionSpliceArray: number[] = [5, 8, 10, 11];
   generatePlayersArray: {}[] = [];
   playersTeam1: any;
@@ -70,26 +71,24 @@ export class MatchSetupService {
   // Extract a single team and 4 additional subs (15 players) each into the select amount of teams 
   allocateTeamPlayersHandler(generatedPlayersArray: {}[], teamsAmount: number){
 
-    function doIt(xy: {}[], f: number[]){
-      console.log('%cmatch-setup.service.ts line:74 xy', 'color: #ff4acc;', xy);
-      let subs: any[] = []
-      f.forEach(i => {
-        console.log('%cmatch-setup.service.ts line:76 f', 'color: #007aff;', f);
-        subs.push(...xy.splice(i, 1))
-      })
-
-      console.log('%cmatch-setup.service.ts line:81 subs', 'color: #007acc;', subs);
+    function sortStarterAndSubsHandler(fullTeamList: {}[], subPositionSpliceValues: number[]){
+      const startingEleven = fullTeamList;
+      let subs: any[] = [];
+      subPositionSpliceValues.forEach(i => {
+        subs.push(...fullTeamList.splice(i, 1));
+      });
+      return [startingEleven, subs]
     }
 
     if(teamsAmount === 2){
-      this.playersTeam1 = doIt(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.playersTeam2 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.playersTeam2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     } else {
       // Else 4 teams
-      this.playersTeam1 = generatedPlayersArray.splice(0, 15);
-      this.playersTeam2 = generatedPlayersArray.splice(0, 15);
-      this.playersTeam3 = generatedPlayersArray.splice(0, 15);
-      this.playersTeam4 = generatedPlayersArray.splice(0, 15);
+      this.playersTeam1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.playersTeam2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.playersTeam3 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.playersTeam4 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     }
 
     

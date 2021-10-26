@@ -1,10 +1,10 @@
 .match-setup {
     font-family: 'script';
-    padding: var(--section-pad);
+    padding: var(--section-space);
     border-radius: var(--radius);
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
 }
 
 .match-setup__match-type div>input {
@@ -44,6 +44,86 @@
     100% {
         box-shadow: 7px 7px 0px var(--grey);
         transform: translate(0px, 0px);
-
     }
 }
+
+.match-setup__team-bars {
+    position: relative;
+    padding: 2rem;
+    background-color: #28a77055;
+    margin: var(--inner-section-space-y);
+    box-shadow: 7px 7px 0px var(--grey);
+
+}
+
+
+.team-bars__two-team-setup {
+    /* display: flex; */
+}
+
+.team-bars__four-team-setup {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.four-team-setup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.four-team-setup__final {
+    display: flex;
+    width: 100%;
+}
+
+.two-team-setup__team, .four-team-setup__team {
+    padding: 1rem 2rem;
+    background-color: var(--blue);
+    color: var(--white);
+    width: 300px;
+    letter-spacing: 0.05rem;
+    font-size: 1.15rem;
+}
+
+.two-team-setup__team.left, .four-team-setup__team.left {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+    /* align-self: baseline; */
+}
+
+.two-team-setup__team.right, .four-team-setup__team.right {
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+    text-align: end;
+    /* align-self:  flex-end; */
+}
+
+.four-team-setup__teams {
+    display: flex;
+}
+
+.two-team-setup__team.success, .four-team-setup__team.success, .four-team-setup__team.vs {
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: var(--green);
+    text-align: center;
+    border-radius: 20px;
+    flex: 0;
+    margin: 0 1rem;
+}
+
+.four-team-setup__team.tbd {
+    background-color: var(--grey50);
+}
+
+/* .two-team-setup__team.success::before {
+    content: '';
+    position: absolute;
+    padding: 2rem;
+    background-color: var(--grey50);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 100%;
+    z-index:-5;
+} */
