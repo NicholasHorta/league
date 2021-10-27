@@ -2,118 +2,125 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 5rem;
 }
 
-.team-sheet__team, 
-.team-sheet__team {
-    padding: 1rem;
+.team-sheet__team, .team-sheet__team {
     flex-direction: row-reverse;
     margin-bottom: 2rem;
     position: relative;
-    /* background-color: gray; */
     max-width: 1200px;
     margin: 0 auto;
+    margin: var(--section-space)
 }
-.team-sheet__team::before, 
-.team-sheet__team::before,
-.team-sheet__team::after,
-.team-sheet__team::after {
-    content: '';
-    clip-path: polygon(100% 0, 0 0, 0 100%);
-    padding: 3rem;
-    background-color: var(--green);
+
+
+/* DIFFERENT COLORS FOR EACH TEAM?? */
+.club-title {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    font-size: 1.75rem;
+    color: var(--orange);
+}
+
+.team-sheet__options {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2.5rem;
+    height: 38px;
+}
+
+.team-sheet__options > span{
+    padding: 0.25rem 0.75rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--orange);
+    color: var(--orange);
     cursor: pointer;
+    /* box-shadow: 3.5px 3.5px 0px var(--grey); */
 }
 
-.team-sheet__team::after,
-.team-sheet__team::after {
-    background-color: var(--grey);
-    z-index: -5;
-    left: 5px;
-    top: 5px;
-}
-
-.team-1__club-title,
-.team-2__club-title {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 2.5rem;
-    font-family: 'script';
-}
-
-.team-1__player-listing,
-.team-2__player-listing {
+.player-listing {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
-    max-width: 300px;
-    /* background-color: rgb(236, 236, 236); */
     flex-grow: 1;
-    font-family: 'script';
     line-height: 2rem;
+    text-align: end;
+    align-items: end;
 }
 
-.team-1__player-listing > ul,
-.team-2__player-listing > ul {
+.player-listing>ul {
     position: relative;
+    width: 220px;
 }
+
+.player-listing>ul>li {
+    padding: 0.25rem 0;
+    padding-right: 1rem;
+    margin-bottom: .25rem;
+    color: var(--white);
+    border-radius: 8px;
+    border: 2px solid var(--grey);
+    color: var(--grey);
+}
+
+/* .player-listing>ul>li:hover {
+    background-color: var(--grey50);
+} */
 
 .player-listing__flag {
-    font-size: 2rem;
+    /* display: none; */
+    font-size: 1.25rem;
     position: absolute;
-    top: 0;
-    z-index: -5;
-    opacity: 0.5;
-    left: -50px;
+    top: 7px;
+    left: 1rem;
+    z-index: 5;
 }
 
-.team-1__player-positions,
-.team-2__player-positions {
+.player-listing>ul>li:hover+.player-listing__flag {
+    display: inline;
+}
+
+.player-positions, .player-positions {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 5;
     max-width: 600px;
     margin: 0 auto;
+    background-color: var(--green50);
+    justify-content: space-around;
+    border-radius: 8px;
+    box-shadow: 7px 7px 0px var(--grey);
+    background-image: var(--texture);
 }
 
-.player-positions__keeper,
-.player-positions__att,
-.player-positions__def,
-.player-positions__def-mid,
-.player-positions__att-mid {
+.player-positions__keeper, .player-positions__att, .player-positions__def, .player-positions__def-mid, .player-positions__att-mid {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
 
-.keeper ,
-.defence ,
-.defensive-mid, 
-.attacking-mid ,
-.attack {
+.keeper, .defence, .defensive-mid, .attacking-mid, .attack {
     display: flex;
     align-items: center;
-    padding: 2rem 0;
-} 
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+/* keeper box outline */
+
+.keeper {
+    border: 3px solid var(--grey50);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-top-color: transparent;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
 
 .player-icon {
     font-size: 2rem;
-    color: var(--blue);
-} 
-
-
-.fa-chevron-up {
-    font-size: 2rem;
-    position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
-    transform: rotate(-45deg);
     color: var(--grey);
-    cursor: pointer;
 }

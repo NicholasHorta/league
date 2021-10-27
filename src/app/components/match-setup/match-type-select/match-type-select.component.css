@@ -1,10 +1,7 @@
 .match-setup {
-    font-family: 'script';
     padding: var(--section-space);
     border-radius: var(--radius);
-    /* max-width: 800px; */
     margin: 0 auto;
-    /* margin-top: 5rem; */
 }
 
 .match-setup__match-type div>input {
@@ -50,9 +47,10 @@
 .match-setup__team-bars {
     position: relative;
     padding: 2rem;
-    background-color: #28a77055;
+    background-color: var(--green50);
     margin: var(--inner-section-space-y);
     box-shadow: 7px 7px 0px var(--grey);
+    background-image: var(--texture);
 
 }
 
@@ -104,11 +102,16 @@
 .two-team-setup__team.success, .four-team-setup__team.success, .four-team-setup__team.vs {
     background-color: transparent;
     font-size: 2.5rem;
-    color: var(--green);
+    color: var(--grey);
     text-align: center;
     border-radius: 20px;
     flex: 0;
     margin: 0 1rem;
+}
+
+.four-team-setup__team.vs {
+    font-size: 2rem;
+    font-style: italic;
 }
 
 .four-team-setup__team.tbd {

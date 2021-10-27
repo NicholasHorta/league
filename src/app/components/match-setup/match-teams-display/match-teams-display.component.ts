@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 @Component({
-  selector: 'app-match-teams-display',
+  selector: 'match-teams-display',
   templateUrl: './match-teams-display.component.html',
   styleUrls: ['./match-teams-display.component.css']
 })

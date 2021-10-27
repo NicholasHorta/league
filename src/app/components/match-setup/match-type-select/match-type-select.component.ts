@@ -2,12 +2,12 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 @Component({
-  selector: 'app-match-type',
-  templateUrl: './match-type.component.html',
-  styleUrls: ['./match-type.component.css']
+  selector: 'match-type-select',
+  templateUrl: './match-type-select.component.html',
+  styleUrls: ['./match-type-select.component.css']
 })
 
-export class MatchTypeComponent implements OnInit {
+export class MatchTypeSelectComponent implements OnInit {
 
   constructor(public matchSetupSVC: MatchSetupService) {}
 

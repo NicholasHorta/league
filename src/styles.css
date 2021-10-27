@@ -12,10 +12,15 @@ html, body {
     margin: 0 auto;
 }
 
+h2, h3, h4, li, p, span, label {
+    font-family: 'script';
+}
+
 :root {
     /* Colors */
     --blue: #2C6C9D;
     --green: #27a770 ;
+    --green50: #31d80865;
     --yellow: #F4A439;
     --orange: #F46E39;
     --red: #ED3744;
@@ -25,9 +30,10 @@ html, body {
     --grey50: #50484799;
     /* Technicals */
     --radius: 5px;
-    --section-space: 8rem 2rem;
+    --section-space: 8rem 2rem 0 2rem;
     --inner-section-space-y: 4rem 0;
     --max-width: 800px;
+    --texture: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.51' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 ul {
@@ -64,8 +70,3 @@ ul {
     font-family: 'script';
     src: url('./assets/font/Nunito/Nunito-Regular.ttf');
 }
-
-/* @font-face {
-    font-family: 'script';
-    src: url('./assets/font/Stick_No_Bills/StickNoBills-VariableFont_wght.ttf');
-} */

@@ -1,146 +1,138 @@
-<section>
-    
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="teams__team-sheets">
+<div class="teams__team-sheets">
     <div class="team-sheets__quick-match">
         <div class="team-sheet__team fx_x-b">
-            <h2 class="team-1__club-title">{{matchSetupSVC.generatedTeamsArray[0]}}</h2>
-            <i class="fas fa-chevron-up"></i>
-            <div class="team-1__player-listing">
-                <h3>Starting Eleven</h3>
+            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}</h2>
+            <div class="team-sheet__options">
+                <span>
+                    Starting 11
+                </span>
+                <span>
+                    Subs
+                </span>
+                <span>
+                    Randomise
+                </span>
+            </div>
+            <div class="player-listing">
                 <ul *ngFor="let player of matchSetupSVC.playersTeam1[0]">
+                    <li>{{player.name}}</li>
+                    <span class="player-listing__flag">{{player.country.flag}}</span>
+                </ul>
+                <!-- Starting 11 -->
+                <!-- <ul *ngFor="let player of matchSetupSVC.playersTeam1[1]">
                     <div id="{{player.id}}">
                         <li>{{player.name}}</li>
-                        <span class="player-listing__flag">{{player.country.flag}}</span>
+                    
                     </div>
-                </ul>
+                </ul> -->
             </div>
-            <div class="team-1__player-positions">
+            <div class="player-positions">
                 <div class="player-positions__keeper">
                     <div class="keeper">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__def">
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__def-mid">
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__att-mid">
                     <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__att">
                     <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class="team-sheet__team fx_x-b">
-            <h2 class="team-2__club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
-            <i class="fas fa-chevron-up"></i>
-            <div class="team-2__player-listing">
-                <h3>Starting Eleven</h3>
+            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
+            <div class="team-sheet__options">
+                <span>
+                    Starting 11
+                </span>
+                <span>
+                    Subs
+                </span>
+                <span>
+                    Randomise
+                </span>
+            </div>
+            <div class="player-listing">
                 <ul *ngFor="let player of matchSetupSVC.playersTeam2[0]">
                     <li>{{player.name}}</li>
                     <span class="player-listing__flag">{{player.country.flag}}</span>
                 </ul>
             </div>
-            <div class="team-2__player-positions">
+            <div class="player-positions">
                 <div class="player-positions__keeper">
                     <div class="keeper">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__def">
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__def-mid">
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__att-mid">
                     <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
                 <div class="player-positions__att">
                     <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                     <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
+                        <i class="fas fa-user-shield player-icon"></i>
                     </div>
                 </div>
             </div>
@@ -149,124 +141,135 @@
     <div *ngIf="matchSetupSVC.leagueTypeValue === 4">
         <div class="team-sheets__quick-match">
             <div class="team-sheet__team fx_x-b">
-                <h2 class="team-1__club-title">{{matchSetupSVC.generatedTeamsArray[2]}}</h2>
-                <i class="fas fa-chevron-up"></i>
-
-                <div class="team-1__player-listing">
-                    <h3>Starting Eleven</h3>
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}</h2>
+                <div class="team-sheet__options">
+                    <span>
+                        Starting 11
+                    </span>
+                    <span>
+                        Subs
+                    </span>
+                    <span>
+                        Randomise
+                    </span>
+                </div>
+                <div class="player-listing">
                     <ul *ngFor="let player of matchSetupSVC.playersTeam3[0]">
-                        <div id="{{player.id}}">
-                            <li>{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </div>
+                        <li>{{player.name}}</li>
+                        <span class="player-listing__flag">{{player.country.flag}}</span>
                     </ul>
                 </div>
-
-                <div class="team-1__player-positions">
+                <div class="player-positions">
                     <div class="player-positions__keeper">
                         <div class="keeper">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__def">
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__def-mid">
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__att-mid">
                         <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__att">
                         <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="team-sheet__team fx_x-b">
-
-                <h2 class="team-2__club-title">{{matchSetupSVC.generatedTeamsArray[3]}}</h2>
-                <i class="fas fa-chevron-up"></i>
-
-                <div class="team-2__player-listing">
-                    <h3>Starting Eleven</h3>
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}</h2>
+                <div class="team-sheet__options">
+                    <span>
+                        Starting 11
+                    </span>
+                    <span>
+                        Subs
+                    </span>
+                    <span>
+                        Randomise
+                    </span>
+                </div>
+                <div class="player-listing">
                     <ul *ngFor="let player of matchSetupSVC.playersTeam4[0]">
                         <li>{{player.name}}</li>
                         <span class="player-listing__flag">{{player.country.flag}}</span>
                     </ul>
                 </div>
-
-                <div class="team-2__player-positions">
+                <div class="player-positions">
                     <div class="player-positions__keeper">
                         <div class="keeper">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__def">
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__def-mid">
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__att-mid">
                         <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                     <div class="player-positions__att">
                         <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                         <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
+                            <i class="fas fa-user-shield player-icon"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+</div>
