@@ -10,16 +10,15 @@ export class MatchSetupService {
 
   leagueTypeValue: number = 2;
   leagueTeamsArray: string[] = [
-    'Iberia FC', 'White Isles Utd', 'Bavaria Stark', 'Clube Europa'
+    'Galaxy FC', 'Valhalla Utd', 'Bavaria Stark', 'Clube Europa'
   ];
   generatedTeamsArray: string[] = [];
-  // Sub position array decreases with every number due to splice reduction
   subPositionSpliceArray: number[] = [5, 8, 10, 11];
   generatePlayersArray: {}[] = [];
-  playersTeam1: any;
-  playersTeam2: any;
-  playersTeam3: any;
-  playersTeam4: any;
+  team1: any;
+  team2: any;
+  team3: any;
+  team4: any;
 
 
   matchTypeHandler(matchType: number) {
@@ -30,22 +29,28 @@ export class MatchSetupService {
   // A copy of the teams array is taken to remove two teams randomly 
   // The result is returned in an array of two remaining teams
   quickMatchSetupHandler() {
-    let quickMatchTeamsArray: string[] = [...this.leagueTeamsArray];
-    for (let i = 0; i < this.leagueTypeValue; i++) {
-      quickMatchTeamsArray.splice(
-        Math.floor(Math.random() * quickMatchTeamsArray.length), 1);
-    }
-    this.generateTeamLists(this.leagueTypeValue);
-    return this.generatedTeamsArray = [...quickMatchTeamsArray];
+    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray)
   }
-
-  // The result is returned in an array of all teams
+  // The result is returns the teams array in original state
   leagueSetupHandler() {
-    this.generateTeamLists(this.leagueTypeValue);
-    return this.generatedTeamsArray = [...this.leagueTeamsArray];
+    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray)
   }
 
-  generateTeamLists(teamsAmount: number) {
+  randomiseTeamNamesArrayHandler(staticTeamsArray: string[]) {
+    let dynamicTeamsArray: string[] = [...staticTeamsArray];
+    if (this.leagueTypeValue === 2) {
+      for (let i = 0; i < this.leagueTypeValue; i++) {
+        dynamicTeamsArray.splice(
+          Math.floor(Math.random() * this.leagueTypeValue), 1);
+      }
+    }
+    this.generateTeamPlayersArrayHandler(this.leagueTypeValue);
+    return this.generatedTeamsArray = [...dynamicTeamsArray];
+  }
+
+  generateTeamPlayersArrayHandler(teamsAmount: number) {
+    // Provides a copy of an array with specific position arrays
+    // [[4 - kpr], [20 - def], [16 - defmid], [12 - attmid], [8 - att]]
     const availablePlayersArray = [
       [...playersListJSON['keeper']],
       [...playersListJSON['def']],
@@ -53,26 +58,33 @@ export class MatchSetupService {
       [...playersListJSON['att-mid']],
       [...playersListJSON['att']]
     ];
-   
-    const perTeamPositionAllocation: number[] = [1, 5, 4, 3, 2];
 
+    // [1 - kpr, 5 - defs, 4 - defmids, 3 - attmids, 2 - att] -- Including subs
+    const playerPositionAmtAllocation: number[] = [1, 5, 4, 3, 2];
+
+    // FOR amount of teams - 2 || 4 -> FOR amount of positions - 5 -> FOR each position total - 1-kp, 5-df, 4-dm, 3-da, 2-at ->
     for (let x = 0; x < teamsAmount; x++) {
-      for (let i = 0; i < perTeamPositionAllocation.length; i++) {
-        for (let j = 0; j < perTeamPositionAllocation[i]; j++) {
+      for (let i = 0; i < playerPositionAmtAllocation.length; i++) {
+        // Each iteration checks amount of teams then positions amt, then Splices from the [AvailablePlayers] copy above on each iteration amount 1, 5, 4, 3, 2
+        for (let j = 0; j < playerPositionAmtAllocation[i]; j++) {
           this.generatePlayersArray.push(
-            ...availablePlayersArray[i].splice(Math.floor(Math.random() * availablePlayersArray[i].length), 1)
+            ...availablePlayersArray[i].splice(
+              Math.floor(Math.random() * availablePlayersArray[i].length
+              ), 1)
           );
+          // And will ultimately take a player from each postition for the amount of positions required
         }
       }
     }
-    this.allocateTeamPlayersHandler(this.generatePlayersArray, teamsAmount)
+    this.allocateFullTeamsheetsHandler(this.generatePlayersArray, teamsAmount)
   }
 
-  // Extract a single team and 4 additional subs (15 players) each into the select amount of teams 
-  allocateTeamPlayersHandler(generatedPlayersArray: {}[], teamsAmount: number){
 
-    function sortStarterAndSubsHandler(fullTeamList: {}[], subPositionSpliceValues: number[]){
-      const startingEleven = fullTeamList;
+  allocateFullTeamsheetsHandler(generatedPlayersArray: {}[], teamsAmount: number) {
+    // SubPositionSpliceValues array decreases with every number due to splice reduction within array on every execution 
+    // Leaving us with one less in the array on each iteration which we account for in the provided SubPositionSpliceValues array
+    function sortStarterAndSubsHandler(fullTeamList: {}[], subPositionSpliceValues: number[]) {
+      let startingEleven = fullTeamList;
       let subs: any[] = [];
       subPositionSpliceValues.forEach(i => {
         subs.push(...fullTeamList.splice(i, 1));
@@ -80,19 +92,16 @@ export class MatchSetupService {
       return [startingEleven, subs]
     }
 
-    if(teamsAmount === 2){
-      this.playersTeam1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.playersTeam2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+    if (teamsAmount === 2) {
+      this.team1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.team2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     } else {
-      // Else 4 teams
-      this.playersTeam1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.playersTeam2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.playersTeam3 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.playersTeam4 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.team1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.team2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.team3 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.team4 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     }
-
-    
-
   }
-
 }
+
+

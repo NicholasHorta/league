@@ -4,6 +4,7 @@
     margin: 0 auto;
 }
 
+
 .match-setup__match-type div>input {
     display: none;
 }
@@ -51,12 +52,12 @@
     margin: var(--inner-section-space-y);
     box-shadow: 7px 7px 0px var(--grey);
     background-image: var(--texture);
-
 }
 
-
-.team-bars__two-team-setup {
-    /* display: flex; */
+.exe__message {
+    font-size: 1.75rem;
+    text-align: center;
+    color: var(--grey);
 }
 
 .team-bars__four-team-setup {

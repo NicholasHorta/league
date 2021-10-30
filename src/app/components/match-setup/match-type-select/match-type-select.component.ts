@@ -18,7 +18,7 @@ export class MatchTypeSelectComponent implements OnInit {
     this.matchSetupSVC.quickMatchSetupHandler();
   }
   
-  matchTypeSvcHandler(matchType: number){
+  matchTypeHandler(matchType: number){
     this.leagueTypeValue = this.matchSetupSVC.matchTypeHandler(matchType);
     matchType === 2 ? 
     this.matchSetupSVC.quickMatchSetupHandler() 

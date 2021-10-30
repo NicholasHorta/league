@@ -5,28 +5,32 @@
             "club": "Manchester City",
             "country": {"name": "Brazil", "flag": "🇧🇷"},
             "rating": "89",
-            "id": "k11"
+            "id": "k11",
+            "captain": false
         },
         {
             "name": "Manuel Neuer",
             "club": "Bayern Munich",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "90",
-            "id": "k12"
+            "id": "k12",
+            "captain": false
         },
         {
             "name": "Jan Oblak",
             "club": "Atletico Madrid",
             "country": {"name": "Slovenia", "flag": "🇸🇮"},
             "rating": "91",
-            "id": "k13"
+            "id": "k13",
+            "captain": false
         },
         {
             "name": "Andre ter Stegen",
             "club": "Barcelona",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "90",
-            "id": "k14"
+            "id": "k14",
+            "captain": false
         }
     ],
     "def": [
@@ -35,140 +39,160 @@
             "club": "Real Madrid",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "89",
-            "id": "d21"
+            "id": "d21",
+            "captain": false
         },
         {
             "name": "Thiago Silva",
             "club": "Chelsea",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "85",
-            "id": "d22"
+            "id": "d22",
+            "captain": false
         },
         {
             "name": "kalidou koulibaly",
             "club": "Napoli",
             "country": {"name": "Senegal", "flag": "🇸🇳"},
             "rating": "88",
-            "id": "d23"
+            "id": "d23",
+            "captain": false
         },
         {
             "name": "Matthijs de Ligt",
             "club": "Juventus",
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "85",
-            "id": "d24"
+            "id": "d24",
+            "captain": false
         },
         {
             "name": "Virgil van Dijk",
             "club": "Liverpool",
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "90",
-            "id": "d25"
+            "id": "d25",
+            "captain": false
         },
         {
             "name": "Ruben Dias",
             "club": "Manchester City",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "81",
-            "id": "d26"
+            "id": "d26",
+            "captain": false
         },
         {
             "name": "Kyle Walker",
             "club": "Manchester City",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"},
             "rating": "85",
-            "id": "d27"
+            "id": "d27",
+            "captain": false
         },
         {
             "name": "Jerome Boateng",
             "club": "Lyon",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "82",
-            "id": "d28"
+            "id": "d28",
+            "captain": false
         },
         {
             "name": "Diego Godin",
             "club": "Cagliari",
             "country": {"name": "Uruguay", "flag": "🇺🇾"},
             "rating": "85",
-            "id": "d29"
+            "id": "d29",
+            "captain": false
         },
         {
             "name": "Mats Hummels",
             "club": "Borussia Dortmund",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "86",
-            "id": "d210"
+            "id": "d210",
+            "captain": false
         },
         {
             "name": "Gerard Pique",
             "club": "Barcelona",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "86",
-            "id": "d211"
+            "id": "d211",
+            "captain": false
         },
         {
             "name": "Raphael Varane",
             "club": "Manchester United",
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "86",
-            "id": "d212"
+            "id": "d212",
+            "captain": false
         },
         {
             "name": "Giorgio Chiellini",
             "club": "Juventus",
             "country": {"name": "Italy", "flag": "🇮🇹"}, 
             "rating": "87",
-            "id": "d213"
+            "id": "d213",
+            "captain": false
         },
         {
             "name": "Harry Maguire",
             "club": "Manchester United",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "82",
-            "id": "d214"
+            "id": "d214",
+            "captain": false
         },
         {
             "name": "Aymeric Laporte",
             "club": "Manchester City",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "87",
-            "id": "d215"
+            "id": "d215",
+            "captain": false
         },
         {
             "name": "Antonio Rudiger",
             "club": "Chelsea",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "81",
-            "id": "d216"
+            "id": "d216",
+            "captain": false
         },
         {
             "name": "John Stones",
             "club": "Manchester City",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "80",
-            "id": "d217"
+            "id": "d217",
+            "captain": false
         },
         {
             "name": "Marquinhos",
             "club": "PSG",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "85",
-            "id": "d218"
+            "id": "d218",
+            "captain": false
         },
         {
             "name": "Eric Dier",
             "club": "Tottenham",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "78",
-            "id": "d219"
+            "id": "d219",
+            "captain": false
         },
         {
             "name": "Sven Botman",
             "club": "Lille",
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "69",
-            "id": "d220"
+            "id": "d220",
+            "captain": false
         }
     ],
     "def-mid": [
@@ -177,112 +201,128 @@
             "club": "Aston Villa",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "75",
-            "id": "dm31"
+            "id": "dm31",
+            "captain": false
         },
         {
             "name": "Jorginho",
             "club": "Chelsea",
             "country": {"name": "Italy", "flag": "🇮🇹"}, 
             "rating": "83",
-            "id": "dm32"
+            "id": "dm32",
+            "captain": false
         },
         {
             "name": "Joshua Kimmich",
             "club": "Bayern Munich",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "88",
-            "id": "dm33"
+            "id": "dm33",
+            "captain": false
         },
         {
             "name": "Fernandinho",
             "club": "Manchester City",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "84",
-            "id": "dm34"
+            "id": "dm34",
+            "captain": false
         },
         {
             "name": "Sergio Busquets",
             "club": "Barcelona",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "87",
-            "id": "dm35"
+            "id": "dm35",
+            "captain": false
         },
         {
             "name": "Wilfred Ndidi",
             "club": "Leicester City",
             "country": {"name": "Nigeria", "flag": "🇳🇬"},
             "rating": "84",
-            "id": "dm36"
+            "id": "dm36",
+            "captain": false
         },
         {
             "name": "Marcelo Brozovic",
             "club": "Inter Milan",
             "country": {"name": "Croatia", "flag": "🇭🇷"},
             "rating": "84",
-            "id": "dm37"
+            "id": "dm37",
+            "captain": false
         },
         {
             "name": "Rodri",
             "club": "Manchester City",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "85",
-            "id": "dm38"
+            "id": "dm38",
+            "captain": false
         },
         {
             "name": "Fabinho",
             "club": "Liverpool",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "87",
-            "id": "dm39"
+            "id": "dm39",
+            "captain": false
         },
         {
             "name": "Casemiro",
             "club": "Real Madrid",
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "89",
-            "id": "dm310"
+            "id": "dm310",
+            "captain": false
         },
         {
             "name": "N'Golo Kante",
             "club": "Chelsea",
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "88",
-            "id": "dm311"
+            "id": "dm311",
+            "captain": false
         },
         {
             "name": "Declan Rice",
             "club": "West Ham",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "79",
-            "id": "dm312"
+            "id": "dm312",
+            "captain": false
         },
         {
             "name": "Leon Goretzka",
             "club": "Bayern Munich",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "84",
-            "id": "dm313"
+            "id": "dm313",
+            "captain": false
         },
         {
             "name": "Franck Kessie",
             "club": "AC Milan",
             "country": {"name": "Ivory Coast", "flag": "🇨🇮"},
             "rating": "77",
-            "id": "dm314"
+            "id": "dm314",
+            "captain": false
         },
         {
             "name": "Joao Cancelo",
             "club": "Manchester City",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "83",
-            "id": "dm315"
+            "id": "dm315",
+            "captain": false
         },
         {
             "name": "Idrissa Gueye",
             "club": "PSG",
             "country": {"name": "Senegal", "flag": "🇸🇳"},
             "rating": "84",
-            "id": "dm316"
+            "id": "dm316",
+            "captain": false
         }
     ],
     "att-mid": [
@@ -291,84 +331,96 @@
             "club": "Chelsea",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "80",
-            "id": "am41"
+            "id": "am41",
+            "captain": false
         },
         {
             "name": "Thomas Muller",
             "club": "Bayern Munich",
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "86",
-            "id": "am42"
+            "id": "am42",
+            "captain": false
         },
         {
             "name": "Bruno Fernandes",
             "club": "Manchester United",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "87",
-            "id": "am43"
+            "id": "am43",
+            "captain": false
         },
         {
             "name": "Kevin De Brunye",
             "club": "Manchester City",
             "country": {"name": "Belgium", "flag": "🇧🇪"},
             "rating": "91",
-            "id": "am44"
+            "id": "am44",
+            "captain": false
         },
         {
             "name": "Lionel Messi",
             "club": "PSG",
             "country": {"name": "Argentina", "flag": "🇦🇷"},
             "rating": "93",
-            "id": "am45"
+            "id": "am45",
+            "captain": false
         },
         {
             "name": "Paulo Dybala",
             "club": "Juventus",
             "country": {"name": "Argentina", "flag": "🇦🇷"},
             "rating": "88",
-            "id": "am46"
+            "id": "am46",
+            "captain": false
         },
         {
             "name": "Bernardo Silva",
             "club": "Manchester City",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "87",
-            "id": "am47"
+            "id": "am47",
+            "captain": false
         },
         {
             "name": "Christian Eriksen",
             "club": "Inter Milan",
             "country": {"name": "Denmark", "flag": "🇩🇰"},
             "rating": "85",
-            "id": "am48"
+            "id": "am48",
+            "captain": false
         },
         {
             "name": "Joao Felix",
             "club": "Atletico Madrid",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "81",
-            "id": "am49"
+            "id": "am49",
+            "captain": false
         },
         {
             "name": "Raheem Sterling",
             "club": "Manchester City",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "88",
-            "id": "am410"
+            "id": "am410",
+            "captain": false
         },
         {
             "name": "Mohammed Salah",
             "club": "Liverpool",
             "country": {"name": "Egypt", "flag": "🇪🇬"}, 
             "rating": "91",
-            "id": "am411"
+            "id": "am411",
+            "captain": false
         },
         {
             "name": "Isco",
             "club": "Real Madrid",
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "84",
-            "id": "am412"
+            "id": "am412",
+            "captain": false
         }
     ],
     "att": [
@@ -377,56 +429,64 @@
             "club": "Tottenham",
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "88",
-            "id": "a51"
+            "id": "a51",
+            "captain": false
         },
         {
             "name": "Karim Benzema",
             "club": "Real Madrid",
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "89",
-            "id": "a52"
+            "id": "a52",
+            "captain": false
         },
         {
             "name": "Christiano Ronaldo",
             "club": "Manchester United",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "99",
-            "id": "a53"
+            "id": "a53",
+            "captain": false
         },
         {
             "name": "Romelu Lukaku",
             "club": "Chelsea",
             "country": {"name": "Belgium", "flag": "🇧🇪"},
             "rating": "85",
-            "id": "a54"
+            "id": "a54",
+            "captain": false
         },
         {
             "name": "Erling Haaland",
             "club": "Borussia Dortmund",
             "country": {"name": "Norway", "flag": "🇳🇴"},
             "rating": "84",
-            "id": "a55"
+            "id": "a55",
+            "captain": false
         },
         {
             "name": "Robert Lewandowski",
             "club": "Bayern Munich",
             "country": {"name": "Poland", "flag": "🇵🇱"},
             "rating": "91",
-            "id": "a56"
+            "id": "a56",
+            "captain": false
         },
         {
             "name": "Kylian Mbappe",
             "club": "PSG",
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "90",
-            "id": "a57"
+            "id": "a57",
+            "captain": false
         },
         {
             "name": "Andre Silva",
             "club": "AC Milan",
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "79",
-            "id": "a58"
+            "id": "a58",
+            "captain": false
         }
     ]
 }
