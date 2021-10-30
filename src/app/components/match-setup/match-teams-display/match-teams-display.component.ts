@@ -1,22 +1,24 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ContentChild, ElementRef } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
+import { MyDirectiveDirective } from '../../../my-directive.directive'
 
 @Component({
   selector: 'match-teams-display',
   templateUrl: './match-teams-display.component.html',
   styleUrls: ['./match-teams-display.component.css']
 })
-export class MatchTeamsDisplayComponent implements OnInit {
+export class MatchTeamsDisplayComponent {
 
-  constructor(public matchSetupSVC: MatchSetupService) { }
-
-  ngOnInit(): void {
-  }
+  constructor(public matchSetupSVC: MatchSetupService, public item: ElementRef) { }
 
   viewTeamOneSubs: boolean = false;
   viewTeamTwoSubs: boolean = false;
   viewTeamThreeSubs: boolean = false;
   viewTeamFourSubs: boolean = false;
+  teamOneCaptain: string = "";
+  teamTwoCaptain: string = "";
+  teamThreeCaptain: string = "";
+  teamFourCaptain: string = "";
 
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
@@ -35,4 +37,34 @@ export class MatchTeamsDisplayComponent implements OnInit {
     }
   }
 
+  assignCaptainHandler(startersArray: any[], teamNumber: number) {
+    let x = document.querySelectorAll('.toggle-view');
+    x.forEach(i => {
+      console.log('%cmatch-teams-display.component.ts line:64 x', 'color: #007acc;', i);
+    })
+    startersArray.forEach(i => {
+      i.captain = false;
+    });
+    const randomPlayerNumber = Math.floor(Math.random() * startersArray.length);
+    startersArray[randomPlayerNumber].captain = true;
+    switch (teamNumber) {
+      case 1:
+        this.teamOneCaptain = startersArray[randomPlayerNumber].name;
+        break;
+      case 2:
+        this.teamTwoCaptain = startersArray[randomPlayerNumber].name;
+        break;
+      case 3:
+        this.teamThreeCaptain = startersArray[randomPlayerNumber].name;
+        break
+      case 4:
+        this.teamFourCaptain = startersArray[randomPlayerNumber].name;
+        break
+    }
+
+  }
+
+  toggleTeamSheetViewHandler() {
+    console.log('%cmatch-teams-display.component.ts line:68 this.item', 'color: #007acc;', this.item.nativeElement);
+  }
 }

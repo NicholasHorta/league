@@ -15,10 +15,10 @@ export class MatchSetupService {
   generatedTeamsArray: string[] = [];
   subPositionSpliceArray: number[] = [5, 8, 10, 11];
   generatePlayersArray: {}[] = [];
-  team1: any;
-  team2: any;
-  team3: any;
-  team4: any;
+  teamOne: any;
+  teamTwo: any;
+  teamThree: any;
+  teamFour: any;
 
 
   matchTypeHandler(matchType: number) {
@@ -93,13 +93,13 @@ export class MatchSetupService {
     }
 
     if (teamsAmount === 2) {
-      this.team1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.team2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamOne = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamTwo = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     } else {
-      this.team1 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.team2 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.team3 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      this.team4 = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamOne = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamTwo = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamThree = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
+      this.teamFour = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     }
   }
 }

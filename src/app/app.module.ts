@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatchSetupComponent } from './components/match-setup/match-setup.component';
 import { MatchTypeSelectComponent } from './components/match-setup/match-type-select/match-type-select.component';
 import { MatchTeamsDisplayComponent } from './components/match-setup/match-teams-display/match-teams-display.component';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MatchTeamsDisplayComponent } from './components/match-setup/match-teams
     NavbarComponent,
     MatchSetupComponent,
     MatchTypeSelectComponent,
-    MatchTeamsDisplayComponent
+    MatchTeamsDisplayComponent,
+    MyDirectiveDirective
   ],
   imports: [
     BrowserModule,
