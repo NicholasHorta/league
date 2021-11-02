@@ -1,342 +1,128 @@
-<div class="teams__team-sheets" *ngIf="matchSetupSVC.leagueTypeValue">
-    <div class="team-sheets__quick-match">
-        <div class="team-sheet__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}
-                <!-- <i class="fas fa-chevron-circle-right toggle-view"></i> -->
-            </h2>
-            <div class="team-sheet__options">
-                <span (click)="assignCaptainHandler(matchSetupSVC.teamOne[0], 1)">
-                    Assign Captain
-                </span>
-                <span (click)="toggleTeamListHandler(viewTeamOneSubs, 1)">
-                    View {{viewTeamOneSubs ? 'Starters' : 'Subs'}}
-                </span>
-            </div>
-            <i class="fas fa-chevron-circle-right" (click)="toggleTeamSheetViewHandler()"></i>
-            <div class="player-listing">
-                <div *ngIf="!viewTeamOneSubs">
-                    <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[0]">
-                        <li>{{player.name}}</li>
-                        <span class="player-listing__flag">{{player.country.flag}}</span>
-                    </ul>
+<div class="view" *ngIf="itemsExpanded">
+    <div class="teams__team-sheets" *ngIf="matchSetupSVC.leagueTypeValue">
+        <div class="team-sheets__quick-match">
+            <div class="team-sheet__team fx_x-b">
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}
+                </h2>
+                <div class="team-sheet__options">
+                    <span (click)="assignCaptainHandler(matchSetupSVC.teamOne[0], 1)">
+                        Assign Captain
+                    </span>
+                    <span (click)="toggleTeamListHandler(viewTeamOneSubs, 1)">
+                        View {{viewTeamOneSubs ? 'Starters' : 'Subs'}}
+                    </span>
                 </div>
-                <div *ngIf="viewTeamOneSubs">
-                    <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[1]">
-                        <li class="player__sub">{{player.name}}</li>
-                        <span class="player-listing__flag">{{player.country.flag}}</span>
-                    </ul>
-                    <span class="substitute__key">Substitutes</span>
-                </div>
-            </div>
-            <div class="player-positions">
-                <div class="player-positions__keeper">
-                    <div class="keeper">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">GK</span>
+                <i class="fas fa-chevron-circle-right" (click)="toggleTeamSheetViewHandler()"></i>
+                <div class="player-listing">
+                    <div *ngIf="!viewTeamOneSubs">
+                        <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[0]">
+                            <li>{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
+                    </div>
+                    <div *ngIf="viewTeamOneSubs">
+                        <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[1]">
+                            <li class="player__sub">{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
+                        <span class="substitute__key">Substitutes</span>
                     </div>
                 </div>
-                <div class="player-positions__def">
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                </div>
-                <div class="player-positions__def-mid">
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                </div>
-                <div class="player-positions__att-mid">
-                    <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">AM</span>
-                    </div>
-                    <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">AM</span>
-                    </div>
-                </div>
-                <div class="player-positions__att">
-                    <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">ST</span>
-                    </div>
-                </div>
+                <app-formation [viewTeamOneSubsX]="viewTeamOneSubs"></app-formation>
                 <h3 class="captain">captain: {{this.teamOneCaptain ? this.teamOneCaptain : 'unassigned'}}</h3>
             </div>
-        </div>
-        <div class="team-sheet__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
-            <div class="team-sheet__options">
-                <span (click)="assignCaptainHandler(matchSetupSVC.teamTwo[0], 2)">
-                    Assign Captain
-                </span>
-                <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
-                    View Subs
-                </span>
-            </div>
-            <div class="player-listing">
-                <div *ngIf="!viewTeamTwoSubs">
-                    <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[0]">
-                        <li>{{player.name}}</li>
-                        <span class="player-listing__flag">{{player.country.flag}}</span>
-                    </ul>
+            <div class="team-sheet__team fx_x-b">
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
+                <div class="team-sheet__options">
+                    <span (click)="assignCaptainHandler(matchSetupSVC.teamTwo[0], 2)">
+                        Assign Captain
+                    </span>
+                    <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
+                        View Subs
+                    </span>
                 </div>
-                <div *ngIf="viewTeamTwoSubs">
-                    <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[1]">
-                        <li class="player__sub">{{player.name}}</li>
-                        <span class="player-listing__flag">{{player.country.flag}}</span>
-                    </ul>
-                    <span class="substitute__key">Substitutes</span>
-                </div>
-            </div>
-            <div class="player-positions">
-                <div class="player-positions__keeper">
-                    <div class="keeper">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">GK</span>
+                <div class="player-listing">
+                    <div *ngIf="!viewTeamTwoSubs">
+                        <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[0]">
+                            <li>{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
+                    </div>
+                    <div *ngIf="viewTeamTwoSubs">
+                        <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[1]">
+                            <li class="player__sub">{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
+                        <span class="substitute__key">Substitutes</span>
                     </div>
                 </div>
-                <div class="player-positions__def">
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                    <div class="defence">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DEF</span>
-                    </div>
-                </div>
-                <div class="player-positions__def-mid">
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                    <div class="defensive-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">DM</span>
-                    </div>
-                </div>
-                <div class="player-positions__att-mid">
-                    <div class="attacking-mid">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">AM</span>
-                    </div>
-                </div>
-                <div class="player-positions__att">
-                    <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">CF</span>
-                    </div>
-                    <div class="attack">
-                        <i class="fas fa-user-circle player-icon"></i>
-                        <span class="player__position">ST</span>
-                    </div>
-                </div>
+                <app-formation></app-formation>
                 <h3 class="captain">Capt. {{this.teamTwoCaptain ? this.teamTwoCaptain : 'unassigned'}}</h3>
             </div>
         </div>
-    </div>
-    <div *ngIf="matchSetupSVC.leagueTypeValue === 4">
-        <div class="team-sheets__quick-match">
-            <div class="team-sheet__team fx_x-b">
-                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}<i class="fas fa-chevron-circle-right"></i></h2>
-                <div class="team-sheet__options">
-                    <span (click)="assignCaptainHandler(matchSetupSVC.teamThree[0], 3)">
-                        Assign Captain
-                    </span>
-                    <span (click)="toggleTeamListHandler(viewTeamThreeSubs, 3)">
-                        View Subs
-                    </span>
-                </div>
-                <div class="player-listing">
-                    <div *ngIf="!viewTeamThreeSubs">
-                        <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[0]">
-                            <li>{{player.name}}</li>
+        
+        <!-- If 4 teams (league option) is chosen -->
+        <div *ngIf="matchSetupSVC.leagueTypeValue === 4">
+            <div class="team-sheets__quick-match">
+                <div class="team-sheet__team fx_x-b">
+                    <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}<i
+                            class="fas fa-chevron-circle-right"></i></h2>
+                    <div class="team-sheet__options">
+                        <span (click)="assignCaptainHandler(matchSetupSVC.teamThree[0], 3)">
+                            Assign Captain
+                        </span>
+                        <span (click)="toggleTeamListHandler(viewTeamThreeSubs, 3)">
+                            View Subs
+                        </span>
+                    </div>
+                    <div class="player-listing">
+                        <div *ngIf="!viewTeamThreeSubs">
+                            <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[0]">
+                                <li>{{player.name}}</li>
 
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
+                                <span class="player-listing__flag">{{player.country.flag}}</span>
+                            </ul>
+                        </div>
+                        <div *ngIf="viewTeamThreeSubs">
+                            <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[1]">
+                                <li class="player__sub">{{player.name}}</li>
+                                <span class="player-listing__flag">{{player.country.flag}}</span>
+                            </ul>
+                            <span class="substitute__key">Substitutes</span>
+                        </div>
                     </div>
-                    <div *ngIf="viewTeamThreeSubs">
-                        <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[1]">
-                            <li class="player__sub">{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
-                        <span class="substitute__key">Substitutes</span>
-                    </div>
+                    <app-formation></app-formation>
                 </div>
-                <div class="player-positions">
-                    <div class="player-positions__keeper">
-                        <div class="keeper">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">GK</span>
+                <div class="team-sheet__team fx_x-b">
+                    <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}<i
+                            class="fas fa-chevron-circle-right"></i></h2>
+                    <div class="team-sheet__options">
+                        <span (click)="assignCaptainHandler(matchSetupSVC.teamFour[0], 4)">
+                            Assign Captain
+                        </span>
+                        <span (click)="toggleTeamListHandler(viewTeamFourSubs, 4)">
+                            View Subs
+                        </span>
+                    </div>
+                    <div class="player-listing">
+                        <div *ngIf="!viewTeamFourSubs">
+                            <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[0]">
+                                <li>{{player.name}}</li>
+                                <span class="player-listing__flag">{{player.country.flag}}</span>
+                            </ul>
+                        </div>
+                        <div *ngIf="viewTeamFourSubs">
+                            <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[1]">
+                                <li class="player__sub">{{player.name}}</li>
+                                <span class="player-listing__flag">{{player.country.flag}}</span>
+                            </ul>
+                            <span class="substitute__key">Substitutes</span>
                         </div>
                     </div>
-                    <div class="player-positions__def">
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__def-mid">
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__att-mid">
-                        <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">AM</span>
-                        </div>
-                        <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">AM</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__att">
-                        <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">ST</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-sheet__team fx_x-b">
-                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}<i class="fas fa-chevron-circle-right"></i></h2>
-                <div class="team-sheet__options">
-                    <span (click)="assignCaptainHandler(matchSetupSVC.teamFour[0], 4)">
-                        Assign Captain
-                    </span>
-                    <span (click)="toggleTeamListHandler(viewTeamFourSubs, 4)">
-                        View Subs
-                    </span>
-                </div>
-                <div class="player-listing">
-                    <div *ngIf="!viewTeamFourSubs">
-                        <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[0]">
-                            <li>{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
-                    </div>
-                    <div *ngIf="viewTeamFourSubs">
-                        <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[1]">
-                            <li class="player__sub">{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
-                        <span class="substitute__key">Substitutes</span>
-                    </div>
-                </div>
-                <div class="player-positions">
-                    <div class="player-positions__keeper">
-                        <div class="keeper">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">GK</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__def">
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF</span>
-                        </div>
-                        <div class="defence">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DEF </span>
-                        </div>
-                    </div>
-                    <div class="player-positions__def-mid">
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                        <div class="defensive-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">DM</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__att-mid">
-                        <div class="attacking-mid">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">AM</span>
-                        </div>
-                    </div>
-                    <div class="player-positions__att">
-                        <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">CF</span>
-                        </div>
-                        <div class="attack">
-                            <i class="fas fa-user-circle player-icon"></i>
-                            <span class="player__position">ST</span>
-                        </div>
-                    </div>
+                    <app-formation></app-formation>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

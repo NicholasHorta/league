@@ -104,59 +104,6 @@
     color: var(--white);
 }
 
-.player-positions, .player-positions {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 5;
-    width: 400px;
-    margin: 0 auto;
-    background-color: var(--green50);
-    justify-content: space-around;
-    border-radius: 8px;
-    box-shadow: 7px 7px 0px var(--grey);
-    background-image: var(--texture);
-}
-
-.player-positions__keeper, .player-positions__att, .player-positions__def, .player-positions__def-mid, .player-positions__att-mid {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-}
-
-.keeper, .defence, .defensive-mid, .attacking-mid, .attack {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem 0;
-    position: relative;
-}
-
-/* keeper box outline */
-
-.keeper {
-    border: 3px solid var(--grey50);
-    padding-left: 3rem;
-    padding-right: 3rem;
-    border-top-color: transparent;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.player-icon {
-    font-size: 2rem;
-    color: var(--blue);
-}
-
-.player__position {
-    position: absolute;
-    top: 5px;
-    font-size: 1rem;
-    left: 50%;
-    font-style: italic;
-    color: var(--grey);
-    transform: translateX(-50%);
-    border-radius: 9px;
-}
 
 .captain {
     position: absolute;
@@ -164,5 +111,6 @@
     color: var(--white);
     background-color: var(--red);
     bottom: -3rem;
+    left: 0;
     border-radius: 9px;
 }

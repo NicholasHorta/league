@@ -1,6 +1,7 @@
-import { Component, ContentChild, ElementRef } from '@angular/core';
+import { Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 import { MyDirectiveDirective } from '../../../my-directive.directive'
+import { FormationComponent } from './formation/formation.component';
 
 @Component({
   selector: 'match-teams-display',
@@ -19,6 +20,7 @@ export class MatchTeamsDisplayComponent {
   teamTwoCaptain: string = "";
   teamThreeCaptain: string = "";
   teamFourCaptain: string = "";
+  itemsExpanded: boolean = true;
 
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
@@ -42,8 +44,8 @@ export class MatchTeamsDisplayComponent {
     x.forEach(i => {
       console.log('%cmatch-teams-display.component.ts line:64 x', 'color: #007acc;', i);
     })
-    startersArray.forEach(i => {
-      i.captain = false;
+    startersArray.forEach(player => {
+      player.captain = false;
     });
     const randomPlayerNumber = Math.floor(Math.random() * startersArray.length);
     startersArray[randomPlayerNumber].captain = true;
@@ -65,6 +67,6 @@ export class MatchTeamsDisplayComponent {
   }
 
   toggleTeamSheetViewHandler() {
-    console.log('%cmatch-teams-display.component.ts line:68 this.item', 'color: #007acc;', this.item.nativeElement);
+    this.itemsExpanded = !this.itemsExpanded
   }
 }

@@ -34,9 +34,10 @@
         background-color: var(--grey50);
         transform: translate(0px, 0px);
     }
+
     50% {
         box-shadow: 0px 0px 0px var(--grey);
-        background-color: var(--grey50);
+        background-color: #71D0A7;
         transform: translate(5px, 5px);
     }
     100% {
@@ -48,10 +49,8 @@
 .match-setup__team-bars {
     position: relative;
     padding: 2rem;
-    background-color: var(--green50);
+    background-color: var(--grey25);
     margin: var(--inner-section-space-y);
-    box-shadow: 7px 7px 0px var(--grey);
-    background-image: var(--texture);
 }
 
 .exe__message {
@@ -87,13 +86,11 @@
 
 .two-team-setup__team.left, .four-team-setup__team.left {
     clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-    /* align-self: baseline; */
 }
 
 .two-team-setup__team.right, .four-team-setup__team.right {
     clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
     text-align: end;
-    /* align-self:  flex-end; */
 }
 
 .four-team-setup__teams {
@@ -118,16 +115,3 @@
 .four-team-setup__team.tbd {
     background-color: var(--grey50);
 }
-
-/* .two-team-setup__team.success::before {
-    content: '';
-    position: absolute;
-    padding: 2rem;
-    background-color: var(--grey50);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 100%;
-    z-index:-5;
-} */
