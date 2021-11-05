@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
+import playersListJSON from '../../../../assets/league_players.json'
 
 @Component({
   selector: 'match-type-select',
@@ -10,6 +11,8 @@ import { MatchSetupService } from '../../../services/match-setup.service'
 export class MatchTypeSelectComponent implements OnInit {
 
   constructor(public matchSetupSVC: MatchSetupService) {}
+
+  @Output() emitMatchValue: EventEmitter<null> = new EventEmitter<null>();
 
   leagueTypeValue: number = this.matchSetupSVC.leagueTypeValue;
 
@@ -23,6 +26,23 @@ export class MatchTypeSelectComponent implements OnInit {
     matchType === 2 ? 
     this.matchSetupSVC.quickMatchSetupHandler() 
     : this.matchSetupSVC.leagueSetupHandler();
+    this.resetJsonValuesHandler()
+  }
+
+  resetJsonValuesHandler(){
+    const list = Array(playersListJSON)
+    list.forEach(i => {
+      i['keeper'].forEach(player => player.captain = false)
+      i['def'].forEach(player => player.captain = false)
+      i['def-mid'].forEach(player => player.captain = false)
+      i['att-mid'].forEach(player => player.captain = false)
+      i['att'].forEach(player => player.captain = false)
+    });
+  }
+
+  emitMatchValueChange(){
+    console.log('%cmatch-setup.component.ts line:19 "IN PARENT"', 'color: #ae5a00;', "EMITTING");
+    this.emitMatchValue.emit()
   }
 
 }

@@ -9,7 +9,6 @@ import { MatchTypeSelectComponent } from './components/match-setup/match-type-se
 import { MatchTeamsDisplayComponent } from './components/match-setup/match-teams-display/match-teams-display.component';
 import { MyDirectiveDirective } from './my-directive.directive';
 import { FormationComponent } from './components/match-setup/match-teams-display/formation/formation.component';
-import { TeamListComponent } from './components/match-setup/match-teams-display/team-list/team-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { TeamListComponent } from './components/match-setup/match-teams-display/
     MatchTeamsDisplayComponent,
     MyDirectiveDirective,
     FormationComponent,
-    TeamListComponent
   ],
   imports: [
     BrowserModule,

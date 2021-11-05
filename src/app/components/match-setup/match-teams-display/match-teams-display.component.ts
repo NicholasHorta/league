@@ -1,7 +1,6 @@
-import { Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
+import { Component, ContentChild, DoCheck, ElementRef, OnChanges, OnInit, ViewChild } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
-import { MyDirectiveDirective } from '../../../my-directive.directive'
-import { FormationComponent } from './formation/formation.component';
+
 
 @Component({
   selector: 'match-teams-display',
@@ -20,7 +19,7 @@ export class MatchTeamsDisplayComponent {
   teamTwoCaptain: string = "";
   teamThreeCaptain: string = "";
   teamFourCaptain: string = "";
-  itemsExpanded: boolean = true;
+  teamsheetDisplayView: boolean = true;
 
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
@@ -32,21 +31,19 @@ export class MatchTeamsDisplayComponent {
         break;
       case 3:
         this.viewTeamThreeSubs = !view;
-        break
+        break;
       case 4:
         this.viewTeamFourSubs = !view;
-        break
+        break;
     }
   }
 
   assignCaptainHandler(startersArray: any[], teamNumber: number) {
-    let x = document.querySelectorAll('.toggle-view');
-    x.forEach(i => {
-      console.log('%cmatch-teams-display.component.ts line:64 x', 'color: #007acc;', i);
-    })
+    console.log('%c PRE FALSE SET.....', 'color: #ff7acc;', startersArray);
     startersArray.forEach(player => {
       player.captain = false;
     });
+    console.log('%c AFTER FALSE SET>>', 'color: #ae0f0c;', startersArray);
     const randomPlayerNumber = Math.floor(Math.random() * startersArray.length);
     startersArray[randomPlayerNumber].captain = true;
     switch (teamNumber) {
@@ -58,15 +55,21 @@ export class MatchTeamsDisplayComponent {
         break;
       case 3:
         this.teamThreeCaptain = startersArray[randomPlayerNumber].name;
-        break
+        break;
       case 4:
         this.teamFourCaptain = startersArray[randomPlayerNumber].name;
-        break
+        break;
     }
-
   }
 
   toggleTeamSheetViewHandler() {
-    this.itemsExpanded = !this.itemsExpanded
+    this.teamsheetDisplayView = !this.teamsheetDisplayView;
+  }
+
+  unassignCaptainKeyString(){
+    this.teamOneCaptain = "";
+    this.teamTwoCaptain = "";
+    this.teamThreeCaptain = "";
+    this.teamFourCaptain = "";
   }
 }

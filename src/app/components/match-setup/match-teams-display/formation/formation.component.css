@@ -49,7 +49,7 @@
 /* keeper box outline */
 
 .keeper {
-    border: 3px solid var(--grey50);
+    border: 3px solid var(--grey25);
     padding-left: 3rem;
     padding-right: 3rem;
     border-top-color: transparent;

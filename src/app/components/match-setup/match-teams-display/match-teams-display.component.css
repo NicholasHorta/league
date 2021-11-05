@@ -114,3 +114,7 @@
     left: 0;
     border-radius: 9px;
 }
+
+.captain__select > li {
+    color: var(--orange) !important;
+}

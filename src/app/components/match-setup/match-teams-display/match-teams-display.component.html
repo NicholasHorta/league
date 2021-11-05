@@ -1,55 +1,95 @@
-<div class="view" *ngIf="itemsExpanded">
-    <div class="teams__team-sheets" *ngIf="matchSetupSVC.leagueTypeValue">
+<div class="teams__team-sheets" *ngIf="matchSetupSVC.leagueTypeValue">
+    <div class="team-sheets__quick-match">
+        <div class="team-sheet__team fx_x-b">
+            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}
+            </h2>
+            <div class="team-sheet__options">
+                <span (click)="toggleTeamSheetViewHandler()">
+                    <i class="far fa-minus-square"></i>
+                    <i class="far fa-plus-square"></i>
+                </span>
+                <span (click)="assignCaptainHandler(matchSetupSVC.teamOne[0], 1)">
+                    Assign Captain
+                </span>
+                <span (click)="toggleTeamListHandler(viewTeamOneSubs, 1)">
+                    View {{viewTeamOneSubs ? 'Starters' : 'Subs'}}
+                </span>
+            </div>
+            <!-- <i class="fas fa-chevron-circle-right" (click)="toggleTeamSheetViewHandler()"></i> -->
+            <div class="player-listing">
+                <div *ngIf="!viewTeamOneSubs">
+                    <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[0]"
+                        [ngClass]="{'captain__select': player.captain}">
+                        <li>{{player.name}}</li>
+                        <span class="player-listing__flag">{{player.country.flag}}</span>
+                    </ul>
+                </div>
+                <div *ngIf="viewTeamOneSubs">
+                    <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[1]">
+                        <li class="player__sub">{{player.name}}</li>
+                        <span class="player-listing__flag">{{player.country.flag}}</span>
+                    </ul>
+                    <span class="substitute__key">Substitutes</span>
+                </div>
+            </div>
+            <app-formation [viewTeamOneSubsX]="viewTeamOneSubs"></app-formation>
+            <h3 class="captain">captain: {{this.teamOneCaptain ? this.teamOneCaptain : 'unassigned'}}</h3>
+        </div>
+        <div class="team-sheet__team fx_x-b">
+            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
+            <div class="team-sheet__options">
+                <span (click)="assignCaptainHandler(matchSetupSVC.teamTwo[0], 2)">
+                    Assign Captain
+                </span>
+                <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
+                    View Subs
+                </span>
+            </div>
+            <div class="player-listing">
+                <div *ngIf="!viewTeamTwoSubs">
+                    <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[0]"
+                        [ngClass]="{'captain__select': player.captain}">
+                        <li>{{player.name}}</li>
+                        <span class="player-listing__flag">{{player.country.flag}}</span>
+                    </ul>
+                </div>
+                <div *ngIf="viewTeamTwoSubs">
+                    <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[1]">
+                        <li class="player__sub">{{player.name}}</li>
+                        <span class="player-listing__flag">{{player.country.flag}}</span>
+                    </ul>
+                    <span class="substitute__key">Substitutes</span>
+                </div>
+            </div>
+            <app-formation></app-formation>
+            <h3 class="captain">Capt. {{this.teamTwoCaptain ? this.teamTwoCaptain : 'unassigned'}}</h3>
+        </div>
+    </div>
+
+    <!-- If 4 teams (league option) is chosen -->
+    <div *ngIf="matchSetupSVC.leagueTypeValue === 4">
         <div class="team-sheets__quick-match">
             <div class="team-sheet__team fx_x-b">
-                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}
-                </h2>
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}<i
+                        class="fas fa-chevron-circle-right"></i></h2>
                 <div class="team-sheet__options">
-                    <span (click)="assignCaptainHandler(matchSetupSVC.teamOne[0], 1)">
+                    <span (click)="assignCaptainHandler(matchSetupSVC.teamThree[0], 3)">
                         Assign Captain
                     </span>
-                    <span (click)="toggleTeamListHandler(viewTeamOneSubs, 1)">
-                        View {{viewTeamOneSubs ? 'Starters' : 'Subs'}}
-                    </span>
-                </div>
-                <i class="fas fa-chevron-circle-right" (click)="toggleTeamSheetViewHandler()"></i>
-                <div class="player-listing">
-                    <div *ngIf="!viewTeamOneSubs">
-                        <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[0]">
-                            <li>{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
-                    </div>
-                    <div *ngIf="viewTeamOneSubs">
-                        <ul id="team-one-list" *ngFor="let player of matchSetupSVC.teamOne[1]">
-                            <li class="player__sub">{{player.name}}</li>
-                            <span class="player-listing__flag">{{player.country.flag}}</span>
-                        </ul>
-                        <span class="substitute__key">Substitutes</span>
-                    </div>
-                </div>
-                <app-formation [viewTeamOneSubsX]="viewTeamOneSubs"></app-formation>
-                <h3 class="captain">captain: {{this.teamOneCaptain ? this.teamOneCaptain : 'unassigned'}}</h3>
-            </div>
-            <div class="team-sheet__team fx_x-b">
-                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
-                <div class="team-sheet__options">
-                    <span (click)="assignCaptainHandler(matchSetupSVC.teamTwo[0], 2)">
-                        Assign Captain
-                    </span>
-                    <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
+                    <span (click)="toggleTeamListHandler(viewTeamThreeSubs, 3)">
                         View Subs
                     </span>
                 </div>
                 <div class="player-listing">
-                    <div *ngIf="!viewTeamTwoSubs">
-                        <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[0]">
+                    <div *ngIf="!viewTeamThreeSubs">
+                        <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[0]"
+                            [ngClass]="{'captain__select': player.captain}">
                             <li>{{player.name}}</li>
                             <span class="player-listing__flag">{{player.country.flag}}</span>
                         </ul>
                     </div>
-                    <div *ngIf="viewTeamTwoSubs">
-                        <ul id="team-two-list" *ngFor="let player of matchSetupSVC.teamTwo[1]">
+                    <div *ngIf="viewTeamThreeSubs">
+                        <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[1]">
                             <li class="player__sub">{{player.name}}</li>
                             <span class="player-listing__flag">{{player.country.flag}}</span>
                         </ul>
@@ -57,72 +97,38 @@
                     </div>
                 </div>
                 <app-formation></app-formation>
-                <h3 class="captain">Capt. {{this.teamTwoCaptain ? this.teamTwoCaptain : 'unassigned'}}</h3>
+                <h3 class="captain">captain: {{this.teamThreeCaptain ? this.teamThreeCaptain : 'unassigned'}}</h3>
             </div>
-        </div>
-        
-        <!-- If 4 teams (league option) is chosen -->
-        <div *ngIf="matchSetupSVC.leagueTypeValue === 4">
-            <div class="team-sheets__quick-match">
-                <div class="team-sheet__team fx_x-b">
-                    <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}<i
-                            class="fas fa-chevron-circle-right"></i></h2>
-                    <div class="team-sheet__options">
-                        <span (click)="assignCaptainHandler(matchSetupSVC.teamThree[0], 3)">
-                            Assign Captain
-                        </span>
-                        <span (click)="toggleTeamListHandler(viewTeamThreeSubs, 3)">
-                            View Subs
-                        </span>
-                    </div>
-                    <div class="player-listing">
-                        <div *ngIf="!viewTeamThreeSubs">
-                            <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[0]">
-                                <li>{{player.name}}</li>
-
-                                <span class="player-listing__flag">{{player.country.flag}}</span>
-                            </ul>
-                        </div>
-                        <div *ngIf="viewTeamThreeSubs">
-                            <ul id="team-three-list" *ngFor="let player of matchSetupSVC.teamThree[1]">
-                                <li class="player__sub">{{player.name}}</li>
-                                <span class="player-listing__flag">{{player.country.flag}}</span>
-                            </ul>
-                            <span class="substitute__key">Substitutes</span>
-                        </div>
-                    </div>
-                    <app-formation></app-formation>
+            <div class="team-sheet__team fx_x-b">
+                <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}<i
+                        class="fas fa-chevron-circle-right"></i></h2>
+                <div class="team-sheet__options">
+                    <span (click)="assignCaptainHandler(matchSetupSVC.teamFour[0], 4)">
+                        Assign Captain
+                    </span>
+                    <span (click)="toggleTeamListHandler(viewTeamFourSubs, 4)">
+                        View Subs
+                    </span>
                 </div>
-                <div class="team-sheet__team fx_x-b">
-                    <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}<i
-                            class="fas fa-chevron-circle-right"></i></h2>
-                    <div class="team-sheet__options">
-                        <span (click)="assignCaptainHandler(matchSetupSVC.teamFour[0], 4)">
-                            Assign Captain
-                        </span>
-                        <span (click)="toggleTeamListHandler(viewTeamFourSubs, 4)">
-                            View Subs
-                        </span>
+                <div class="player-listing">
+                    <div *ngIf="!viewTeamFourSubs">
+                        <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[0]"
+                            [ngClass]="{'captain__select': player.captain}">
+                            <li>{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
                     </div>
-                    <div class="player-listing">
-                        <div *ngIf="!viewTeamFourSubs">
-                            <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[0]">
-                                <li>{{player.name}}</li>
-                                <span class="player-listing__flag">{{player.country.flag}}</span>
-                            </ul>
-                        </div>
-                        <div *ngIf="viewTeamFourSubs">
-                            <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[1]">
-                                <li class="player__sub">{{player.name}}</li>
-                                <span class="player-listing__flag">{{player.country.flag}}</span>
-                            </ul>
-                            <span class="substitute__key">Substitutes</span>
-                        </div>
+                    <div *ngIf="viewTeamFourSubs">
+                        <ul id="team-four-list" *ngFor="let player of matchSetupSVC.teamFour[1]">
+                            <li class="player__sub">{{player.name}}</li>
+                            <span class="player-listing__flag">{{player.country.flag}}</span>
+                        </ul>
+                        <span class="substitute__key">Substitutes</span>
                     </div>
-                    <app-formation></app-formation>
                 </div>
+                <app-formation></app-formation>
+                <h3 class="captain">captain: {{this.teamFourCaptain ? this.teamFourCaptain : 'unassigned'}}</h3>
             </div>
         </div>
     </div>
-
 </div>

@@ -15,12 +15,8 @@ export class MatchSetupComponent implements OnInit {
 
   }
 
+  dop(){
+    console.log('%cmatch-setup.component.ts line:19 "IN PARENT"', 'color: #ae5a00;', "IN PARENT");
+  }
 
-  
-
-  //   function rnd() { return Math.floor(Math.random() * 11) }
-
-  // console.log('%cmatch-setup.service.ts line:97 object', 'color: #007acc;', this.playersTeam1[0]);
-  // this.playersTeam1[0][rnd()].captain = true;
-  // this.playersTeam2[0][rnd()].captain = true;
 }

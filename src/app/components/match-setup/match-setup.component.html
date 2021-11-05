@@ -1,4 +1,4 @@
 <div>
-    <match-type-select></match-type-select>
-    <match-teams-display></match-teams-display>
+    <match-type-select (emitMatchValue)="matchTeamsDisplay.unassignCaptainKeyString()"></match-type-select>
+    <match-teams-display #matchTeamsDisplay></match-teams-display>
 </div>

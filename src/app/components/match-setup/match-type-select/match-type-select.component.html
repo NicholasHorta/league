@@ -1,14 +1,14 @@
 <div class="match-setup">
     <div class="match-setup__match-type fx_x-a_y-c">
         <div class="match-type__quick-match">
-            <label for="quick-match" class="quick-match__btn" (click)="matchTypeHandler(2);"
+            <label for="quick-match" class="quick-match__btn" (click)="matchTypeHandler(2); emitMatchValueChange()"
                 [ngClass]="{'match-type__selected': leagueTypeValue === 2 }">
                 Quick Match
             </label>
             <input type="radio" name="match-type" id="quick-match" checked>
         </div>
         <div class="match-type__cup-run">
-            <label for="cup-run" class="cup-run__btn" (click)="matchTypeHandler(4);"
+            <label for="cup-run" class="cup-run__btn" (click)="matchTypeHandler(4); emitMatchValueChange()"
                 [ngClass]="{'match-type__selected': leagueTypeValue === 4 }">
                 Cup Run
             </label>
