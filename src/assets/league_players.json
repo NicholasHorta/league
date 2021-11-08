@@ -6,7 +6,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"},
             "rating": "89",
             "id": "k11",
-            "captain": false
+            "captain": false,
+            "position": "GK"
         },
         {
             "name": "Manuel Neuer",
@@ -14,7 +15,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "90",
             "id": "k12",
-            "captain": false
+            "captain": false,
+            "position": "GK"
         },
         {
             "name": "Jan Oblak",
@@ -22,7 +24,8 @@
             "country": {"name": "Slovenia", "flag": "🇸🇮"},
             "rating": "91",
             "id": "k13",
-            "captain": false
+            "captain": false,
+            "position": "GK"
         },
         {
             "name": "Andre ter Stegen",
@@ -30,7 +33,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "90",
             "id": "k14",
-            "captain": false
+            "captain": false,
+            "position": "GK"
         }
     ],
     "def": [
@@ -40,7 +44,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "89",
             "id": "d21",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Thiago Silva",
@@ -48,7 +53,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "85",
             "id": "d22",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Kalidou Koulibaly",
@@ -56,7 +62,8 @@
             "country": {"name": "Senegal", "flag": "🇸🇳"},
             "rating": "88",
             "id": "d23",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Matthijs de Ligt",
@@ -64,7 +71,8 @@
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "85",
             "id": "d24",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Virgil van Dijk",
@@ -72,7 +80,8 @@
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "90",
             "id": "d25",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Ruben Dias",
@@ -80,7 +89,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "81",
             "id": "d26",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Kyle Walker",
@@ -88,7 +98,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"},
             "rating": "85",
             "id": "d27",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Jerome Boateng",
@@ -96,7 +107,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "82",
             "id": "d28",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Diego Godin",
@@ -104,7 +116,8 @@
             "country": {"name": "Uruguay", "flag": "🇺🇾"},
             "rating": "85",
             "id": "d29",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Mats Hummels",
@@ -112,7 +125,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "86",
             "id": "d210",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Gerard Pique",
@@ -120,7 +134,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "86",
             "id": "d211",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Raphael Varane",
@@ -128,7 +143,8 @@
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "86",
             "id": "d212",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Giorgio Chiellini",
@@ -136,7 +152,8 @@
             "country": {"name": "Italy", "flag": "🇮🇹"}, 
             "rating": "87",
             "id": "d213",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Harry Maguire",
@@ -144,7 +161,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "82",
             "id": "d214",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Aymeric Laporte",
@@ -152,7 +170,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "87",
             "id": "d215",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Antonio Rudiger",
@@ -160,7 +179,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "81",
             "id": "d216",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "John Stones",
@@ -168,7 +188,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "80",
             "id": "d217",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Marquinhos",
@@ -176,7 +197,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "85",
             "id": "d218",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Eric Dier",
@@ -184,7 +206,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "78",
             "id": "d219",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         },
         {
             "name": "Sven Botman",
@@ -192,7 +215,8 @@
             "country": {"name": "Netherlands", "flag": "🇳🇱"},
             "rating": "69",
             "id": "d220",
-            "captain": false
+            "captain": false,
+            "position": "DEF"
         }
     ],
     "def-mid": [
@@ -202,7 +226,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "75",
             "id": "dm31",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Jorginho",
@@ -210,7 +235,8 @@
             "country": {"name": "Italy", "flag": "🇮🇹"}, 
             "rating": "83",
             "id": "dm32",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Joshua Kimmich",
@@ -218,7 +244,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "88",
             "id": "dm33",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Fernandinho",
@@ -226,7 +253,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "84",
             "id": "dm34",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Sergio Busquets",
@@ -234,7 +262,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "87",
             "id": "dm35",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Wilfred Ndidi",
@@ -242,7 +271,8 @@
             "country": {"name": "Nigeria", "flag": "🇳🇬"},
             "rating": "84",
             "id": "dm36",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Marcelo Brozovic",
@@ -250,7 +280,8 @@
             "country": {"name": "Croatia", "flag": "🇭🇷"},
             "rating": "84",
             "id": "dm37",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Rodri",
@@ -258,7 +289,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "85",
             "id": "dm38",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Fabinho",
@@ -266,7 +298,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "87",
             "id": "dm39",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Casemiro",
@@ -274,7 +307,8 @@
             "country": {"name": "Brazil", "flag": "🇧🇷"}, 
             "rating": "89",
             "id": "dm310",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "N'Golo Kante",
@@ -282,7 +316,8 @@
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "88",
             "id": "dm311",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Declan Rice",
@@ -290,7 +325,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "79",
             "id": "dm312",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Leon Goretzka",
@@ -298,7 +334,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "84",
             "id": "dm313",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Franck Kessie",
@@ -306,7 +343,8 @@
             "country": {"name": "Ivory Coast", "flag": "🇨🇮"},
             "rating": "77",
             "id": "dm314",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Joao Cancelo",
@@ -314,7 +352,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "83",
             "id": "dm315",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         },
         {
             "name": "Idrissa Gueye",
@@ -322,7 +361,8 @@
             "country": {"name": "Senegal", "flag": "🇸🇳"},
             "rating": "84",
             "id": "dm316",
-            "captain": false
+            "captain": false,
+            "position": "DM"
         }
     ],
     "att-mid": [
@@ -332,7 +372,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "80",
             "id": "am41",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Thomas Muller",
@@ -340,7 +381,8 @@
             "country": {"name": "Germany", "flag": "🇩🇪"},
             "rating": "86",
             "id": "am42",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Bruno Fernandes",
@@ -348,7 +390,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "87",
             "id": "am43",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Kevin De Brunye",
@@ -356,7 +399,8 @@
             "country": {"name": "Belgium", "flag": "🇧🇪"},
             "rating": "91",
             "id": "am44",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Lionel Messi",
@@ -364,7 +408,8 @@
             "country": {"name": "Argentina", "flag": "🇦🇷"},
             "rating": "93",
             "id": "am45",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Paulo Dybala",
@@ -372,7 +417,8 @@
             "country": {"name": "Argentina", "flag": "🇦🇷"},
             "rating": "88",
             "id": "am46",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Bernardo Silva",
@@ -380,7 +426,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "87",
             "id": "am47",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Christian Eriksen",
@@ -388,7 +435,8 @@
             "country": {"name": "Denmark", "flag": "🇩🇰"},
             "rating": "85",
             "id": "am48",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Joao Felix",
@@ -396,7 +444,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "81",
             "id": "am49",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Raheem Sterling",
@@ -404,7 +453,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "88",
             "id": "am410",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Mohammed Salah",
@@ -412,7 +462,8 @@
             "country": {"name": "Egypt", "flag": "🇪🇬"}, 
             "rating": "91",
             "id": "am411",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         },
         {
             "name": "Isco",
@@ -420,7 +471,8 @@
             "country": {"name": "Spain", "flag": "🇪🇸"}, 
             "rating": "84",
             "id": "am412",
-            "captain": false
+            "captain": false,
+            "position": "AM"
         }
     ],
     "att": [
@@ -430,7 +482,8 @@
             "country": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 
             "rating": "88",
             "id": "a51",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Karim Benzema",
@@ -438,7 +491,8 @@
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "89",
             "id": "a52",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Christiano Ronaldo",
@@ -446,7 +500,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "99",
             "id": "a53",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Romelu Lukaku",
@@ -454,7 +509,8 @@
             "country": {"name": "Belgium", "flag": "🇧🇪"},
             "rating": "85",
             "id": "a54",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Erling Haaland",
@@ -462,7 +518,8 @@
             "country": {"name": "Norway", "flag": "🇳🇴"},
             "rating": "84",
             "id": "a55",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Robert Lewandowski",
@@ -470,7 +527,8 @@
             "country": {"name": "Poland", "flag": "🇵🇱"},
             "rating": "91",
             "id": "a56",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Kylian Mbappe",
@@ -478,7 +536,8 @@
             "country": {"name": "France", "flag": "🇫🇷"}, 
             "rating": "90",
             "id": "a57",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         },
         {
             "name": "Andre Silva",
@@ -486,7 +545,8 @@
             "country": {"name": "Portugal", "flag": "🇵🇹"},
             "rating": "79",
             "id": "a58",
-            "captain": false
+            "captain": false,
+            "position": "ST"
         }
     ]
 }

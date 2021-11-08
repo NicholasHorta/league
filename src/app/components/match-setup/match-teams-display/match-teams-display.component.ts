@@ -1,4 +1,4 @@
-import { Component, ContentChild, DoCheck, ElementRef, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 
@@ -7,9 +7,10 @@ import { MatchSetupService } from '../../../services/match-setup.service'
   templateUrl: './match-teams-display.component.html',
   styleUrls: ['./match-teams-display.component.css']
 })
+
 export class MatchTeamsDisplayComponent {
 
-  constructor(public matchSetupSVC: MatchSetupService, public item: ElementRef) { }
+  constructor(public matchSetupSVC: MatchSetupService) { }
 
   viewTeamOneSubs: boolean = false;
   viewTeamTwoSubs: boolean = false;
@@ -20,6 +21,9 @@ export class MatchTeamsDisplayComponent {
   teamThreeCaptain: string = "";
   teamFourCaptain: string = "";
   teamsheetDisplayView: boolean = true;
+  // teamFormationKeysArray: string[] = 
+
+
 
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
@@ -66,7 +70,7 @@ export class MatchTeamsDisplayComponent {
     this.teamsheetDisplayView = !this.teamsheetDisplayView;
   }
 
-  unassignCaptainKeyString(){
+  unassignCaptainKeyString() {
     this.teamOneCaptain = "";
     this.teamTwoCaptain = "";
     this.teamThreeCaptain = "";

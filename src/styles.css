@@ -26,6 +26,7 @@ h2, h3, h4, li, p, span, label {
     --orange: #F46E39;
     --red: #ED3744;
     --purple: #BE2C88;
+    --purple50: #e49dc9;
     --white: #fff;
     --grey: #646464;
     --grey50: #50484799;
@@ -34,7 +35,7 @@ h2, h3, h4, li, p, span, label {
     --radius: 5px;
     --section-space: 8rem 2rem 0 2rem;
     --inner-section-space-y: 4rem 0;
-    --max-width: 800px;
+    --max-width: 1000px;
     --texture: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23ffffff' fill-opacity='0.46' fill-rule='evenodd'/%3E%3C/svg%3E");;
 }
 
@@ -71,4 +72,9 @@ ul {
 @font-face {
     font-family: 'script';
     src: url('./assets/font/Nunito/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'team';
+    src: url('./assets/font/Poppins/Poppins-Light.ttf');
 }

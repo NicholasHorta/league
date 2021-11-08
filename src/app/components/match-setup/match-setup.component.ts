@@ -12,11 +12,6 @@ export class MatchSetupComponent implements OnInit {
   constructor(public matchSetupSCV: MatchSetupService) {}
 
   ngOnInit(): void {
-
-  }
-
-  dop(){
-    console.log('%cmatch-setup.component.ts line:19 "IN PARENT"', 'color: #ae5a00;', "IN PARENT");
   }
 
 }
