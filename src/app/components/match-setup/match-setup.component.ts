@@ -9,9 +9,14 @@ import { MatchSetupService } from '../../services/match-setup.service'
 })
 export class MatchSetupComponent implements OnInit {
 
-  constructor(public matchSetupSCV: MatchSetupService) {}
+  constructor(public matchSetupSCV: MatchSetupService) { }
 
   ngOnInit(): void {
   }
 
+
+  proceedToMatchDayHandler() {
+    
+  }
 }
+

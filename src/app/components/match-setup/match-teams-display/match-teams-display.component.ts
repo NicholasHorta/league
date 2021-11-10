@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 
@@ -12,6 +12,7 @@ export class MatchTeamsDisplayComponent {
 
   constructor(public matchSetupSVC: MatchSetupService) { }
 
+
   viewTeamOneSubs: boolean = false;
   viewTeamTwoSubs: boolean = false;
   viewTeamThreeSubs: boolean = false;
@@ -20,8 +21,10 @@ export class MatchTeamsDisplayComponent {
   teamTwoCaptain: string = "";
   teamThreeCaptain: string = "";
   teamFourCaptain: string = "";
-  teamsheetDisplayView: boolean = true;
-  // teamFormationKeysArray: string[] = 
+  teamDisplayToggleTeamOne: boolean = true;
+  teamDisplayToggleTeamTwo: boolean = true;
+  teamDisplayToggleTeamThree: boolean = true;
+  teamDisplayToggleTeamFour: boolean = true;
 
 
 
@@ -43,11 +46,9 @@ export class MatchTeamsDisplayComponent {
   }
 
   assignCaptainHandler(startersArray: any[], teamNumber: number) {
-    console.log('%c PRE FALSE SET.....', 'color: #ff7acc;', startersArray);
     startersArray.forEach(player => {
       player.captain = false;
     });
-    console.log('%c AFTER FALSE SET>>', 'color: #ae0f0c;', startersArray);
     const randomPlayerNumber = Math.floor(Math.random() * startersArray.length);
     startersArray[randomPlayerNumber].captain = true;
     switch (teamNumber) {
@@ -66,8 +67,21 @@ export class MatchTeamsDisplayComponent {
     }
   }
 
-  toggleTeamSheetViewHandler() {
-    this.teamsheetDisplayView = !this.teamsheetDisplayView;
+  toggleTeamSheetViewHandler(teamNumber: number) {
+    switch(teamNumber){
+      case 1:
+        this.teamDisplayToggleTeamOne = !this.teamDisplayToggleTeamOne;
+        break;
+      case 2:
+        this.teamDisplayToggleTeamTwo = !this.teamDisplayToggleTeamTwo;
+        break;
+      case 3:
+        this.teamDisplayToggleTeamThree = !this.teamDisplayToggleTeamThree;
+        break;
+      case 4:
+        this.teamDisplayToggleTeamFour = !this.teamDisplayToggleTeamFour;
+        break;
+    }
   }
 
   unassignCaptainKeyString() {

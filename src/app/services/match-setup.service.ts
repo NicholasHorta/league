@@ -92,18 +92,13 @@ export class MatchSetupService {
       subPositionSpliceValues.forEach(i => {
         subs.push(...fullTeamList.splice(i, 1));
       });
-      const x = [startingEleven, subs]
-      // x[0].forEach(i => i.captain = false);
-      console.log('%c SERVICE--', 'color: #af0eaf;', fullTeamList);
-      // console.log('%cmatch-setup.service.ts line:98 object', 'color: #77aecc;', );
-      return x
+      const configuredTeam = [startingEleven, subs]
+      return configuredTeam;
     }
 
     if (teamsAmount === 2) {
       this.teamOne = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      console.log('%c TEAM ONE!!!', 'color: #04eacc;', this.teamOne);
       this.teamTwo = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
-      console.log('%c TEAM TWO!!!', 'color: #00880c;', this.teamOne);
 
     } else {
       this.teamOne = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);

@@ -3,15 +3,10 @@
     flex-direction: column;
     flex-grow: 5;
     width: 600px;
-    /* Fixed Height */
     height: 528px;
     margin: 0 auto;
-    /* background-color: var(--green50) */
     justify-content: space-around;
-    /* border-radius: 8px; */
-    /* box-shadow: 7px 7px 0px var(--grey); */
     background: var(--green50);
-    /* border: 2px solid var(--grey); */
 }
 
 .player-positions__keeper, .player-positions__att, .player-positions__def, .player-positions__def-mid, .player-positions__att-mid {

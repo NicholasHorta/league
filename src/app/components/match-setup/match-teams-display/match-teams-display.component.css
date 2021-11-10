@@ -4,13 +4,16 @@
     position: relative;
 }
 
+.team-sheets__quick-match {
+    /* background-color: var(--grey25); */
+}
+
 .team-sheets__team {
     flex-direction: row-reverse;
-    margin-bottom: 2rem;
     position: relative;
     margin: 0 auto;
     margin: var(--section-space);
-    margin-bottom: 12rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -33,7 +36,7 @@
 .team-sheet__options {
     position: absolute;
     left: 0;
-    top: -2.5rem;
+    top: -3.5rem;
     height: 38px;
 }
 
@@ -119,4 +122,14 @@
 .captain__select > li {
     color: var(--purple) !important;
     font-weight: 900 !important;
+}
+
+.team-divider {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding: 1px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 9px;
 }

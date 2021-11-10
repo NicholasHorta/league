@@ -1,12 +1,8 @@
 <div>
     <match-type-select (emitMatchValue)="matchTeamsDisplay.unassignCaptainKeyString()"></match-type-select>
     <match-teams-display #matchTeamsDisplay></match-teams-display>
-    <!-- <button>Begin</button> -->
+    <button class="match-setup__progress-btn fx_x-c_y-c" (click)="proceedToMatchDayHandler()">
+        Match Day
+        <i class="fas fa-chevron-right"></i>
+    </button>
 </div>
-
-<!-- 
-    <i class="fas fa-tshirt"></i>
-    Crests
-<i class="fab fa-shirtsinbulk"></i>
-<i class="fab fa-cotton-bureau"></i>
- -->
