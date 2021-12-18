@@ -26,12 +26,12 @@ export class MatchTypeSelectComponent implements OnInit {
     matchType === 2 ? 
     this.matchSetupSVC.quickMatchSetupHandler() 
     : this.matchSetupSVC.leagueSetupHandler();
-    this.resetJsonValuesHandler()
+    this.resetJsonValuesHandler();
   }
 
   resetJsonValuesHandler(){
-    const list = Array(playersListJSON)
-    list.forEach(i => {
+    const playerList = Array(playersListJSON)
+    playerList.forEach(i => {
       i['keeper'].forEach(player => player.captain = false)
       i['def'].forEach(player => player.captain = false)
       i['def-mid'].forEach(player => player.captain = false)

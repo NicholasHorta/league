@@ -29,11 +29,11 @@ export class MatchSetupService {
   // A copy of the teams array is taken to remove two teams randomly 
   // The result is returned in an array of two remaining teams
   quickMatchSetupHandler() {
-    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray)
+    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
   }
   // The result is returns the teams array in original state
   leagueSetupHandler() {
-    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray)
+    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
   }
 
   randomiseTeamNamesArrayHandler(staticTeamsArray: string[]) {
