@@ -1,5 +1,5 @@
 <div>
-    <match-type-select (emitMatchValue)="matchTeamsDisplay.unassignCaptainKeyString()"></match-type-select>
+    <match-type-select (captaincyStringReset)="matchTeamsDisplay.unassignCaptainKeyString()"></match-type-select>
     <match-teams-display #matchTeamsDisplay></match-teams-display>
     <a routerLink="/league-play" *ngIf="matchSetupSVC.leagueTypeValue" class="match-setup__progress-btn" (click)="proceedToMatchDayHandler()">
         Match Day

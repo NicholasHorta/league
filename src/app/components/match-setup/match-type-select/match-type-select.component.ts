@@ -12,7 +12,7 @@ export class MatchTypeSelectComponent implements OnInit {
 
   constructor(public matchSetupSVC: MatchSetupService) {}
 
-  @Output() emitMatchValue: EventEmitter<null> = new EventEmitter<null>();
+  @Output() captaincyStringReset: EventEmitter<null> = new EventEmitter<null>();
 
   leagueTypeValue: number = this.matchSetupSVC.leagueTypeValue;
 
@@ -26,23 +26,23 @@ export class MatchTypeSelectComponent implements OnInit {
     matchType === 2 ? 
     this.matchSetupSVC.quickMatchSetupHandler() 
     : this.matchSetupSVC.leagueSetupHandler();
-    this.resetJsonValuesHandler();
+    // this.resetJsonValuesHandler();
   }
 
-  resetJsonValuesHandler(){
-    const playerList = Array(playersListJSON)
-    playerList.forEach(i => {
-      i['keeper'].forEach(player => player.captain = false)
-      i['def'].forEach(player => player.captain = false)
-      i['def-mid'].forEach(player => player.captain = false)
-      i['att-mid'].forEach(player => player.captain = false)
-      i['att'].forEach(player => player.captain = false)
-    });
-  }
+  // resetJsonValuesHandler(){
+  //   console.log('%cmatch-type-select.component.ts line:33 "I JUST RAN"', 'color: #ae7acc;', "I JUST RAN");
+  //   const playerList = Array(playersListJSON)
+  //   playerList.forEach(i => {
+  //     i['keeper'].forEach(player => player.captain = false)
+  //     i['def'].forEach(player => player.captain = false)
+  //     i['def-mid'].forEach(player => player.captain = false)
+  //     i['att-mid'].forEach(player => player.captain = false)
+  //     i['att'].forEach(player => player.captain = false)
+  //   });
+  // }
 
-  emitMatchValueChange(){
-    console.log('%cmatch-setup.component.ts line:19 "IN PARENT"', 'color: #ae5a00;', "EMITTING");
-    this.emitMatchValue.emit()
+  clearCaptaincyStringValue(){
+    this.captaincyStringReset.emit()
   }
 
 }

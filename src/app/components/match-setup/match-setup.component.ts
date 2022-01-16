@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MatchSetupService } from '../../services/match-setup.service'
 
 
@@ -9,6 +9,8 @@ import { MatchSetupService } from '../../services/match-setup.service'
 })
 export class MatchSetupComponent implements OnInit {
 
+  // @Output 
+
   constructor(public matchSetupSVC: MatchSetupService) { }
 
   ngOnInit(): void {
@@ -16,7 +18,7 @@ export class MatchSetupComponent implements OnInit {
 
 
   proceedToMatchDayHandler() {
-    console.log('%cmatch-setup.component.ts line:19 ', 'color: #007acc;', this.matchSetupSVC);
+
   }
 }
 

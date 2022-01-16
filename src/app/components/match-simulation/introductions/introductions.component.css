@@ -1,12 +1,24 @@
+/* SOME CSS IN THIS COMPONENT IS SHARED WITH ANOTHER */
+/* THIS CSS CAN BE FOUND IN SRC/STYLES.CSS */
+
 .match-intro__quick-match-container {
     padding: var(--section-space);
 }
 
+.qwe {
+    display: grid;
+    
+}
+
 .quick-match-intro__title {
-    text-align: center;
     font-size: 2rem;
     padding: 1.25rem 3rem;
     background-color: var(--red);
-    display: block;
     color: var(--white);
+    margin-right: 2rem;
+}
+
+.quick-match-intro__intro-comment-text > span{
+    color: var(--white);
+    background-color: var(--red);
 }

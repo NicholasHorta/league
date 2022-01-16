@@ -59,6 +59,7 @@ export class MatchSetupService {
       [...playersListJSON['att']]
     ];
 
+    // Reset changed JSON properties such as Captaincy
     this.resetJsonPropertiesOnChangeHandler(allPlayersArray);
 
     // [1 - kpr, 5 - defs, 4 - defmids, 3 - attmids, 2 - att] -- Including subs
@@ -106,6 +107,8 @@ export class MatchSetupService {
       this.teamThree = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
       this.teamFour = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     }
+    console.log('%cmatch-setup.service.ts line:109 this.teamOne', 'color: #007acc;', this.teamOne[0]);
+    console.log('%cmatch-setup.service.ts line:109 this.teamTwo[0]', 'color: #007acc;', this.teamTwo[0]);
   }
 
   resetJsonPropertiesOnChangeHandler(allPlayersArray: any[][]){

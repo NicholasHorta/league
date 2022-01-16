@@ -1,3 +1,6 @@
+/* SOME CSS IN THIS COMPONENT IS SHARED WITH ANOTHER */
+/* THIS CSS CAN BE FOUND IN SRC/STYLES.CSS */
+
 .match-setup {
     padding: var(--section-space);
     border-radius: var(--radius);
@@ -46,13 +49,6 @@
     }
 }
 
-.match-setup__team-bars {
-    position: relative;
-    padding: 2rem;
-    background-color: var(--grey25);
-    margin: var(--inner-section-space-y);
-}
-
 .exe__message {
     font-size: 1.75rem;
     text-align: center;
@@ -75,23 +71,6 @@
     width: 100%;
 }
 
-.two-team-setup__team, .four-team-setup__team {
-    padding: 1rem 2rem;
-    background-color: var(--blue);
-    color: var(--white);
-    width: 300px;
-    letter-spacing: 0.05rem;
-    font-size: 1.15rem;
-}
-
-.two-team-setup__team.left, .four-team-setup__team.left {
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-}
-
-.two-team-setup__team.right, .four-team-setup__team.right {
-    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
-    text-align: end;
-}
 
 .four-team-setup__teams {
     display: flex;

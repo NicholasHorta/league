@@ -1,28 +1,37 @@
 <div>
     <div *ngIf="this.matchType === 2" class="match-intro__quick-match-container">
-        <span class="quick-match-intro__title">Super Cup Final</span>
-        <div>
-            <span>{{confirmedTeams[0]}}</span>
-            <span>VS</span>
-            <span>{{confirmedTeams[1]}}</span>
-        </div>
-        <p>
-            <span>
+        <div class="fx_x-b_y-c">
+            <p class="quick-match-intro__title">Welcome to Final Match Day</p>
+            <p class="quick-match-intro__intro-comment-text">
                 Hello and good evening to everyone joining us. It's the moment we've all been waiting for and the
                 excitement in the stadium is palpable! Everyone is on their feet with baited breath as to what the
-                outcome of the final match today will be between {{confirmedTeams[0]}} and {{confirmedTeams[1]}}.
+                outcome of the final match today will be between <span>{{confirmedTeams[0]}}</span> and
+                <span>{{confirmedTeams[1]}}</span>.
                 No doubt the support for either team will be deafening today, as the winner here will be crowned
                 champions.
-            </span>
-            <span>
-                Now let’s get ready to put predictions aside and for the next 90 minutes let the quality and performance
+            </p>
+            <p class="quick-match-intro__intro-comment-text">
+                Now let’s get ready to put predictions aside and for the next 90 minutes let the quality and
+                performance
                 of these two super clubs and their world-class footballers decide what is written in histoy on this
                 day.
-            </span>
-            <span>
-                The teams have taken to the pitch and are in position. The stadium is electric as we wait for the
+            </p>
+            <p class="quick-match-intro__intro-comment-text">
+                The teams have taken to the pitch and are in position. The stadium is electric as the two team captains
+                <span>{{teamOneCaptain}}</span> and <span>{{teamTwoCaptain}}</span> exchange pleasantries and take their positions.
+            </p>
+            <p class="quick-match-intro__intro-comment-text">
+                Finally we wait for the
                 referee to blow the whistle and start the game off...
-            </span>
-        </p>
+            </p>
+        </div>
+        <div class="match-setup__team-bars">
+            <div class="team-bars__two-team-setup fx_x-b_y-c">
+                <p class="two-team-setup__team left">{{confirmedTeams[0]}}</p>
+                <p class="two-team-setup__team success">🏆</p>
+                <p class="two-team-setup__team right">{{confirmedTeams[1]}}</p>
+            </div>
+        </div>
     </div>
+
 </div>
