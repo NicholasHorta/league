@@ -60,7 +60,7 @@
     flex-grow: 1;
     line-height: 2rem;
     text-align: end;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .player-listing>div>ul {
