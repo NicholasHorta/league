@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import { MatchSetupService } from '../../services/match-setup.service'
+
+@Component({
+  selector: 'match-simulation',
+  templateUrl: './match-simulation.component.html',
+  styleUrls: ['./match-simulation.component.css']
+})
+export class MatchSimulationComponent implements OnInit {
+
+  constructor(private matchSetupSVC: MatchSetupService) { }
+
+  matchType: Number = this.matchSetupSVC.leagueTypeValue;
+  confirmedTeams: string[] = this.matchSetupSVC.generatedTeamsArray;
+  ngOnInit(): void {
+    console.log('%cmatch-simulation.component.ts line:15 this.confirmedTeams', 'color: #007acc;', this.confirmedTeams);
+  }
+
+}

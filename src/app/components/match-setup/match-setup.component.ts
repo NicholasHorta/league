@@ -9,14 +9,14 @@ import { MatchSetupService } from '../../services/match-setup.service'
 })
 export class MatchSetupComponent implements OnInit {
 
-  constructor(public matchSetupSCV: MatchSetupService) { }
+  constructor(public matchSetupSVC: MatchSetupService) { }
 
   ngOnInit(): void {
   }
 
 
   proceedToMatchDayHandler() {
-    
+    console.log('%cmatch-setup.component.ts line:19 ', 'color: #007acc;', this.matchSetupSVC);
   }
 }
 

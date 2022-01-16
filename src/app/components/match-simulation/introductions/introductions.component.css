@@ -1,0 +1,12 @@
+.match-intro__quick-match-container {
+    padding: var(--section-space);
+}
+
+.quick-match-intro__title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.25rem 3rem;
+    background-color: var(--red);
+    display: block;
+    color: var(--white);
+}

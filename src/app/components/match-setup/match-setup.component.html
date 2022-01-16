@@ -1,8 +1,8 @@
 <div>
     <match-type-select (emitMatchValue)="matchTeamsDisplay.unassignCaptainKeyString()"></match-type-select>
     <match-teams-display #matchTeamsDisplay></match-teams-display>
-    <button class="match-setup__progress-btn fx_x-c_y-c" (click)="proceedToMatchDayHandler()">
+    <a routerLink="/league-play" *ngIf="matchSetupSVC.leagueTypeValue" class="match-setup__progress-btn" (click)="proceedToMatchDayHandler()">
         Match Day
         <i class="fas fa-chevron-right"></i>
-    </button>
+    </a>
 </div>

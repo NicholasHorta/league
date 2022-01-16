@@ -1,4 +1,4 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import playersListJSON from '../../assets/league_players.json'
 
 
@@ -8,7 +8,7 @@ import playersListJSON from '../../assets/league_players.json'
 
 export class MatchSetupService {
 
-  leagueTypeValue: number = 2;
+  leagueTypeValue: number = 2; // NB
   leagueTeamsArray: string[] = [
     'Galaxy FC', 'Valhalla Utd', 'Bavaria Stark', 'Clube Europa'
   ];

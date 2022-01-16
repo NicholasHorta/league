@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MatchSetupComponent } from './components/match-setup/match-setup.component';
+import { MatchSimulationComponent } from './components/match-simulation/match-simulation.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', redirectTo: 'league-setup', pathMatch: 'full'},
+  {path: 'league-setup', component: MatchSetupComponent},
+  {path: 'league-play', component: MatchSimulationComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

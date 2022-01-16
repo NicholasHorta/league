@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="match-setup__team-bars">
-    <p class="exe__message" *ngIf="!matchSetupSVC.leagueTypeValue">Select an option to simulate</p>
+    <p class="exe__message" *ngIf="!matchSetupSVC.leagueTypeValue">Select an option to begin</p>
         <div class="team-bars__two-team-setup fx_x-b_y-c" *ngIf="matchSetupSVC.leagueTypeValue === 2">
             <p class="two-team-setup__team left">{{matchSetupSVC.generatedTeamsArray[0]}}</p>
             <p class="two-team-setup__team success">🏆</p>
