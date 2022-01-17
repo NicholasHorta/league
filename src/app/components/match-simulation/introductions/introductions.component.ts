@@ -18,10 +18,8 @@ export class IntroductionsComponent implements OnInit {
 
   ngOnInit(): void {
     const teamCaptainsArr = this.confirmedTeamsArr.filter(i => i.captain ? i : null);
-    console.log('%cintroductions.component.ts line:21 this.teamOneCaptain', 'color: #007acc;', teamCaptainsArr);
     this.teamOneCaptain = teamCaptainsArr[0].name;
     this.teamTwoCaptain = teamCaptainsArr[1].name;
   }
-
 
 }

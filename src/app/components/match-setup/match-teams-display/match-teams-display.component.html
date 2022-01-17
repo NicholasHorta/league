@@ -41,7 +41,7 @@
                     Assign Captain
                 </span>
                 <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
-                    View Subs
+                    View {{viewTeamTwoSubs ? 'Starters' : 'Subs'}}
                 </span>
                 <span (click)="this.toggleTeamSheetViewHandler(2)">{{this.teamDisplayToggleTeamTwo ? 'Hide':
                     'Show'}}</span>
@@ -79,7 +79,7 @@
                     Assign Captain
                 </span>
                 <span (click)="toggleTeamListHandler(viewTeamThreeSubs, 3)">
-                    View Subs
+                    View {{viewTeamThreeSubs ? 'Starters' : 'Subs'}} 
                 </span>
                 <span (click)="this.toggleTeamSheetViewHandler(3)">{{this.teamDisplayToggleTeamThree ? 'Hide':
                     'Show'}}</span>
@@ -113,7 +113,7 @@
                     Assign Captain
                 </span>
                 <span (click)="toggleTeamListHandler(viewTeamFourSubs, 4)">
-                    View Subs
+                    View {{viewTeamFourSubs ? 'Starters' : 'Subs'}}
                 </span>
                 <span (click)="this.toggleTeamSheetViewHandler(4)">{{this.teamDisplayToggleTeamFour ? 'Hide':
                     'Show'}}</span>

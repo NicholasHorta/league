@@ -8,7 +8,7 @@ import playersListJSON from '../../assets/league_players.json'
 
 export class MatchSetupService {
 
-  leagueTypeValue: number = 2; // NB
+  leagueTypeValue: number = 2;
   leagueTeamsArray: string[] = [
     'Galaxy FC', 'Valhalla Utd', 'Bavaria Stark', 'Clube Europa'
   ];
@@ -107,8 +107,6 @@ export class MatchSetupService {
       this.teamThree = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
       this.teamFour = sortStarterAndSubsHandler(generatedPlayersArray.splice(0, 15), this.subPositionSpliceArray);
     }
-    console.log('%cmatch-setup.service.ts line:109 this.teamOne', 'color: #007acc;', this.teamOne[0]);
-    console.log('%cmatch-setup.service.ts line:109 this.teamTwo[0]', 'color: #007acc;', this.teamTwo[0]);
   }
 
   resetJsonPropertiesOnChangeHandler(allPlayersArray: any[][]){

@@ -1,5 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 import { MatchSetupService } from '../../services/match-setup.service'
+import { MatchTeamsDisplayComponent } from './match-teams-display/match-teams-display.component';
 
 
 @Component({
@@ -9,16 +11,11 @@ import { MatchSetupService } from '../../services/match-setup.service'
 })
 export class MatchSetupComponent implements OnInit {
 
-  // @Output 
 
   constructor(public matchSetupSVC: MatchSetupService) { }
 
   ngOnInit(): void {
   }
 
-
-  proceedToMatchDayHandler() {
-
-  }
 }
 

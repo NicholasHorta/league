@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component} from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 
@@ -11,7 +11,6 @@ import { MatchSetupService } from '../../../services/match-setup.service'
 export class MatchTeamsDisplayComponent {
 
   constructor(public matchSetupSVC: MatchSetupService) { }
-
 
   viewTeamOneSubs: boolean = false;
   viewTeamTwoSubs: boolean = false;
@@ -26,8 +25,7 @@ export class MatchTeamsDisplayComponent {
   teamDisplayToggleTeamThree: boolean = true;
   teamDisplayToggleTeamFour: boolean = true;
 
-
-
+  
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
       case 1:
@@ -46,6 +44,7 @@ export class MatchTeamsDisplayComponent {
   }
 
   assignCaptainHandler(startersArray: any[], teamNumber: number) {
+    // Unassigns prior to re-assigning
     startersArray.forEach(player => {
       player.captain = false;
     });

@@ -14,6 +14,7 @@ import { QuickMatchSimComponent } from './components/match-simulation/quick-matc
 import { CupRunSimComponent } from './components/match-simulation/cup-run-sim/cup-run-sim.component';
 import { SimResultsComponent } from './components/match-simulation/sim-results/sim-results.component';
 import { IntroductionsComponent } from './components/match-simulation/introductions/introductions.component';
+import { RefreshResolver } from './services/refresh.resolver';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { IntroductionsComponent } from './components/match-simulation/introducti
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RefreshResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
