@@ -1,24 +1,30 @@
 <div>
     <div *ngIf="this.matchType === 2" class="match-intro__quick-match-container">
-        <div class="fx_x-b_y-c">
-            <p class="quick-match-intro__title">Welcome to Final Match Day</p>
+        <p class="quick-match-intro__title" title="toggle commentary view">
+            Welcome to Final Match Day
+            <span class="title__commentary" (click)="toggleCommentaryView()">x</span>
+        </p>
+        <div *ngIf="this.commentaryView" class="quick-match__quick-match-intro fx_x-b">
             <p class="quick-match-intro__intro-comment-text">
                 Hello and good evening to everyone joining us. It's the moment we've all been waiting for and the
                 excitement in the stadium is palpable! Everyone is on their feet with baited breath as to what the
-                outcome of the final match today will be between <span>{{confirmedTeams[0]}}</span> and
-                <span>{{confirmedTeams[1]}}</span>.
+                outcome of the final match today will be between...<br>
+                <span>{{confirmedTeams[0]}}</span> and <span>{{confirmedTeams[1]}}</span> <br>
                 No doubt the support for either team will be deafening today, as the winner here will be crowned
                 champions.
             </p>
             <p class="quick-match-intro__intro-comment-text">
+                The teams have taken to the pitch and are in position. The stadium is electric as the two team captains
+                <span>{{teamOneCaptain}}</span> and <span>{{teamTwoCaptain}}</span> exchange pleasantries and take their
+                positions.
+            </p>
+        </div>
+        <div *ngIf="this.commentaryView" class="fx_x-b">
+            <p class="quick-match-intro__intro-comment-text">
                 Now let’s get ready to put predictions aside and for the next 90 minutes let the quality and
                 performance
-                of these two super clubs and their world-class footballers decide what is written in histoy on this
+                of these two super clubs and their world-class footballers decide what is written in history on this
                 day.
-            </p>
-            <p class="quick-match-intro__intro-comment-text">
-                The teams have taken to the pitch and are in position. The stadium is electric as the two team captains
-                <span>{{teamOneCaptain}}</span> and <span>{{teamTwoCaptain}}</span> exchange pleasantries and take their positions.
             </p>
             <p class="quick-match-intro__intro-comment-text">
                 Finally we wait for the
@@ -33,5 +39,65 @@
             </div>
         </div>
     </div>
-
+    <div *ngIf="this.matchType === 4" class="match-intro__cup-run-container">
+        <p class="cup-run-intro__title" title="toggle commentary view">
+            Welcome to Cup Match Day
+            <span class="title__commentary" (click)="toggleCommentaryView()">x</span>
+        </p>
+        <div *ngIf="this.commentaryView" class="cup-run__cup-run-intro fx_x-b">
+            <p class="cup-run-intro__intro-comment-text">
+                Hello and good evening to everyone joining us. We have live feeds from two games tonight, culminating in
+                a final between the victors. It's the moment we've all been waiting for and the excitement in both
+                stadiums is palpable! Everyone is on their feet with baited breath as to what the outcome of each match
+                today will be, and who will be off to face each other in the final. <br>
+                Today we have for you... <br>
+                <span>{{confirmedTeams[0]}}</span> vs <span>{{confirmedTeams[1]}}</span> <br>
+                <span>{{confirmedTeams[2]}}</span> vs <span>{{confirmedTeams[3]}}</span> <br>
+                No doubt the support for each team will be deafening today.
+            </p>
+            <p class="cup-run-intro__intro-comment-text">
+                The teams have taken to the pitch and are in position. The stadiums are electric as each of the two team
+                captains
+                <span>{{teamOneCaptain}}</span>, <span>{{teamTwoCaptain}}</span>, <span>{{teamThreeCaptain}}</span> and
+                <span>{{teamFourCaptain}}</span>, respectively, exchange pleasantries and take their positions.
+            </p>
+        </div>
+        <div *ngIf="this.commentaryView" class="fx_x-b">
+            <p class="cup-run-intro__intro-comment-text">
+                Now let’s get ready to put predictions aside and for the next 90 minutes let the quality and
+                performance
+                of these two super clubs and their world-class footballers decide what is written in history on this
+                day.
+            </p>
+            <p class="cup-run-intro__intro-comment-text">
+                Finally we wait for the
+                referee to blow the whistle and start the game off...
+            </p>
+        </div>
+        <div class="match-setup__team-bars">
+            <div class="four-team-setup__final fx_x-b_y-c">
+                <p class="four-team-setup__team left tbd">Semi Final Winner</p>
+                <p class="two-team-setup__team success">🏆</p>
+                <p class="four-team-setup__team right tbd">Semi Final Winner</p>
+            </div>
+            <div class="team-bars__two-team-setup fx_x-b_y-c">
+                <div class="four-team-setup">
+                    <div class="four-team-setup__teams fx_x-b_y-c">
+                        <p class="four-team-setup__team left">{{confirmedTeams[0]}}</p>
+                        <p class="four-team-setup__team vs">
+                            vs
+                        </p>
+                        <p class="four-team-setup__team right">{{confirmedTeams[1]}}</p>
+                    </div>
+                    <div class="four-team-setup__teams fx_x-b_y-c">
+                        <p class="four-team-setup__team left">{{confirmedTeams[2]}}</p>
+                        <p class="four-team-setup__team vs">
+                            vs
+                        </p>
+                        <p class="four-team-setup__team right">{{confirmedTeams[3]}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

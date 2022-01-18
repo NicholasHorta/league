@@ -21,6 +21,7 @@ h2, h3, h4, li, p, span, label {
     --blue: #2C6C9D;
     --green: #27a770 ;
     --green50: #71D0A7;
+    --green25: #cef0e1;
     --green-swatch: linear-gradient(0deg, #6ebd13 0%, #27a770 100%);
     --yellow: #F4A439;
     --orange: #F46E39;
@@ -47,11 +48,17 @@ ul {
     display: flex;
     justify-content: center;
 }
+
 .fx_x-b {
     display: flex;
     justify-content: space-between;
 }
 
+.fx_x-c_y-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .fx_x-b_y-c {
     display: flex;
     justify-content: space-between;
@@ -79,40 +86,3 @@ ul {
     src: url('./assets/font/Poppins/Poppins-Light.ttf');
 }
 
-
-/* Shared CSS between two components: match-type-select && introductions */
-
-.match-setup__team-bars {
-    position: relative;
-    padding: 2rem;
-    background-color: var(--grey25);
-    margin: var(--inner-section-space-y);
-}
-
-.two-team-setup__team, .four-team-setup__team {
-    padding: 1rem 2rem;
-    background-color: var(--blue);
-    color: var(--white);
-    width: 300px;
-    letter-spacing: 0.05rem;
-    font-size: 1.15rem;
-}
-
-.two-team-setup__team.left, .four-team-setup__team.left {
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-}
-
-.two-team-setup__team.right, .four-team-setup__team.right {
-    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
-    text-align: end;
-}
-
-.two-team-setup__team.success, .four-team-setup__team.success, .four-team-setup__team.vs {
-    background-color: transparent;
-    font-size: 2.5rem;
-    color: var(--grey);
-    text-align: center;
-    border-radius: 20px;
-    flex: 0;
-    margin: 0 1rem;
-}

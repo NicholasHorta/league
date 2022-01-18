@@ -8,7 +8,7 @@ import { RefreshResolver } from './services/refresh.resolver';
 const routes: Routes = [
   {path: '', redirectTo: 'league-setup', pathMatch: 'full'},
   {path: 'league-setup', component: MatchSetupComponent},
-  {path: 'league-play', component: MatchSimulationComponent, resolve: {refresh: RefreshResolver}}
+  {path: 'league-play', component: MatchSimulationComponent, resolve: {RefreshResolver}}
 ];
 
 @NgModule({

@@ -15,6 +15,7 @@ import { CupRunSimComponent } from './components/match-simulation/cup-run-sim/cu
 import { SimResultsComponent } from './components/match-simulation/sim-results/sim-results.component';
 import { IntroductionsComponent } from './components/match-simulation/introductions/introductions.component';
 import { RefreshResolver } from './services/refresh.resolver';
+import { GuideComponent } from './components/match-setup/guide/guide.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RefreshResolver } from './services/refresh.resolver';
     CupRunSimComponent,
     SimResultsComponent,
     IntroductionsComponent,
+    GuideComponent,
   ],
   imports: [
     BrowserModule,

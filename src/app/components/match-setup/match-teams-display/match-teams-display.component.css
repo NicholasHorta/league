@@ -4,10 +4,6 @@
     position: relative;
 }
 
-.team-sheets__quick-match {
-    /* background-color: var(--grey25); */
-}
-
 .team-sheets__team {
     flex-direction: row-reverse;
     position: relative;
@@ -115,7 +111,7 @@
     font-size: 0.9rem;
 }
 
-.capain__text {
+.captain__text {
     font-size: 0.85rem;
 }
 

@@ -49,6 +49,50 @@
     }
 }
 
+.match-setup__team-bars {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--grey25);
+    margin: var(--inner-section-space-y);
+}
+
+.two-team-setup__team, .four-team-setup__team {
+    padding: 1rem 2rem;
+    background-color: var(--blue);
+    color: var(--white);
+    width: 300px;
+    letter-spacing: 0.05rem;
+    font-size: 1.15rem;
+}
+
+.two-team-setup__team.left, .four-team-setup__team.left {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+
+.two-team-setup__team.right, .four-team-setup__team.right {
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+    text-align: end;
+}
+
+.two-team-setup__team.success, .four-team-setup__team.success, .four-team-setup__team.vs {
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: var(--grey);
+    text-align: center;
+    border-radius: 20px;
+    flex: 0;
+    margin: 0 1rem;
+}
+
+.four-team-setup__team.vs {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.four-team-setup__team.tbd {
+    background-color: var(--grey50);
+}
+
 .exe__message {
     font-size: 1.75rem;
     text-align: center;
@@ -84,13 +128,4 @@
     border-radius: 20px;
     flex: 0;
     margin: 0 1rem;
-}
-
-.four-team-setup__team.vs {
-    font-size: 2rem;
-    font-style: italic;
-}
-
-.four-team-setup__team.tbd {
-    background-color: var(--grey50);
 }

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { MatchSetupComponent } from '../components/match-setup/match-setup.component';
 import { MatchSetupService } from './match-setup.service';
 
 @Injectable({

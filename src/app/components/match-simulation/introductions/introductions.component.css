@@ -1,24 +1,62 @@
-/* SOME CSS IN THIS COMPONENT IS SHARED WITH ANOTHER */
-/* THIS CSS CAN BE FOUND IN SRC/STYLES.CSS */
+/* SOME CSS IN THIS COMPONENT IS SHARED WITH ANOTHER COMPONENTS - <match-type-select/> */
 
-.match-intro__quick-match-container {
+.match-intro__quick-match-container,
+.match-intro__cup-run-container {
     padding: var(--section-space);
 }
 
-.qwe {
-    display: grid;
-    
+.quick-match-intro__title,
+.cup-run-intro__title {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: var(--green);
+    color: var(--white);
+    margin-bottom: 1rem;
+    flex: 1;
+    position: relative;
 }
 
-.quick-match-intro__title {
-    font-size: 2rem;
-    padding: 1.25rem 3rem;
-    background-color: var(--red);
-    color: var(--white);
-    margin-right: 2rem;
+.quick-match-intro__title .title__commentary,
+.cup-run-intro__title .title__commentary {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--green25);
+    color: var(--grey);
+    padding: 0 .75rem 0.15rem;
 }
 
-.quick-match-intro__intro-comment-text > span{
+.quick-match-intro__title .title__commentary:hover,
+.cup-run-intro__title .title__commentary:hover {
+    cursor: pointer;
+    background-color: var(--green50);
     color: var(--white);
-    background-color: var(--red);
+}
+
+.quick-match-intro__title span,
+.cup-run-intro__title span {
+    text-align: end;
+    display: inline-block;
+}
+
+.quick-match__quick-match-intro,
+.cup-run__cup-run-intro {
+    margin-bottom: 1rem;
+}
+
+.quick-match-intro__intro-comment-text,
+.cup-run-intro__intro-comment-text {
+    padding: 1rem;
+    flex:1;
+    background-color: var(--green25);
+}
+
+.quick-match-intro__intro-comment-text:first-of-type,
+.cup-run-intro__intro-comment-text:first-of-type {
+    margin-right: 1rem;
+}
+
+.quick-match-intro__intro-comment-text > span, .cup-run-intro__intro-comment-text > span{
+    color: var(--purple);
+    text-align: center;
 }

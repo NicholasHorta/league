@@ -8,7 +8,7 @@ import playersListJSON from '../../assets/league_players.json'
 
 export class MatchSetupService {
 
-  leagueTypeValue: number = 2;
+  leagueTypeValue: number = 0;
   leagueTeamsArray: string[] = [
     'Galaxy FC', 'Valhalla Utd', 'Bavaria Stark', 'Clube Europa'
   ];
@@ -41,7 +41,7 @@ export class MatchSetupService {
     if (this.leagueTypeValue === 2) {
       for (let i = 0; i < this.leagueTypeValue; i++) {
         dynamicTeamsArray.splice(
-          Math.floor(Math.random() * this.leagueTypeValue), 1);
+          Math.floor(Math.random() * dynamicTeamsArray.length), 1);
       }
     }
     this.generateTeamPlayersArrayHandler(this.leagueTypeValue);

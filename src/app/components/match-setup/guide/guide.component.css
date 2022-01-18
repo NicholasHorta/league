@@ -1,0 +1,56 @@
+.guide__container {
+    padding: var(--section-space)
+}
+
+.guide__league-description {
+    color: var(--grey);
+}
+
+.league-description__guide-header {
+    padding-bottom: 1.5rem;
+}
+
+.league-description__guide-header .guide-header__title {
+    font-size: 1.5rem;    
+    color: var(--green);
+}
+
+.league-description__guide-header .guide-header__view-toggle {
+    color: var(--white);
+    background-color: var(--grey);
+    font-size: 1.15rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.league-description__guide-header .guide-header__view-toggle:hover {
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.guide__league-description > p{
+    padding-bottom: 1rem;
+}
+
+.guide__league-description p:last-of-type{
+    border-bottom: 1px solid var(--grey25);
+}
+
+.league-description__options {
+    border-bottom: 1px solid var(--grey25);
+    padding: 1rem 0;
+}
+
+.league-description__options .options__option-info{
+    color: var(--blue);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.league-description__options > ul:first-of-type{
+    margin-bottom: 1.5rem;
+}
+
+.league-description__note {
+    color: var(--red);
+    opacity: 0.9;
+}

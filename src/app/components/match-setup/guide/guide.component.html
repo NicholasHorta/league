@@ -1,0 +1,44 @@
+<div>
+    <div class="guide__container">
+        <div class="guide__league-description">
+            <div class="league-description__guide-header fx_x-b_y-c">
+                <h3 class="guide-header__title">Welcome to League</h3>
+                <span class="guide-header__view-toggle" (click)="toggleMoreInfo()">{{this.infoToggle ? 'less' : 'more'}} info</span>
+            </div>
+            <p>
+                League is an exciting football simulator which can be used for personal or group activities when in a
+                competitive or friendly betting mood.
+                A fun way for lovers of all things football to pass the time and get one over each other by succeeding
+                in
+                their call of a team to lift the cup and retain bragging rights over the players.
+            </p>
+            <p>
+                Just choose which option you'd like to begin with and this will auto generate a team sheet for each team
+                with the finest players the world has to offer along with a list of substitutes. <span
+                    class="league-description__note">If you would like to regenerate the player lists, simply select the
+                    match type option again.</span>
+            </p>
+            <p class="league-description__note">
+                Before being able to progress, each player MUST ensure that a captain is assigned to their team in
+                order to continue on to the Match Day simulations.
+            </p>
+            <div class="league-description__options" *ngIf="this.infoToggle">
+                <ul>
+                    <li class="options__option-info">Quick Match</li>
+                    <li>Consists of 2 teams.</li>
+                    <li>The simulated game acts as a final.</li>
+                    <li>The winner of which is the overall victor.</li>
+                </ul>
+                <ul>
+                    <li class="options__option-info">Cup Run:</li>
+                    <li>Consists of 4 teams.</li>
+                    <li>4 simulated games.</li>
+                    <li>The initial two act as semi
+                        finals</li>
+                    <li>Runner Up game - Losers of the semi final games.</li>
+                    <li>Final game - Winners of the semi final games.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
