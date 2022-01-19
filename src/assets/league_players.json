@@ -227,7 +227,7 @@
             "rating": "75",
             "id": "dm31",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Jorginho",
@@ -236,7 +236,7 @@
             "rating": "83",
             "id": "dm32",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Joshua Kimmich",
@@ -245,7 +245,7 @@
             "rating": "88",
             "id": "dm33",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Fernandinho",
@@ -254,7 +254,7 @@
             "rating": "84",
             "id": "dm34",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Sergio Busquets",
@@ -263,7 +263,7 @@
             "rating": "87",
             "id": "dm35",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Wilfred Ndidi",
@@ -272,7 +272,7 @@
             "rating": "84",
             "id": "dm36",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Marcelo Brozovic",
@@ -281,7 +281,7 @@
             "rating": "84",
             "id": "dm37",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Rodri",
@@ -290,7 +290,7 @@
             "rating": "85",
             "id": "dm38",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Fabinho",
@@ -299,7 +299,7 @@
             "rating": "87",
             "id": "dm39",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Casemiro",
@@ -308,7 +308,7 @@
             "rating": "89",
             "id": "dm310",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "N'Golo Kante",
@@ -317,7 +317,7 @@
             "rating": "88",
             "id": "dm311",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Declan Rice",
@@ -326,7 +326,7 @@
             "rating": "79",
             "id": "dm312",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Leon Goretzka",
@@ -335,7 +335,7 @@
             "rating": "84",
             "id": "dm313",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Franck Kessie",
@@ -344,7 +344,7 @@
             "rating": "77",
             "id": "dm314",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Joao Cancelo",
@@ -353,7 +353,7 @@
             "rating": "83",
             "id": "dm315",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         },
         {
             "name": "Idrissa Gueye",
@@ -362,7 +362,7 @@
             "rating": "84",
             "id": "dm316",
             "captain": false,
-            "position": "DM"
+            "position": "MID"
         }
     ],
     "att-mid": [

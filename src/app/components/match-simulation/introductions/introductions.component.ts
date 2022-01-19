@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatchSetupService } from '../../../services/match-setup.service'
 
 @Component({
@@ -9,6 +9,8 @@ import { MatchSetupService } from '../../../services/match-setup.service'
 export class IntroductionsComponent implements OnInit {
 
   constructor(private matchSetupSVC: MatchSetupService) { }
+
+  @Output() teamSheetArrEmission: EventEmitter<any[]> = new EventEmitter<any[]>()
 
   matchType: Number = this.matchSetupSVC.leagueTypeValue;
   confirmedTeams: string[] = this.matchSetupSVC.generatedTeamsArray;
@@ -25,6 +27,7 @@ export class IntroductionsComponent implements OnInit {
       const teamCaptainsArr = this.confirmedQuickMatchTeamsArr.filter(i => i.captain ? i : null);
       this.teamOneCaptain = teamCaptainsArr[0].name;
       this.teamTwoCaptain = teamCaptainsArr[1].name;
+      this.outputTeamSheetArr(this.confirmedQuickMatchTeamsArr);
     } else {
       const teamCaptainsArr = this.confirmedCupRunTeamsArr.filter(i => i.captain ? i : null);
       this.teamOneCaptain = teamCaptainsArr[0].name;
@@ -36,6 +39,10 @@ export class IntroductionsComponent implements OnInit {
 
   toggleCommentaryView(){
     this.commentaryView = !this.commentaryView;
+  }
+
+  outputTeamSheetArr(teamSheetArr: any[]){
+    this.teamSheetArrEmission.emit(teamSheetArr);
   }
 
 }

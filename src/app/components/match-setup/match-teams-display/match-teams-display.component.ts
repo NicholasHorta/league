@@ -29,10 +29,10 @@ export class MatchTeamsDisplayComponent {
   toggleTeamListHandler(view: boolean, teamNumber: number) {
     switch (teamNumber) {
       case 1:
-        this.viewTeamOneSubs = !view
+        this.viewTeamOneSubs = !view;
         break;
       case 2:
-        this.viewTeamTwoSubs = !view
+        this.viewTeamTwoSubs = !view;
         break;
       case 3:
         this.viewTeamThreeSubs = !view;

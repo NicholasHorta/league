@@ -1,3 +1,30 @@
-<div>
-    QUICK MATCH SIM
-</div>
+<section class="match-simuation__container">
+    <div class="match-simulation__team-sections fx_x-b_y-c">
+        <div class="team-sections__team-one">
+            <h3 class="team-one__name"></h3>
+            <ul class="team-one__starting-11">
+                <li *ngFor="let player of this.teamOneStarters" class="starter">
+                    <span class="starter__position">{{player.position}}</span>
+                    {{player.name}}
+                </li>
+            </ul>
+            <ul class="team-one__subs">
+                    <span class="sub__position"></span>
+                <li *ngFor="" class="sub"></li>
+            </ul>
+        </div>
+        <div class="team-sections__team-two">
+            <h3 class="team-two__name"></h3>
+            <ul class="team-two__starting-11">
+                <li *ngFor="let player of this.teamTwoStarters" class="starter">
+                    <span class="starter__position">{{player.position}}</span>
+                    {{player.name}}
+                </li>
+            </ul>
+            <ul class="team-two__subs">
+                    <span class="sub__position"></span>
+                <li *ngFor="" class="subs"></li>
+            </ul>
+        </div>
+    </div>
+</section>

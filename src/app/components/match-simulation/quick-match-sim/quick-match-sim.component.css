@@ -1,0 +1,13 @@
+.match-simulation__team-sections {
+    padding: var(--section-space);
+    margin-bottom: 5rem;
+}
+
+.starter__position {
+    margin-right: 1rem;
+    min-width: 50px;
+    display: inline-block;
+    background-color: var(--purple);
+    color: var(--white);
+    text-align: center;
+}

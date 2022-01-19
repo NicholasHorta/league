@@ -1,9 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, OnInit} from '@angular/core';
 import { MatchSetupService } from '../../services/match-setup.service'
-import { MatchTeamsDisplayComponent } from './match-teams-display/match-teams-display.component';
-
-
 @Component({
   selector: 'match-setup',
   templateUrl: './match-setup.component.html',
