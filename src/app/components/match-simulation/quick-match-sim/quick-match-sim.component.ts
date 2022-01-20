@@ -11,16 +11,16 @@ export class QuickMatchSimComponent implements OnInit {
   constructor(private matchSetupSVC: MatchSetupService) { }
 
   @Input() teamSheetArr: any;
+  @Input() teams: any;
   teamOneStarters: any[] = [];
   teamTwoStarters: any[] = [];
-  teamOneSubs: 
-  teamTwoSubs:
-
+  teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
+  teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
+  confirmedTeams: string[] = [];
+  
   ngOnInit(): void {
-    console.log('%c FINAL RESULT!!! => ', 'color: #bada55;', this.teamSheetArr);
     this.teamOneStarters = this.teamSheetArr.splice(0, 11);
     this.teamTwoStarters = this.teamSheetArr.splice(0, 11);
-
   }
 
 }

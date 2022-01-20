@@ -15,7 +15,6 @@ export class MatchSimulationComponent implements OnInit {
   teamSheetArr: any[] = [];
   
   ngOnInit(): void {
-    console.log('%cmatch-simulation.component.ts line:15 this.confirmedTeams', 'color: #007acc;', this.confirmedTeams);
   }
 
   emitTeamSheetToMatchSim(arr: any){

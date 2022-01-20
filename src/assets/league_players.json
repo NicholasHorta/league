@@ -7,7 +7,11 @@
             "rating": "89",
             "id": "k11",
             "captain": false,
-            "position": "GK"
+            "position": "GK",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Manuel Neuer",
@@ -16,7 +20,11 @@
             "rating": "90",
             "id": "k12",
             "captain": false,
-            "position": "GK"
+            "position": "GK",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Jan Oblak",
@@ -25,7 +33,11 @@
             "rating": "91",
             "id": "k13",
             "captain": false,
-            "position": "GK"
+            "position": "GK",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Andre ter Stegen",
@@ -34,7 +46,11 @@
             "rating": "90",
             "id": "k14",
             "captain": false,
-            "position": "GK"
+            "position": "GK",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         }
     ],
     "def": [
@@ -45,7 +61,11 @@
             "rating": "89",
             "id": "d21",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Thiago Silva",
@@ -54,7 +74,11 @@
             "rating": "85",
             "id": "d22",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Kalidou Koulibaly",
@@ -63,7 +87,11 @@
             "rating": "88",
             "id": "d23",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Matthijs de Ligt",
@@ -72,7 +100,11 @@
             "rating": "85",
             "id": "d24",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Virgil van Dijk",
@@ -81,7 +113,11 @@
             "rating": "90",
             "id": "d25",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Ruben Dias",
@@ -90,7 +126,11 @@
             "rating": "81",
             "id": "d26",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Kyle Walker",
@@ -99,7 +139,11 @@
             "rating": "85",
             "id": "d27",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Jerome Boateng",
@@ -108,7 +152,11 @@
             "rating": "82",
             "id": "d28",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Diego Godin",
@@ -117,7 +165,11 @@
             "rating": "85",
             "id": "d29",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Mats Hummels",
@@ -126,7 +178,11 @@
             "rating": "86",
             "id": "d210",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Gerard Pique",
@@ -135,7 +191,11 @@
             "rating": "86",
             "id": "d211",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Raphael Varane",
@@ -144,7 +204,11 @@
             "rating": "86",
             "id": "d212",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Giorgio Chiellini",
@@ -153,7 +217,11 @@
             "rating": "87",
             "id": "d213",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Harry Maguire",
@@ -162,7 +230,11 @@
             "rating": "82",
             "id": "d214",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Aymeric Laporte",
@@ -171,7 +243,11 @@
             "rating": "87",
             "id": "d215",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Antonio Rudiger",
@@ -180,7 +256,11 @@
             "rating": "81",
             "id": "d216",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "John Stones",
@@ -189,7 +269,11 @@
             "rating": "80",
             "id": "d217",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Marquinhos",
@@ -198,7 +282,11 @@
             "rating": "85",
             "id": "d218",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Eric Dier",
@@ -207,7 +295,11 @@
             "rating": "78",
             "id": "d219",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Sven Botman",
@@ -216,7 +308,11 @@
             "rating": "69",
             "id": "d220",
             "captain": false,
-            "position": "DEF"
+            "position": "DEF",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         }
     ],
     "def-mid": [
@@ -227,7 +323,11 @@
             "rating": "75",
             "id": "dm31",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Jorginho",
@@ -236,7 +336,11 @@
             "rating": "83",
             "id": "dm32",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Joshua Kimmich",
@@ -245,7 +349,11 @@
             "rating": "88",
             "id": "dm33",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Fernandinho",
@@ -254,7 +362,11 @@
             "rating": "84",
             "id": "dm34",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Sergio Busquets",
@@ -263,7 +375,11 @@
             "rating": "87",
             "id": "dm35",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Wilfred Ndidi",
@@ -272,7 +388,11 @@
             "rating": "84",
             "id": "dm36",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Marcelo Brozovic",
@@ -281,7 +401,11 @@
             "rating": "84",
             "id": "dm37",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Rodri",
@@ -290,7 +414,11 @@
             "rating": "85",
             "id": "dm38",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Fabinho",
@@ -299,7 +427,11 @@
             "rating": "87",
             "id": "dm39",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Casemiro",
@@ -308,7 +440,11 @@
             "rating": "89",
             "id": "dm310",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "N'Golo Kante",
@@ -317,7 +453,11 @@
             "rating": "88",
             "id": "dm311",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Declan Rice",
@@ -326,7 +466,11 @@
             "rating": "79",
             "id": "dm312",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Leon Goretzka",
@@ -335,7 +479,11 @@
             "rating": "84",
             "id": "dm313",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Franck Kessie",
@@ -344,7 +492,11 @@
             "rating": "77",
             "id": "dm314",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Joao Cancelo",
@@ -353,7 +505,11 @@
             "rating": "83",
             "id": "dm315",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Idrissa Gueye",
@@ -362,7 +518,11 @@
             "rating": "84",
             "id": "dm316",
             "captain": false,
-            "position": "MID"
+            "position": "MID",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         }
     ],
     "att-mid": [
@@ -373,7 +533,11 @@
             "rating": "80",
             "id": "am41",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Thomas Muller",
@@ -382,7 +546,11 @@
             "rating": "86",
             "id": "am42",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Bruno Fernandes",
@@ -391,7 +559,11 @@
             "rating": "87",
             "id": "am43",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Kevin De Brunye",
@@ -400,7 +572,11 @@
             "rating": "91",
             "id": "am44",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Lionel Messi",
@@ -409,7 +585,11 @@
             "rating": "93",
             "id": "am45",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Paulo Dybala",
@@ -418,7 +598,11 @@
             "rating": "88",
             "id": "am46",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Bernardo Silva",
@@ -427,7 +611,11 @@
             "rating": "87",
             "id": "am47",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Christian Eriksen",
@@ -436,7 +624,11 @@
             "rating": "85",
             "id": "am48",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Joao Felix",
@@ -445,7 +637,11 @@
             "rating": "81",
             "id": "am49",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Raheem Sterling",
@@ -454,7 +650,11 @@
             "rating": "88",
             "id": "am410",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Mohammed Salah",
@@ -463,7 +663,11 @@
             "rating": "91",
             "id": "am411",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Isco",
@@ -472,7 +676,11 @@
             "rating": "84",
             "id": "am412",
             "captain": false,
-            "position": "AM"
+            "position": "AM",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         }
     ],
     "att": [
@@ -483,7 +691,11 @@
             "rating": "88",
             "id": "a51",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Karim Benzema",
@@ -492,7 +704,11 @@
             "rating": "89",
             "id": "a52",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Christiano Ronaldo",
@@ -501,7 +717,11 @@
             "rating": "99",
             "id": "a53",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Romelu Lukaku",
@@ -510,7 +730,11 @@
             "rating": "85",
             "id": "a54",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Erling Haaland",
@@ -519,7 +743,11 @@
             "rating": "84",
             "id": "a55",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Robert Lewandowski",
@@ -528,7 +756,11 @@
             "rating": "91",
             "id": "a56",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Kylian Mbappe",
@@ -537,7 +769,11 @@
             "rating": "90",
             "id": "a57",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         },
         {
             "name": "Andre Silva",
@@ -546,7 +782,11 @@
             "rating": "79",
             "id": "a58",
             "captain": false,
-            "position": "ST"
+            "position": "ST",
+            "yellow cards": 0,
+            "red card": false,
+            "goals": 0,
+            "motm": false
         }
     ]
 }
