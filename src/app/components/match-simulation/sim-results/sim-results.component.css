@@ -1,0 +1,102 @@
+.sim-results__container {
+    padding: 2rem;
+    margin: 0rem 2rem;
+    margin-bottom: 5rem;
+    border: 2px solid var(--purple);
+    border-top: 0px;
+}
+
+.sim-results__section-one,
+.sim-results__section-two {
+    flex: 1;
+}
+
+.sim-results__section-one {
+    margin-right: 0.5rem;
+}
+.sim-results__section-two {
+    margin-left: 0.5rem;
+}
+
+.section-one__possession {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-one__shots {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-one__shots-on-target {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-one__passes {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    flex: 1;
+}
+
+
+.section-two__yellow-cards {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__red-cards {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__tackles {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__corners {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    flex: 1;
+}
+
+.title {
+    color: var(--blue);
+}
+
+.possession__team-one,
+.shots__team-one,
+.shots-on-target__team-one,
+.passes__team-one,
+.yellow-cards__team-one,
+.red-cards__team-one,
+.tackles__team-one,
+.corners__team-one {
+    margin-left: 1rem;
+    color: var(--grey50);
+}
+
+.possession__team-two,
+.shots__team-two,
+.shots-on-target__team-two,
+.passes__team-two,
+.yellow-cards__team-two,
+.red-cards__team-two,
+.tackles__team-two,
+.corners__team-two {
+    margin-right: 1rem;
+    color: var(--grey50);
+}

@@ -1,16 +1,30 @@
+.match-simulation__container {
+    position: relative;
+}
+
+.match-simulation__current-score {
+    position: absolute;
+    font-family: 'team';
+    font-size: 3rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: var(--blue);
+    top: 1rem;
+}
+
 .match-simulation__team-sections {
     padding: 2rem;
     margin: 0rem 2rem;
-    margin-bottom: 5rem;
     border: 2px solid var(--purple);
-
 }
+
 .team-one__starting-11,
 .team-two__starting-11 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--grey25);
 }
+
 .team-one__subs-title,
 .team-two__subs-title {
     /* text-align: center; */
