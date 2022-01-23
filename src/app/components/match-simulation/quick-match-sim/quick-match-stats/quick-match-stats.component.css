@@ -1,20 +1,30 @@
-.sim-results__container {
+.stats__container {
     padding: 2rem;
     margin: 0rem 2rem;
     margin-bottom: 5rem;
-    border: 2px solid var(--purple);
+    border: 2px solid var(--green);
     border-top: 0px;
+    position: relative;
 }
 
-.sim-results__section-one,
-.sim-results__section-two {
+.stats__title {
+    position: absolute;
+    top: -16px;
+    background-color: var(--green);
+    color: var(--white);
+    left: 2rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.stats__section-one,
+.stats__section-two {
     flex: 1;
 }
 
-.sim-results__section-one {
+.stats__section-one {
     margin-right: 0.5rem;
 }
-.sim-results__section-two {
+.stats__section-two {
     margin-left: 0.5rem;
 }
 

@@ -1,8 +1,22 @@
-.match-simulation__container {
+
+.match-simulation__team-sections {
+    padding: 2rem;
+    margin: 0rem 2rem;
+    border: 2px solid var(--green);
     position: relative;
 }
 
-.match-simulation__current-score {
+.team-sections__title {
+    position: absolute;
+    top: -16px;
+    background-color: var(--green);
+    color: var(--white);
+    left: 2rem;
+    font-family: script;
+    padding: 0.25rem 0.75rem;
+}
+
+.team-sections__current-score {
     position: absolute;
     font-family: 'team';
     font-size: 3rem;
@@ -10,12 +24,7 @@
     transform: translateX(-50%);
     color: var(--blue);
     top: 1rem;
-}
-
-.match-simulation__team-sections {
-    padding: 2rem;
-    margin: 0rem 2rem;
-    border: 2px solid var(--purple);
+    left: 0;
 }
 
 .team-one__starting-11,
@@ -27,11 +36,11 @@
 
 .team-one__subs-title,
 .team-two__subs-title {
-    /* text-align: center; */
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--grey25);
     margin-bottom: 1rem;
     font-family: 'team';
+    color: var(--grey50);
 }
 
 .starter__position, 

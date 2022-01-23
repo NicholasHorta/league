@@ -12,10 +12,11 @@ import { FormationComponent } from './components/match-setup/match-teams-display
 import { MatchSimulationComponent } from './components/match-simulation/match-simulation.component';
 import { QuickMatchSimComponent } from './components/match-simulation/quick-match-sim/quick-match-sim.component';
 import { CupRunSimComponent } from './components/match-simulation/cup-run-sim/cup-run-sim.component';
-import { SimResultsComponent } from './components/match-simulation/sim-results/sim-results.component';
 import { IntroductionsComponent } from './components/match-simulation/introductions/introductions.component';
 import { RefreshResolver } from './services/refresh.resolver';
 import { GuideComponent } from './components/match-setup/guide/guide.component';
+import { CupRunStatsComponent } from './components/match-simulation/cup-run-sim/cup-run-stats/cup-run-stats.component';
+import { QuickMatchStatsComponent } from './components/match-simulation/quick-match-sim/quick-match-stats/quick-match-stats.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { GuideComponent } from './components/match-setup/guide/guide.component';
     MatchSimulationComponent,
     QuickMatchSimComponent,
     CupRunSimComponent,
-    SimResultsComponent,
     IntroductionsComponent,
     GuideComponent,
+    CupRunStatsComponent,
+    QuickMatchStatsComponent,
   ],
   imports: [
     BrowserModule,

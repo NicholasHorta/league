@@ -1,6 +1,5 @@
 <div>
     <match-introductions (teamSheetArrEmission)="emitTeamSheetToMatchSim($event)"></match-introductions>
     <quick-match-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 2"></quick-match-sim>
-    <cup-run-sim *ngIf="matchType === 4"></cup-run-sim>
-    <sim-results></sim-results>
+    <cup-run-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 4"></cup-run-sim>
 </div>

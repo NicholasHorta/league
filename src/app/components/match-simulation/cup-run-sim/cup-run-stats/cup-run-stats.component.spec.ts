@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SimResultsComponent } from './sim-results.component';
+import { CupRunStatsComponent } from './cup-run-stats.component';
 
-describe('SimResultsComponent', () => {
-  let component: SimResultsComponent;
-  let fixture: ComponentFixture<SimResultsComponent>;
+describe('CupRunStatsComponent', () => {
+  let component: CupRunStatsComponent;
+  let fixture: ComponentFixture<CupRunStatsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SimResultsComponent ]
+      declarations: [ CupRunStatsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimResultsComponent);
+    fixture = TestBed.createComponent(CupRunStatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

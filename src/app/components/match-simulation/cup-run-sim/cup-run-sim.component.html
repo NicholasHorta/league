@@ -1,10 +1,12 @@
 <section class="match-simulation__container">
-    <div class="match-simulation__current-score">0 : 0</div>  
     <div class="match-simulation__team-sections fx_x-b_y-c">
+        <div class="team-sections__title">Team Sheet</div>  
+        <div class="team-sections__current-score">0 : 0</div>
         <div class="team-sections__team-one">
             <h3 class="team-one__name">{{teams[0]}}</h3>
             <ul class="team-one__starting-11">
-                <li *ngFor="let player of this.teamOneStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                <li *ngFor="let player of this.teamOneStarters" class="starter"
+                    [ngClass]="{'captain': player.captain }">
                     <span class="starter__position">
                         {{player.position}}
                     </span>
@@ -24,7 +26,8 @@
         <div class="team-sections__team-two">
             <h3 class="team-two__name">{{teams[1]}}</h3>
             <ul class="team-two__starting-11">
-                <li *ngFor="let player of this.teamTwoStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                <li *ngFor="let player of this.teamTwoStarters" class="starter"
+                    [ngClass]="{'captain': player.captain }">
                     {{player.name}}
                     <span class="starter__position right">
                         {{player.position}}
@@ -42,12 +45,15 @@
             </ul>
         </div>
     </div>
-    <div class="match-simulation__current-score">0 : 0</div>  
+    <cup-run-stats></cup-run-stats>
     <div class="match-simulation__team-sections fx_x-b_y-c">
+        <div class="team-sections__title">Team Sheet</div>  
+        <div class="team-sections__current-score">0 : 0</div>
         <div class="team-sections__team-one">
             <h3 class="team-one__name">{{teams[2]}}</h3>
             <ul class="team-one__starting-11">
-                <li *ngFor="let player of this.teamThreeStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                <li *ngFor="let player of this.teamThreeStarters" class="starter"
+                    [ngClass]="{'captain': player.captain }">
                     <span class="starter__position">
                         {{player.position}}
                     </span>
@@ -67,7 +73,8 @@
         <div class="team-sections__team-two">
             <h3 class="team-two__name">{{teams[3]}}</h3>
             <ul class="team-two__starting-11">
-                <li *ngFor="let player of this.teamFourStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                <li *ngFor="let player of this.teamFourStarters" class="starter"
+                    [ngClass]="{'captain': player.captain }">
                     {{player.name}}
                     <span class="starter__position right">
                         {{player.position}}
@@ -85,4 +92,5 @@
             </ul>
         </div>
     </div>
+    <cup-run-stats></cup-run-stats>
 </section>
