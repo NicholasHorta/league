@@ -20,9 +20,44 @@
     right: 0;
     font-size: 1.75rem;
     font-size: 4.5rem;
-    color: var(--blue);
     font-family: 'team';
     opacity: 0.75;
+}
+
+.club-title.team-one {
+    background: var(--team-one-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.club-title.team-two {
+    background: var(--team-two-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.club-title.team-three {
+       background: var(--team-three-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.club-title.team-four {
+       background: var(--team-four-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .toggle-view {
@@ -36,7 +71,7 @@
     height: 38px;
 }
 
-.team-sheet__options > span {
+.team-sheet__options>span {
     padding: 0.25rem 0.75rem;
     margin-right: 1rem;
     background-color: var(--grey);
@@ -44,7 +79,7 @@
     cursor: pointer;
 }
 
-.team-sheet__options > span:hover {
+.team-sheet__options>span:hover {
     color: var(--white);
     background-color: var(--orange);
 }
@@ -115,7 +150,7 @@
     font-size: 0.85rem;
 }
 
-.captain__select > li {
+.captain__select>li {
     color: var(--purple) !important;
     font-weight: 900 !important;
 }

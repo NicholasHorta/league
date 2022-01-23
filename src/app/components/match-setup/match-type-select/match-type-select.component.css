@@ -58,11 +58,34 @@
 
 .two-team-setup__team, .four-team-setup__team {
     padding: 1rem 2rem;
-    background-color: var(--blue);
     color: var(--white);
     width: 300px;
     letter-spacing: 0.05rem;
     font-size: 1.15rem;
+}
+
+.two-team-setup__team.left {
+    background: var(--team-one-colors);
+}
+
+.two-team-setup__team.right {
+    background: var(--team-two-colors);
+}
+
+.four-team-setup__team.left.one {
+    background: var(--team-one-colors);
+}
+
+.four-team-setup__team.right.two {
+    background: var(--team-two-colors);
+}
+
+.four-team-setup__team.left.three {
+    background: var(--team-three-colors);
+}
+
+.four-team-setup__team.right.four {
+    background: var(--team-four-colors);
 }
 
 .two-team-setup__team.left, .four-team-setup__team.left {

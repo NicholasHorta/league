@@ -1,7 +1,7 @@
 <div class="teams__team-sheets" *ngIf="matchSetupSVC.leagueTypeValue">
     <div class="team-sheets__quick-match">
         <div class="team-sheets__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[0]}}</h2>
+            <h2 class="club-title team-one">{{matchSetupSVC.generatedTeamsArray[0]}}</h2>
             <div class="team-sheet__options">
                 <span (click)="assignCaptainHandler(matchSetupSVC.teamOne[0], 1)">
                     Assign Captain
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="team-sheets__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
+            <h2 class="club-title team-two">{{matchSetupSVC.generatedTeamsArray[1]}}</h2>
             <div class="team-sheet__options">
                 <span (click)="assignCaptainHandler(matchSetupSVC.teamTwo[0], 2)">
                     Assign Captain
@@ -73,7 +73,7 @@
     <!-- If 4 teams (league option) is chosen -->
     <div class="team-sheets__quick-match" *ngIf="matchSetupSVC.leagueTypeValue === 4">
         <div class="team-sheets__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[2]}}</h2>
+            <h2 class="club-title team-three">{{matchSetupSVC.generatedTeamsArray[2]}}</h2>
             <div class="team-sheet__options">
                 <span (click)="assignCaptainHandler(matchSetupSVC.teamThree[0], 3)">
                     Assign Captain
@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="team-sheets__team fx_x-b">
-            <h2 class="club-title">{{matchSetupSVC.generatedTeamsArray[3]}}</h2>
+            <h2 class="club-title team-four">{{matchSetupSVC.generatedTeamsArray[3]}}</h2>
             <div class="team-sheet__options">
                 <span (click)="assignCaptainHandler(matchSetupSVC.teamFour[0], 4)">
                     Assign Captain

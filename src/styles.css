@@ -22,7 +22,10 @@ h2, h3, h4, li, p, span, label {
     --green: #27a770 ;
     --green50: #71D0A7;
     --green25: #cef0e1;
-    --green-swatch: linear-gradient(0deg, #6ebd13 0%, #27a770 100%);
+    --team-one-colors: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    --team-two-colors: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    --team-three-colors: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    --team-four-colors: linear-gradient(90deg, #fafafa 0%, #363636 100%);
     --yellow: #F4A439;
     --orange: #F46E39;
     --red: #ED3744;
