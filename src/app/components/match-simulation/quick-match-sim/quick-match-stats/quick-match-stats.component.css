@@ -1,7 +1,6 @@
 .stats__container {
     padding: 2rem;
     margin: 0rem 2rem;
-    margin-bottom: 5rem;
     border: 2px solid var(--green);
     border-top: 0px;
     position: relative;

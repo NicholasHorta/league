@@ -23,7 +23,8 @@
     right: 0;
     background-color: var(--green25);
     color: var(--grey);
-    padding: 0 .75rem 0.15rem;
+    padding: 0 .50rem .25rem;
+    font-size: 0.85rem;
 }
 
 .quick-match-intro__title .title__commentary:hover,

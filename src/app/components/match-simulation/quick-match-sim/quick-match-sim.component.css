@@ -1,4 +1,3 @@
-
 .match-simulation__team-sections {
     padding: 2rem;
     margin: 0rem 2rem;
@@ -14,6 +13,18 @@
     left: 2rem;
     font-family: script;
     padding: 0.25rem 0.75rem;
+}
+
+.team-sections__init-match-time {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    color: #71D0A7;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: script;
+    font-size: 4rem;
+    opacity: 0.5;
 }
 
 .team-sections__current-score {
@@ -43,7 +54,7 @@
     color: var(--grey50);
 }
 
-.starter__position, 
+.starter__position,
 .sub__position {
     margin-right: 1rem;
     min-width: 50px;
@@ -52,6 +63,13 @@
     color: var(--white);
     text-align: center;
     padding: 0.25rem 0;
+}
+
+.starter__captain {
+    color: var(--grey50);
+    font-size: 0.5rem;
+    font-style: italic;
+    padding: 0 0.25rem;
 }
 
 .starter__position.right,
@@ -64,10 +82,7 @@
     background-color: var(--grey) !important;
 }
 
-
-
-
-.starter, 
+.starter,
 .sub {
     margin-bottom: 0.25rem;
     position: relative;
@@ -92,4 +107,21 @@
 
 .captain {
     color: var(--purple);
+}
+
+.match-simulation__start-game{
+    margin: 0.5rem 2rem 5rem;
+    display: flex;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: var(--green);
+    color: var(--white); 
+    cursor: pointer;
+    font-family: script;
+    justify-content: center;
+}
+.match-simulation__start-game:hover{
+    background-color: var(--blue);
 }

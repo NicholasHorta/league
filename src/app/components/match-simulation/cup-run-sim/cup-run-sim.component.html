@@ -2,6 +2,7 @@
     <div class="match-simulation__team-sections fx_x-b_y-c">
         <div class="team-sections__title">Team Sheet</div>  
         <div class="team-sections__current-score">0 : 0</div>
+        <div class="team-sections__init-match-time">00:00</div>  
         <div class="team-sections__team-one">
             <h3 class="team-one__name">{{teams[0]}}</h3>
             <ul class="team-one__starting-11">
@@ -11,6 +12,7 @@
                         {{player.position}}
                     </span>
                     {{player.name}}
+                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
                 </li>
             </ul>
             <p class="team-one__subs-title">Substitutes</p>
@@ -28,6 +30,7 @@
             <ul class="team-two__starting-11">
                 <li *ngFor="let player of this.teamTwoStarters" class="starter"
                     [ngClass]="{'captain': player.captain }">
+                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
                     {{player.name}}
                     <span class="starter__position right">
                         {{player.position}}
@@ -46,9 +49,11 @@
         </div>
     </div>
     <cup-run-stats></cup-run-stats>
+    <div class="match-simulation__start-game">Start Game</div>
     <div class="match-simulation__team-sections fx_x-b_y-c">
         <div class="team-sections__title">Team Sheet</div>  
         <div class="team-sections__current-score">0 : 0</div>
+        <div class="team-sections__init-match-time">00:00</div>  
         <div class="team-sections__team-one">
             <h3 class="team-one__name">{{teams[2]}}</h3>
             <ul class="team-one__starting-11">
@@ -58,6 +63,7 @@
                         {{player.position}}
                     </span>
                     {{player.name}}
+                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
                 </li>
             </ul>
             <p class="team-one__subs-title">Substitutes</p>
@@ -75,6 +81,7 @@
             <ul class="team-two__starting-11">
                 <li *ngFor="let player of this.teamFourStarters" class="starter"
                     [ngClass]="{'captain': player.captain }">
+                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
                     {{player.name}}
                     <span class="starter__position right">
                         {{player.position}}
@@ -93,4 +100,5 @@
         </div>
     </div>
     <cup-run-stats></cup-run-stats>
+    <div class="match-simulation__start-game">Start Game</div>
 </section>
