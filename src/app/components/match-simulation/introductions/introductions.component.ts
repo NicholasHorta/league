@@ -15,7 +15,7 @@ export class IntroductionsComponent implements OnInit {
   matchType: Number = this.matchSetupSVC.leagueTypeValue;
   confirmedTeams: string[] = this.matchSetupSVC.generatedTeamsArray;
   confirmedQuickMatchTeamsArr: any[] = [...this.matchSetupSVC.teamOne[0], ...this.matchSetupSVC.teamTwo[0]];
-  confirmedCupRunTeamsArr: any[] = [...this.matchSetupSVC.teamOne[0], ...this.matchSetupSVC.teamTwo[0], , ...this.matchSetupSVC.teamThree[0], , ...this.matchSetupSVC.teamFour[0]];
+  confirmedCupRunTeamsArr: any[] = [...this.matchSetupSVC.teamOne[0], ...this.matchSetupSVC.teamTwo[0], ...this.matchSetupSVC.teamThree[0], ...this.matchSetupSVC.teamFour[0]];
   teamOneCaptain: string = "";
   teamTwoCaptain: string = "";
   teamThreeCaptain: string = "";
@@ -34,6 +34,7 @@ export class IntroductionsComponent implements OnInit {
       this.teamTwoCaptain = teamCaptainsArr[1].name;
       this.teamThreeCaptain = teamCaptainsArr[2].name;
       this.teamFourCaptain = teamCaptainsArr[3].name;
+      this.outputTeamSheetArr(this.confirmedCupRunTeamsArr);
     }
   }
 

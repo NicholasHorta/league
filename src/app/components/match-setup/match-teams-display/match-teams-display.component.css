@@ -43,7 +43,7 @@
 }
 
 .club-title.team-three {
-       background: var(--team-three-colors);
+    background: var(--team-three-colors);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -52,7 +52,7 @@
 }
 
 .club-title.team-four {
-       background: var(--team-four-colors);
+    background: var(--team-four-colors);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;

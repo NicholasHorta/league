@@ -1,3 +1,88 @@
-<div>
-    CUP RUN SIM
-</div>
+<section class="match-simulation__container">
+    <div class="match-simulation__current-score">0 : 0</div>  
+    <div class="match-simulation__team-sections fx_x-b_y-c">
+        <div class="team-sections__team-one">
+            <h3 class="team-one__name">{{teams[0]}}</h3>
+            <ul class="team-one__starting-11">
+                <li *ngFor="let player of this.teamOneStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                    <span class="starter__position">
+                        {{player.position}}
+                    </span>
+                    {{player.name}}
+                </li>
+            </ul>
+            <p class="team-one__subs-title">Substitutes</p>
+            <ul class="team-one__subs">
+                <li *ngFor="let sub of this.teamOneSubs" class="sub">
+                    <span class="sub__position">
+                        {{sub.position}}
+                    </span>
+                    {{sub.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="team-sections__team-two">
+            <h3 class="team-two__name">{{teams[1]}}</h3>
+            <ul class="team-two__starting-11">
+                <li *ngFor="let player of this.teamTwoStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                    {{player.name}}
+                    <span class="starter__position right">
+                        {{player.position}}
+                    </span>
+                </li>
+            </ul>
+            <p class="team-two__subs-title">Substitutes</p>
+            <ul class="team-two__subs">
+                <li *ngFor="let sub of this.teamTwoSubs" class="sub">
+                    {{sub.name}}
+                    <span class="sub__position right">
+                        {{sub.position}}
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="match-simulation__current-score">0 : 0</div>  
+    <div class="match-simulation__team-sections fx_x-b_y-c">
+        <div class="team-sections__team-one">
+            <h3 class="team-one__name">{{teams[2]}}</h3>
+            <ul class="team-one__starting-11">
+                <li *ngFor="let player of this.teamThreeStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                    <span class="starter__position">
+                        {{player.position}}
+                    </span>
+                    {{player.name}}
+                </li>
+            </ul>
+            <p class="team-one__subs-title">Substitutes</p>
+            <ul class="team-one__subs">
+                <li *ngFor="let sub of this.teamThreeSubs" class="sub">
+                    <span class="sub__position">
+                        {{sub.position}}
+                    </span>
+                    {{sub.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="team-sections__team-two">
+            <h3 class="team-two__name">{{teams[3]}}</h3>
+            <ul class="team-two__starting-11">
+                <li *ngFor="let player of this.teamFourStarters" class="starter" [ngClass]="{'captain': player.captain }">
+                    {{player.name}}
+                    <span class="starter__position right">
+                        {{player.position}}
+                    </span>
+                </li>
+            </ul>
+            <p class="team-two__subs-title">Substitutes</p>
+            <ul class="team-two__subs">
+                <li *ngFor="let sub of this.teamFourSubs" class="sub">
+                    {{sub.name}}
+                    <span class="sub__position right">
+                        {{sub.position}}
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
