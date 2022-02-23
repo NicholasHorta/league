@@ -29,11 +29,11 @@ export class MatchSetupService {
   // A copy of the teams array is taken to remove two teams randomly 
   // The result is returned in an array of two remaining teams
   quickMatchSetupHandler() {
-    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
+    return this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
   }
   // The result is returns the teams array in original state
   leagueSetupHandler() {
-    this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
+    return this.randomiseTeamNamesArrayHandler(this.leagueTeamsArray);
   }
 
   randomiseTeamNamesArrayHandler(staticTeamsArray: string[]) {
@@ -66,7 +66,6 @@ export class MatchSetupService {
     const playerPositionAmtAllocation: number[] = [1, 5, 4, 3, 2];
 
     // FOR amount of teams - 2 || 4 -> FOR amount of positions - 5 -> FOR each position total - 1-kp, 5-df, 4-dm, 3-da, 2-at ->
-    let d = []
     for (let x = 0; x < teamsAmount; x++) {
       for (let i = 0; i < playerPositionAmtAllocation.length; i++) {
         // Each iteration checks amount of teams then positions amt, then Splices from the [AvailablePlayers] copy above on each iteration amount 1, 5, 4, 3, 2
