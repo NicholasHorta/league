@@ -55,16 +55,51 @@
 
 .player-icon {
     font-size: 2rem;
-    color: var(--grey25);
-    text-shadow: -2px 2px 5px var(--blue);
+    position: relative;
+    filter: drop-shadow(2px 2px 2px var(--grey));
+}
+
+.player-icon-team-1 {
+    background: var(--team-one-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.player-icon-team-2 {
+    background: var(--team-two-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.player-icon-team-3 {
+    background: var(--team-three-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.player-icon-team-4 {
+    background: var(--team-four-colors);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .player__position {
     position: absolute;
-    top: 60px;
+    top: 62.5px;
     font-size: 0.75rem;
     left: 50%;
     font-style: italic;
-    color: var(--blue);
+    color: var(--grey);
     transform: translateX(-50%);
 }

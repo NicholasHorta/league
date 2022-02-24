@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-formation',
@@ -7,9 +7,23 @@ import { Component } from '@angular/core';
 })
 export class FormationComponent {
 
+  @Input() teamOne: string = '';
+  @Input() teamTwo: string = '';
+  @Input() teamThree: string = '';
+  @Input() teamFour: string = '';
 
+  playerPositionAmtDefs: any = new Array(4);
+  playerPositionAmtMids: any = new Array(3);
+  playerPositionAmtAms: any = new Array(2);
 
-  constructor() { }
-
+  get defs() {
+    return this.playerPositionAmtDefs;
+  }
+  get mids() {
+    return this.playerPositionAmtMids;
+  }
+  get ams() {
+    return this.playerPositionAmtAms;
+  }
 
 }

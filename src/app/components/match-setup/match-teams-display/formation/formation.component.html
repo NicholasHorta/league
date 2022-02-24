@@ -1,55 +1,60 @@
 <div class="player-positions">
     <div class="player-positions__keeper">
         <div class="keeper">
-            <i class="fas fa-tshirt player-icon"></i>
+            <i class="fas fa-tshirt player-icon" [ngClass]="{
+                    'player-icon-team-1': this.teamOne, 
+                    'player-icon-team-2': this.teamTwo, 
+                    'player-icon-team-3': this.teamThree, 
+                    'player-icon-team-4': this.teamFour
+                }"></i>
             <span class="player__position">GK</span>
         </div>
     </div>
     <div class="player-positions__def">
-        <div class="defence outer-position-y">
-            <i class="fas fa-tshirt player-icon"></i>
+        <div class="defence outer-position-y" *ngFor="let dm of defs">
+            <i class="fas fa-tshirt player-icon"
+                [ngClass]="{
+                    'player-icon-team-1': this.teamOne, 
+                    'player-icon-team-2': this.teamTwo, 
+                    'player-icon-team-3': this.teamThree, 
+                    'player-icon-team-4': this.teamFour
+                }"></i>
             <span class="player__position">DEF</span>
-        </div>
-        <div class="defence">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position">DEF</span>
-        </div>
-        <div class="defence">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position">DEF</span>
-        </div>
-        <div class="defence outer-position-y">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position ">DEF</span>
         </div>
     </div>
     <div class="player-positions__def-mid">
-        <div class="defensive-mid outer-position-y">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position">MID</span>
-        </div>
-        <div class="defensive-mid">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position">MID</span>
-        </div>
-        <div class="defensive-mid outer-position-y">
-            <i class="fas fa-tshirt player-icon"></i>
+        <div class="defensive-mid outer-position-y" *ngFor="let md of mids">
+            <i class="fas fa-tshirt player-icon"
+                [ngClass]="{
+                    'player-icon-team-1': this.teamOne, 
+                    'player-icon-team-2': this.teamTwo, 
+                    'player-icon-team-3': this.teamThree, 
+                    'player-icon-team-4': this.teamFour
+                }"></i>
             <span class="player__position">MID</span>
         </div>
     </div>
     <div class="player-positions__att-mid">
-        <div class="attacking-mid outer-position-x-l">
-            <i class="fas fa-tshirt player-icon"></i>
-            <span class="player__position">AM</span>
-        </div>
-        <div class="attacking-mid outer-position-x-r">
-            <i class="fas fa-tshirt player-icon"></i>
+        <div class="attacking-mid outer-position-x-l" *ngFor="let am of ams">
+            <i class="fas fa-tshirt player-icon"
+                [ngClass]="{
+                    'player-icon-team-1': this.teamOne, 
+                    'player-icon-team-2': this.teamTwo, 
+                    'player-icon-team-3': this.teamThree, 
+                    'player-icon-team-4': this.teamFour
+                }"></i>
             <span class="player__position">AM</span>
         </div>
     </div>
     <div class="player-positions__att">
         <div class="attack outer-position-y-st">
-            <i class="fas fa-tshirt player-icon"></i>
+            <i class="fas fa-tshirt player-icon"
+                [ngClass]="{
+                    'player-icon-team-1': this.teamOne, 
+                    'player-icon-team-2': this.teamTwo, 
+                    'player-icon-team-3': this.teamThree, 
+                    'player-icon-team-4': this.teamFour
+                }"></i>
             <span class="player__position">ST</span>
         </div>
     </div>

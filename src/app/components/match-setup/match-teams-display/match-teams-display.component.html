@@ -28,7 +28,7 @@
                     <span class="substitute__key">Substitutes</span>
                 </div>
             </div>
-            <app-formation *ngIf="this.teamDisplayToggleTeamOne"></app-formation>
+            <app-formation *ngIf="this.teamDisplayToggleTeamOne" [teamOne]="matchSetupSVC.generatedTeamsArray[0]"></app-formation>
             <div class="captain" *ngIf="this.teamDisplayToggleTeamOne">
                 <span>{{this.teamOneCaptain}}</span>
                 <p class="captain__text">captain</p>
@@ -62,7 +62,7 @@
                     <span class="substitute__key">Substitutes</span>
                 </div>
             </div>
-            <app-formation *ngIf="this.teamDisplayToggleTeamTwo"></app-formation>
+            <app-formation *ngIf="this.teamDisplayToggleTeamTwo" [teamTwo]="matchSetupSVC.generatedTeamsArray[1]"></app-formation>
             <div class="captain" *ngIf="this.teamDisplayToggleTeamTwo">
                 <span>{{this.teamTwoCaptain}}</span>
                 <p class="captain__text">captain</p>
@@ -100,7 +100,7 @@
                     <span class="substitute__key">Substitutes</span>
                 </div>
             </div>
-            <app-formation *ngIf="this.teamDisplayToggleTeamThree"></app-formation>
+            <app-formation *ngIf="this.teamDisplayToggleTeamThree" [teamThree]="matchSetupSVC.generatedTeamsArray[2]"></app-formation>
             <div class="captain" *ngIf="this.teamDisplayToggleTeamThree">
                 <span>{{this.teamThreeCaptain}}</span>
                 <p class="captain__text">captain</p>
@@ -134,7 +134,7 @@
                     <span class="substitute__key">Substitutes</span>
                 </div>
             </div>
-            <app-formation *ngIf="this.teamDisplayToggleTeamFour"></app-formation>
+            <app-formation *ngIf="this.teamDisplayToggleTeamFour" [teamFour]="matchSetupSVC.generatedTeamsArray[3]"></app-formation>
             <div class="captain" *ngIf="this.teamDisplayToggleTeamFour">
                 <span>{{this.teamFourCaptain}}</span>
                 <p class="captain__text">captain</p>

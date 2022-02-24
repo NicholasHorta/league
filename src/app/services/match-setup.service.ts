@@ -85,7 +85,7 @@ export class MatchSetupService {
 
   allocateFullTeamsheetsHandler(generatedPlayersArray: {}[], teamsAmount: number) {
     // SubPositionSpliceValues array decreases with every number due to splice reduction within array on every execution 
-    // Leaving us with one less in the array on each iteration which we account for in the provided SubPositionSpliceValues array
+    // Leaving us with one less in the array on each iteration which we account for in the provided SubPositionSpliceValues array for each sub position
     function sortStarterAndSubsHandler(fullTeamList: {}[], subPositionSpliceValues: number[]) {
       const startingEleven = fullTeamList;
       let subs: any[] = [];
