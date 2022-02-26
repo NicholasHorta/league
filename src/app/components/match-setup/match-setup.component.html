@@ -5,7 +5,11 @@
     <div class="match-setup__notice fx_x-c_y-c"
         *ngIf="(matchSetupSVC.leagueTypeValue === 2 && (!matchTeamsDisplay.teamOneCaptain || !matchTeamsDisplay.teamTwoCaptain)) 
         || 
-        (matchSetupSVC.leagueTypeValue === 4 && (!matchTeamsDisplay.teamOneCaptain || !matchTeamsDisplay.teamTwoCaptain || !matchTeamsDisplay.teamThreeCaptain || !matchTeamsDisplay.teamFourCaptain))">
+        (matchSetupSVC.leagueTypeValue === 4 && 
+        (!matchTeamsDisplay.teamOneCaptain 
+        || !matchTeamsDisplay.teamTwoCaptain 
+        || !matchTeamsDisplay.teamThreeCaptain 
+        || !matchTeamsDisplay.teamFourCaptain))">
         <svg xmlns="http://www.w3.org/2000/svg" class="notice__icon" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -15,13 +19,19 @@
     </div>
     <!-- Link below is generated according to selected type and captaincy values -->
     <a routerLink="/league-play"
-        *ngIf="matchSetupSVC.leagueTypeValue === 2 && (matchTeamsDisplay.teamOneCaptain && matchTeamsDisplay.teamTwoCaptain)"
+        *ngIf="matchSetupSVC.leagueTypeValue === 2 && 
+        (matchTeamsDisplay.teamOneCaptain 
+        && matchTeamsDisplay.teamTwoCaptain)"
         class="match-setup__progress-btn">
         Match Day
         <i class="fas fa-chevron-right"></i>
     </a>
     <a routerLink="/league-play"
-        *ngIf="matchSetupSVC.leagueTypeValue === 4 && (matchTeamsDisplay.teamOneCaptain && matchTeamsDisplay.teamTwoCaptain && matchTeamsDisplay.teamThreeCaptain && matchTeamsDisplay.teamFourCaptain)"
+        *ngIf="matchSetupSVC.leagueTypeValue === 4 && 
+        (matchTeamsDisplay.teamOneCaptain 
+        && matchTeamsDisplay.teamTwoCaptain 
+        && matchTeamsDisplay.teamThreeCaptain 
+        && matchTeamsDisplay.teamFourCaptain)"
         class="match-setup__progress-btn">
         Match Day
         <i class="fas fa-chevron-right"></i>

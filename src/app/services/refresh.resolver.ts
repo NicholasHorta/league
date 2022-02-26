@@ -7,7 +7,7 @@ import { MatchSetupService } from './match-setup.service';
 })
 export class RefreshResolver implements Resolve<any> {
 
-  constructor(public matchSetupSVC: MatchSetupService) { }
+  constructor(private matchSetupSVC: MatchSetupService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if(this.matchSetupSVC.generatedTeamsArray.length === 0){
