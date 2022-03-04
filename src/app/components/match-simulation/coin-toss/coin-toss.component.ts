@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-coin-toss',
+  selector: 'coin-toss',
   templateUrl: './coin-toss.component.html',
   styleUrls: ['./coin-toss.component.css']
 })

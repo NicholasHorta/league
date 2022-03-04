@@ -1,0 +1,46 @@
+* {
+    color: var(--white);
+}
+
+.coin-toss-component {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.coin-toss__container {
+    width: 500px;
+    height: 300px;
+    /* background: linear-gradient(var(--orange), var(--white)) ; */
+    background: var(--orange) ;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--white);
+}
+
+.coin-toss__teams {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+}
+
+.coin-toss__desc {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.coin-toss__init {
+    background: none;
+    border: none;
+    border: 2px solid var(--white);
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+}
+
+.coin-toss__result {
+    
+}
