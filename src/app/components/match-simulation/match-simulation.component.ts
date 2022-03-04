@@ -4,7 +4,7 @@ import { MatchSetupService } from '../../services/match-setup.service'
 @Component({
   selector: 'match-simulation',
   templateUrl: './match-simulation.component.html',
-  styleUrls: ['./match-simulation.component.css']
+  styleUrls: ['./match-simulation.component.css'],
 })
 export class MatchSimulationComponent implements OnInit {
 

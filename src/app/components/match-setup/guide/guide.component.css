@@ -38,6 +38,8 @@
 .league-description__options {
     border-bottom: 1px solid var(--grey25);
     padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .league-description__options .options__option-info{
