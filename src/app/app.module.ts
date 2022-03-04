@@ -7,7 +7,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatchSetupComponent } from './components/match-setup/match-setup.component';
 import { MatchTypeSelectComponent } from './components/match-setup/match-type-select/match-type-select.component';
 import { MatchTeamsDisplayComponent } from './components/match-setup/match-teams-display/match-teams-display.component';
-import { MyDirectiveDirective } from './my-directive.directive';
 import { FormationComponent } from './components/match-setup/match-teams-display/formation/formation.component';
 import { MatchSimulationComponent } from './components/match-simulation/match-simulation.component';
 import { QuickMatchSimComponent } from './components/match-simulation/quick-match-sim/quick-match-sim.component';
@@ -25,7 +24,6 @@ import { QuickMatchStatsComponent } from './components/match-simulation/quick-ma
     MatchSetupComponent,
     MatchTypeSelectComponent,
     MatchTeamsDisplayComponent,
-    MyDirectiveDirective,
     FormationComponent,
     MatchSimulationComponent,
     QuickMatchSimComponent,
