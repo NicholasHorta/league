@@ -16,10 +16,9 @@
 /* DIFFERENT COLORS FOR EACH TEAM?? */
 .club-title {
     position: absolute;
-    top: -7rem;
+    top: -4.5rem;
     right: 0;
-    font-size: 1.75rem;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-family: 'team';
     opacity: 0.75;
 }
@@ -163,4 +162,5 @@
     background-color: var(--orange);
     border: none;
     border-radius: 9px;
+    margin-bottom: 2rem;
 }
