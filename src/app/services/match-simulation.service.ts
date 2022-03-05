@@ -7,9 +7,6 @@ export class MatchSimulationService {
 
   constructor() { }
 
-  coinTossWinner: string = '';
+  advantagePossessionTeams: string[] = [];
 
-  coinTossWinnerHandler(teams: string[]){
-    console.log(teams);
-  }
 }

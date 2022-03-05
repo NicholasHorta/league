@@ -17,7 +17,7 @@ import { GuideComponent } from './components/match-setup/guide/guide.component';
 import { CupRunStatsComponent } from './components/match-simulation/cup-run-sim/cup-run-stats/cup-run-stats.component';
 import { QuickMatchStatsComponent } from './components/match-simulation/quick-match-sim/quick-match-stats/quick-match-stats.component';
 import { CoinTossDirective } from './components/match-simulation/coin-toss/coin-toss.directive';
-import { CoinTossComponent } from './components/match-simulation/coin-toss/coin-toss.component';
+import { CoinTossModalComponent } from './components/match-simulation/coin-toss/coin-toss-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { CoinTossComponent } from './components/match-simulation/coin-toss/coin-
     CupRunStatsComponent,
     QuickMatchStatsComponent,
     CoinTossDirective,
-    CoinTossComponent,
+    CoinTossModalComponent,
   ],
   imports: [
     BrowserModule,

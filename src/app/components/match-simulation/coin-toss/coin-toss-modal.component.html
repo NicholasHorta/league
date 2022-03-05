@@ -1,0 +1,19 @@
+<div class="coin-toss-component fx_x-c_y-c"
+    *coinToss="false as init; let msg = message; let res = result; let toss = runCoinToss; let load = loading; let teamsAmt = fourTeams">
+    <div class="coin-toss__container">
+        <div *ngIf="!load" class="coin-toss__teams-decider">
+            <div class="teams-decider__teams">
+                <h2 *ngIf="!teamsAmt" class="team">{{res.length ? res[0] : msg}}</h2>
+                <div *ngIf="teamsAmt">
+                    <h2 class="team">{{res.length ? res[0] : msg}}</h2>
+                    <h2 class="team">{{res.length ? res[1] : null}}</h2>
+                </div>
+                <!-- // add the changes to the service -->
+            </div>
+        </div>
+        <img *ngIf="load" src="../../../../assets/img/load_blue.gif" alt="loading">
+        <button class="coin-toss__init fx_x-b" [ngClass]="{'disabled-btn': res[0]}" (click)="toss()">
+            Flip Coin!
+        </button>
+    </div>
+</div>
