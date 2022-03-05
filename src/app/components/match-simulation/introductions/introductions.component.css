@@ -50,6 +50,7 @@
     padding: 1rem;
     flex:1;
     background-color: var(--green25);
+    text-align: justify;
 }
 
 .quick-match-intro__intro-comment-text:first-of-type,
