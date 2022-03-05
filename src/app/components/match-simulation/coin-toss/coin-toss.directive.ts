@@ -7,12 +7,18 @@ class AdditionalProperties {
   public message = "Flip the coin to see who beggins the game with the advantage of possession.";
   public result = '';
   public closeModal = false;
+  public loading = false;
   public runCoinToss = () => {
-    this.result = this.availableTeams[Math.floor(Math.random() * this.matchSetupSVC.generatedTeamsArray.length)];
+    this.loading = true;
+    const initloading = setInterval(() => {
+      this.result = this.availableTeams[Math.floor(Math.random() * this.matchSetupSVC.generatedTeamsArray.length)];
+      this.loading = false;
+      clearInterval(initloading);
+    }, 2000)
     const initCloseModal = setInterval(() => {
       this.closeModal = true;
       clearInterval(initCloseModal);
-    }, 3000)
+    }, 5000)
   }
 }
 @Directive({

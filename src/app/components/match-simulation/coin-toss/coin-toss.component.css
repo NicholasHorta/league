@@ -2,6 +2,12 @@
     color: var(--white);
 }
 
+img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
 .coin-toss-component {
     height: 100vh;
     position: fixed;

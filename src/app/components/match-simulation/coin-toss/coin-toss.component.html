@@ -1,13 +1,12 @@
 <div class="coin-toss-component fx_x-c_y-c"
-    *coinToss="false as init; let msg = message; let res = result; let toss = runCoinToss;">
+    *coinToss="false as init; let msg = message; let res = result; let toss = runCoinToss; let load = loading">
     <div class="coin-toss__container">
-        <div class="coin-toss__teams-decider">
-            
+        <div *ngIf="!load" class="coin-toss__teams-decider">
             <div class="teams-decider__teams">
                 <h2 class="team">{{res ? res : msg}}</h2>
             </div>
-            
         </div>
+        <img *ngIf="load" src="../../../../assets/img/loading.gif" alt="loading">
         <button class="coin-toss__init fx_x-b" [ngClass]="{'disabled-btn': res}" [disabled]="res" (click)="toss()">
             Flip Coin!
         </button>
