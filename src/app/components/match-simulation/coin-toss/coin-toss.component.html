@@ -1,16 +1,15 @@
-<div class="coin-toss-component fx_x-c_y-c" *coinToss="false; let teams = availableTeams;">
+<div class="coin-toss-component fx_x-c_y-c"
+    *coinToss="false as init; let msg = message; let res = result; let toss = runCoinToss;">
     <div class="coin-toss__container">
-        <div class="coin-toss__teams">
-            <h2 class="team">{{teams[0]}}</h2>
-            <span>vs</span>
-            <h2 class="team">{{teams[1]}}</h2>
+        <div class="coin-toss__teams-decider">
+            
+            <div class="teams-decider__teams">
+                <h2 class="team">{{res ? res : msg}}</h2>
+            </div>
+            
         </div>
-        <p class="coin-toss__desc">Flip the coin to see who beggins the game with the advantage of possession.</p>
-        <button class="coin-toss__init fx_x-b">
+        <button class="coin-toss__init fx_x-b" [ngClass]="{'disabled-btn': res}" [disabled]="res" (click)="toss()">
             Flip Coin!
         </button>
-        <span class="coin-toss__result fx_x-b">
-
-        </span>
     </div>
 </div>

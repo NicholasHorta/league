@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './coin-toss.component.html',
   styleUrls: ['./coin-toss.component.css']
 })
-export class CoinTossComponent implements OnInit {
+export class CoinTossComponent  {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

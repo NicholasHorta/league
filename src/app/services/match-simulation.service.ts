@@ -6,4 +6,10 @@ import { Injectable } from '@angular/core';
 export class MatchSimulationService {
 
   constructor() { }
+
+  coinTossWinner: string = '';
+
+  coinTossWinnerHandler(teams: string[]){
+    console.log(teams);
+  }
 }

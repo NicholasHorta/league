@@ -12,8 +12,12 @@ html, body {
     margin: 0 auto;
 }
 
-h2, h3, h4, li, p, span, label{
+h2, h3, h4, li, p, span, label, button{
     font-family: 'script';
+}
+
+button {
+    cursor: pointer;
 }
 
 :root {
