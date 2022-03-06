@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MatchSimulationService {
+export class MatchSimulationService implements OnInit {
 
   constructor() { }
 
   advantagePossessionTeams: string[] = [];
+
+  ngOnInit(){
+    
+  }
 
 }

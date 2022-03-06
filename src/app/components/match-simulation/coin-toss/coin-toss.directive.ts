@@ -11,19 +11,15 @@ class AdditionalProperties {
   public closeModal = false;
   public loading = false;
   public runCoinToss = () => {
-    console.log('%ccoin-toss.directive.ts line:19 this.availableTeams', 'color: #bada55;', this.availableTeams);
-    console.log('%ccoin-toss.directive.ts line:19 this.availableTeams', 'color: #b00b13;', this.matchSetupSVC.generatedTeamsArray);
     this.loading = true;
     if (this.fourTeams) {
-      const teamOne = this.availableTeams.splice(Math.floor(Math.random() * this.matchSetupSVC.generatedTeamsArray.length), 1);
-      this.result.push(...teamOne);
-      const teamTwo = this.availableTeams.splice(Math.floor(Math.random() * this.matchSetupSVC.generatedTeamsArray.length), 1);
-      this.result.push(...teamTwo);
-      console.log('%ccoin-toss.directive.ts line:19 this.availableTeams', 'color: #007acc;', this.result);
+      // 4 team line ups remain the same on every instance
+      // So to ensure we assign from the right pool of 2, we draw off 0/1, then 0 + 2 = team[2] /1 + 2 = team[3] 
+      const teamOne = this.availableTeams[Math.floor(Math.random() * 2)];
+      const teamTwo = this.availableTeams[Math.floor(Math.random() * 2 + 2)];
+      this.result.push(teamOne), this.result.push(teamTwo);
     } else {
       this.result.push(this.availableTeams[Math.floor(Math.random() * this.matchSetupSVC.generatedTeamsArray.length)]);
-      console.log('%ccoin-toss.directive.ts line:23 this.availableTeams', 'color: #007acc;', this.availableTeams);
-      console.log('%ccoin-toss.directive.ts line:23 this.availableTeams', 'color: #007acc;', this.result);
     }
     this.matchSimSVC.advantagePossessionTeams  = this.result;
     const initloading = setInterval(() => {

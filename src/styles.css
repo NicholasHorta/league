@@ -72,6 +72,12 @@ ul {
     align-items: center;
 }
 
+.fx_x-e_y-c {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .fx_x-a_y-c {
     display: flex;
     justify-content: space-around;

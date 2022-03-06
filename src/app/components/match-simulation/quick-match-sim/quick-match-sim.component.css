@@ -98,6 +98,18 @@
     border-bottom: 1px solid var(--grey25);
 }
 
+.possession-icon {
+    width: 25px;
+    height: 25px;
+    color: var(--green50);
+}
+.possession-icon .right {
+    margin-left: 1rem;
+}
+.possession-icon .left {
+    margin-right: 1rem;
+}
+
 .team-two__name,
 .team-two__subs .sub,
 .team-two__subs-title,
