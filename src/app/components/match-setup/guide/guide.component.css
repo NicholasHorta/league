@@ -20,6 +20,8 @@
     background-color: var(--grey);
     font-size: 1.15rem;
     padding: 0.25rem 0.75rem;
+    width: 105px;
+    text-align: center;
 }
 
 .league-description__guide-header .guide-header__view-toggle:hover {
