@@ -137,3 +137,7 @@
 .match-simulation__start-game:hover{
     background-color: var(--blue);
 }
+
+.match__full-time-red {
+    color: var(--red) !important;
+}

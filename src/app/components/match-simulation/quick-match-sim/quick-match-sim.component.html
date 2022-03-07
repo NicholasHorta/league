@@ -2,7 +2,7 @@
     <div class="match-simulation__team-sections fx_x-b_y-c">
         <div class="team-sections__title">Team Sheet</div>
         <div class="team-sections__current-score">0 : 0</div>
-        <div class="team-sections__init-match-time">
+        <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchTimeMinutes === 93}">
             {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
         </div>
         <div class="team-sections__team-one">
