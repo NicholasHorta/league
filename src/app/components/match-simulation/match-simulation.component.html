@@ -1,6 +1,9 @@
 <div>
-    <match-introductions (teamSheetArrEmission)="emitTeamSheetToMatchSim($event)"></match-introductions>
-    <quick-match-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 2"></quick-match-sim>
-    <cup-run-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 4"></cup-run-sim>
+    <match-introductions (teamSheetArrEmission)="emitTeamSheetToMatchSim($event)">
+    </match-introductions>
+    <quick-match-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 2" [matchTimeMinutes]="matchMinutesVisual" [matchTimeSeconds]="matchSecondsVisual" (emitMatchInit)="matchTimeHandler()">
+    </quick-match-sim>
+    <cup-run-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 4">
+    </cup-run-sim>
     <coin-toss-modal></coin-toss-modal>
 </div>

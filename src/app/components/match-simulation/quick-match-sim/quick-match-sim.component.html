@@ -2,7 +2,9 @@
     <div class="match-simulation__team-sections fx_x-b_y-c">
         <div class="team-sections__title">Team Sheet</div>
         <div class="team-sections__current-score">0 : 0</div>
-        <div class="team-sections__init-match-time">00:00</div>
+        <div class="team-sections__init-match-time">
+            {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
+        </div>
         <div class="team-sections__team-one">
             <h3 class="team-one__name fx_x-b_y-c">
                 {{teams[0]}}
@@ -63,5 +65,5 @@
         </div>
     </div>
     <quick-match-stats></quick-match-stats>
-    <div class="match-simulation__start-game">Start Game</div>
+    <div class="match-simulation__start-game" [ngClass]="{'disabled-btn': matchStarted}" (click)="emitMatchInitHandler()">Start Game</div>
 </section>

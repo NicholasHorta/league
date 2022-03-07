@@ -29,7 +29,6 @@
 .coin-toss__loader {
     width: 50px;
     height: 50px;
-    /* margin: 0 auto; */
     position: absolute;
     top: 0;
     left: 0;
@@ -88,6 +87,3 @@
     text-shadow: 0px 0px 3px var(--grey25);
 }
 
-.disabled-btn {
-    display: none;
-}

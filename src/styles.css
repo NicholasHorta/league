@@ -51,6 +51,10 @@ ul {
     list-style: none;
 }
 
+.disabled-btn {
+    display: none !important;
+}
+
 .fx_x-c {
     display: flex;
     justify-content: center;
