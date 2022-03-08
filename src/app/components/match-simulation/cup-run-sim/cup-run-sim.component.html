@@ -1,137 +1,146 @@
 <section class="match-simulation__container">
-    <div class="match-simulation__team-sections fx_x-b_y-c">
-        <div class="team-sections__title">Team Sheet</div>
-        <div class="team-sections__current-score">0 : 0</div>
-        <div class="team-sections__init-match-time">00:00</div>
-        <div class="team-sections__team-one">
-            <h3 class="team-one__name fx_x-b_y-c">
-                {{teams[0]}}
-                <svg *ngIf="teams[0] == currentPossession[0]" xmlns="http://www.w3.org/2000/svg"
-                    class="possession-icon left" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-            </h3>
-            <ul class="team-one__starting-11">
-                <li *ngFor="let player of this.teamOneStarters" class="starter"
-                    [ngClass]="{'captain': player.captain }">
-                    <span class="starter__position">
-                        {{player.position}}
-                    </span>
-                    {{player.name}}
-                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
-                </li>
-            </ul>
-            <p class="team-one__subs-title">Substitutes</p>
-            <ul class="team-one__subs">
-                <li *ngFor="let sub of this.teamOneSubs" class="sub">
-                    <span class="sub__position">
-                        {{sub.position}}
-                    </span>
-                    {{sub.name}}
-                </li>
-            </ul>
+    <div *ngIf="cupRunProgress.semiFinalOne">
+        <div class="match-simulation__team-sections fx_x-b_y-c">
+            <div class="team-sections__title">Team Sheet</div>
+            <div class="team-sections__current-score">0 : 0</div>
+            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchTimeMinutes === 93}">
+                {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
+            </div>
+            <div class="team-sections__team-one">
+                <h3 class="team-one__name fx_x-b_y-c">
+                    {{teams[0]}}
+                    <svg *ngIf="teams[0] == currentPossession[0]" xmlns="http://www.w3.org/2000/svg"
+                        class="possession-icon left" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </h3>
+                <ul class="team-one__starting-11">
+                    <li *ngFor="let player of this.teamOneStarters" class="starter"
+                        [ngClass]="{'captain': player.captain }">
+                        <span class="starter__position">
+                            {{player.position}}
+                        </span>
+                        {{player.name}}
+                        <span class="starter__captain" *ngIf="player.captain">CPT</span>
+                    </li>
+                </ul>
+                <p class="team-one__subs-title">Substitutes</p>
+                <ul class="team-one__subs">
+                    <li *ngFor="let sub of this.teamOneSubs" class="sub">
+                        <span class="sub__position">
+                            {{sub.position}}
+                        </span>
+                        {{sub.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="team-sections__team-two">
+                <h3 class="team-two__name"
+                    [ngClass]="{'fx_x-b_y-c': teams[1] === currentPossession[0], 'fx_x-e_y-c': teams[1] !== currentPossession[0]}">
+                    <svg *ngIf="teams[1] === currentPossession[0]" xmlns="http://www.w3.org/2000/svg"
+                        class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    {{teams[1]}}
+                </h3>
+                <ul class="team-two__starting-11">
+                    <li *ngFor="let player of this.teamTwoStarters" class="starter"
+                        [ngClass]="{'captain': player.captain }">
+                        <span class="starter__captain" *ngIf="player.captain">CPT</span>
+                        {{player.name}}
+                        <span class="starter__position right">
+                            {{player.position}}
+                        </span>
+                    </li>
+                </ul>
+                <p class="team-two__subs-title">Substitutes</p>
+                <ul class="team-two__subs">
+                    <li *ngFor="let sub of this.teamTwoSubs" class="sub">
+                        {{sub.name}}
+                        <span class="sub__position right">
+                            {{sub.position}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="team-sections__team-two">
-            <h3 class="team-two__name"
-                [ngClass]="{'fx_x-b_y-c': teams[1] === currentPossession[0], 'fx_x-e_y-c': teams[1] !== currentPossession[0]}">
-                <svg *ngIf="teams[1] === currentPossession[0]" xmlns="http://www.w3.org/2000/svg"
-                    class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                {{teams[1]}}
-            </h3>
-            <ul class="team-two__starting-11">
-                <li *ngFor="let player of this.teamTwoStarters" class="starter"
-                    [ngClass]="{'captain': player.captain }">
-                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
-                    {{player.name}}
-                    <span class="starter__position right">
-                        {{player.position}}
-                    </span>
-                </li>
-            </ul>
-            <p class="team-two__subs-title">Substitutes</p>
-            <ul class="team-two__subs">
-                <li *ngFor="let sub of this.teamTwoSubs" class="sub">
-                    {{sub.name}}
-                    <span class="sub__position right">
-                        {{sub.position}}
-                    </span>
-                </li>
-            </ul>
-        </div>
+        <cup-run-stats></cup-run-stats>
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler()" [ngClass]="{'disabled-btn': semiFinalOneStarted}">Start Game</div>
     </div>
-    <cup-run-stats></cup-run-stats>
-    <div class="match-simulation__start-game">Start Game</div>
-    <div class="match-simulation__team-sections fx_x-b_y-c">
-        <div class="team-sections__title">Team Sheet</div>
-        <div class="team-sections__current-score">0 : 0</div>
-        <div class="team-sections__init-match-time">00:00</div>
-        <div class="team-sections__team-one">
-            <h3 class="team-one__name fx_x-b_y-c">
-                {{teams[2]}}
-                <svg *ngIf="teams[2] === currentPossession[1]" xmlns="http://www.w3.org/2000/svg"
-                    class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-            </h3>
-            <ul class="team-one__starting-11">
-                <li *ngFor="let player of this.teamThreeStarters" class="starter"
-                    [ngClass]="{'captain': player.captain }">
-                    <span class="starter__position">
-                        {{player.position}}
-                    </span>
-                    {{player.name}}
-                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
-                </li>
-            </ul>
-            <p class="team-one__subs-title">Substitutes</p>
-            <ul class="team-one__subs">
-                <li *ngFor="let sub of this.teamThreeSubs" class="sub">
-                    <span class="sub__position">
-                        {{sub.position}}
-                    </span>
-                    {{sub.name}}
-                </li>
-            </ul>
+    <div *ngIf="cupRunProgress.semiFinalTwo">
+        <div class="match-simulation__team-sections fx_x-b_y-c">
+            <div class="team-sections__title">Team Sheet</div>
+            <div class="team-sections__current-score">0 : 0</div>
+            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchTimeMinutes === 93}">
+                {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
+            </div>
+            <div class="team-sections__team-one">
+                <h3 class="team-one__name fx_x-b_y-c">
+                    {{teams[2]}}
+                    <svg *ngIf="teams[2] === currentPossession[1]" xmlns="http://www.w3.org/2000/svg"
+                        class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </h3>
+                <ul class="team-one__starting-11">
+                    <li *ngFor="let player of this.teamThreeStarters" class="starter"
+                        [ngClass]="{'captain': player.captain }">
+                        <span class="starter__position">
+                            {{player.position}}
+                        </span>
+                        {{player.name}}
+                        <span class="starter__captain" *ngIf="player.captain">CPT</span>
+                    </li>
+                </ul>
+                <p class="team-one__subs-title">Substitutes</p>
+                <ul class="team-one__subs">
+                    <li *ngFor="let sub of this.teamThreeSubs" class="sub">
+                        <span class="sub__position">
+                            {{sub.position}}
+                        </span>
+                        {{sub.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="team-sections__team-two">
+                <h3 class="team-two__name"
+                    [ngClass]="{'fx_x-b_y-c': teams[3] === currentPossession[1], 'fx_x-e_y-c': teams[3] !== currentPossession[1]}">
+                    <svg *ngIf="teams[3] === currentPossession[1]" xmlns="http://www.w3.org/2000/svg"
+                        class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    {{teams[3]}}
+                </h3>
+                <ul class="team-two__starting-11">
+                    <li *ngFor="let player of this.teamFourStarters" class="starter"
+                        [ngClass]="{'captain': player.captain }">
+                        <span class="starter__captain" *ngIf="player.captain">CPT</span>
+                        {{player.name}}
+                        <span class="starter__position right">
+                            {{player.position}}
+                        </span>
+                    </li>
+                </ul>
+                <p class="team-two__subs-title">Substitutes</p>
+                <ul class="team-two__subs">
+                    <li *ngFor="let sub of this.teamFourSubs" class="sub">
+                        {{sub.name}}
+                        <span class="sub__position right">
+                            {{sub.position}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="team-sections__team-two">
-            <h3 class="team-two__name"
-                [ngClass]="{'fx_x-b_y-c': teams[3] === currentPossession[1], 'fx_x-e_y-c': teams[3] !== currentPossession[1]}">
-                <svg *ngIf="teams[3] === currentPossession[1]" xmlns="http://www.w3.org/2000/svg"
-                    class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                {{teams[3]}}
-            </h3>
-            <ul class="team-two__starting-11">
-                <li *ngFor="let player of this.teamFourStarters" class="starter"
-                    [ngClass]="{'captain': player.captain }">
-                    <span class="starter__captain" *ngIf="player.captain">CPT</span>
-                    {{player.name}}
-                    <span class="starter__position right">
-                        {{player.position}}
-                    </span>
-                </li>
-            </ul>
-            <p class="team-two__subs-title">Substitutes</p>
-            <ul class="team-two__subs">
-                <li *ngFor="let sub of this.teamFourSubs" class="sub">
-                    {{sub.name}}
-                    <span class="sub__position right">
-                        {{sub.position}}
-                    </span>
-                </li>
-            </ul>
-        </div>
+        <cup-run-stats></cup-run-stats>
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler()" [ngClass]="{'disabled-btn': semiFinalTwoStarted}">Start Game</div>
     </div>
-    <cup-run-stats></cup-run-stats>
-    <div class="match-simulation__start-game">Start Game</div>
 </section>
