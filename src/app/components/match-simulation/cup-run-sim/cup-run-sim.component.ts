@@ -12,16 +12,23 @@ export class CupRunSimComponent implements OnInit {
 
   @Input() teamSheetArr: any;
   @Input() teams: any;
-  teamOneStarters: any[] = [];
-  teamTwoStarters: any[] = [];
-  teamThreeStarters: any[] = [];
-  teamFourStarters: any[] = [];
+
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
   teamThreeSubs: any[] = this.matchSetupSVC.teamThree[1];
   teamFourSubs: any[] = this.matchSetupSVC.teamFour[1];
+  teamOneStarters: any[] = [];
+  teamTwoStarters: any[] = [];
+  teamThreeStarters: any[] = [];
+  teamFourStarters: any[] = [];
   confirmedTeams: string[] = [];
   currentPossession: string[] = [];
+
+  currentMatchInProgress: object = {
+    matchNumber: 1, // of 3 matches - initial two, then the final
+    finalMatch: false,
+    teamsInTheFinal: []
+  };
 
   ngOnInit(): void {
     this.teamOneStarters = this.teamSheetArr.splice(0, 11);
