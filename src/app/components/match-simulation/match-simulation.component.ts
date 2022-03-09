@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { MatchSimulationService } from 'src/app/services/match-simulation.service';
 import { MatchSetupService } from '../../services/match-setup.service'
 @Component({
@@ -20,7 +21,9 @@ export class MatchSimulationComponent implements OnInit {
   matchSecondsVisual: number = 0;
   matchMinutesVisual: number = 0;
 
+
   ngOnInit(): void {
+    console.dir(Observable);
   }
 
   emitTeamSheetToMatchSim(arr: any) {
@@ -37,15 +40,13 @@ export class MatchSimulationComponent implements OnInit {
       if (this.matchTimeTotalIncrement % 60 === 0) this.matchMinutesVisual += 1;
       if (this.matchTimeTotalIncrement >= this.matchFullTimeSeconds) {
         /// Insert winner into array
-        /// this.matchSimSVC.cupRunSemiFinalWinners.push( [winner] )
-
-        // console.log('%cmatch-simulation.component.ts line:39 object', 'color: #007acc;', this.matchSetupSVC.leagueTypeValue === 4);
+        // if(this.matchSetupSVC.leagueTypeValue === 2) this.matchSimSVC.cupRunSemiFinalWinners.push( [winner] )
         if (this.matchSetupSVC.leagueTypeValue === 4) {
           this.matchTimeTotalIncrement = 0;
           this.matchSecondsVisual = 0;
           this.matchMinutesVisual = 0;
+          // this.matchSimSVC.cupRunSemiFinalWinners.push( [winner] )
         }
-        // console.log('%cmatch-simulation.component.ts line:42', 'color: #bada55;', this.matchTimeTotalIncrement);
         clearInterval(matchTimeIncrement);
       }
     }, this.matchMiliSecondInterval);

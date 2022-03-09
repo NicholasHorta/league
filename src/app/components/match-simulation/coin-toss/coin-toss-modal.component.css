@@ -84,6 +84,6 @@
     font-size: 1.75rem;
     padding: 0.5rem 0;
     text-align: center;
-    text-shadow: 0px 0px 3px var(--grey25);
+    text-shadow: 1px 1px 1px var(--grey50);
 }
 

@@ -8,7 +8,7 @@
 
 html, body {
     background-color: white;
-    background-color: black;
+    /* background-color: black; */
     max-width: var(--max-width);
     margin: 0 auto;
 }
