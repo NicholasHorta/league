@@ -13,9 +13,9 @@ export class CupRunSimComponent implements OnInit {
 
   @Input() teamSheetArr: any;
   @Input() teams: any;
-  @Input() matchTimeSeconds: number = 0;
-  @Input() matchTimeMinutes: number = 0;
-  @Output() emitMatchInit: EventEmitter<any> = new EventEmitter<any>();
+  @Input('matchTimeSeconds') seconds: number = 0;
+  @Input('matchTimeMinutes') minutes: number = 0;
+  @Output() emitMatchInit: EventEmitter<number> = new EventEmitter<number>();
 
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
@@ -47,21 +47,11 @@ export class CupRunSimComponent implements OnInit {
 
   ngDoCheck(){
     this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
-    this.matchTimeMinutes === 93 && !this.cupRunProgress.finalMatch ? console.log('%ccup-run-sim.component.ts line:50 "FUCKING"', 'color: #007acc;', this.matchTimeSeconds + "FAGGOT TRANS CUNT FUCK") : console.log('%ccup-run-sim.component.ts line:50 "FUCKING"', 'color: #007acc;', "NOPE---------------------------");
-    if(this.matchTimeMinutes === 93 && !this.cupRunProgress.finalMatch){
-      console.log("WE'RE IN");
-      this.cupRunProgress.semiFinalTwo = true;
-      this.cupRunProgress.semiFinalOne = false;
-    } 
   }
 
-  emitMatchInitHandler(){
+  emitMatchInitHandler(matchId: number){
     /// Handle button disabling
-    this.cupRunProgress.semiFinalOne ? this.semiFinalOneStarted = true : null;
-    // console.log('%c --ONE ', 'color: #00aecc;', this.cupRunProgress.semiFinalOne);
-    // this.cupRunProgress.semiFinalTwo ? this.semiFinalTwoStarted = true : null;
-    // console.log('%c --TWO ', 'color: #00aecc;', this.cupRunProgress.semiFinalTwo);
-    this.emitMatchInit.emit();
+    this.emitMatchInit.emit(matchId);
   }
  
 

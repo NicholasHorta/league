@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChange } from '@angular/core';
 import { MatchSetupService } from 'src/app/services/match-setup.service';
 import { MatchSimulationService } from 'src/app/services/match-simulation.service';
 
@@ -13,9 +13,9 @@ export class QuickMatchSimComponent implements OnInit {
 
   @Input() teamSheetArr: any;
   @Input() teams: any;
-  @Input() matchTimeSeconds: number = 0;
-  @Input() matchTimeMinutes: number = 0;
-  @Output() emitMatchInit: EventEmitter<any> = new EventEmitter<any>();
+  @Input('matchTimeSeconds') seconds: number = 0;
+  @Input('matchTimeMinutes') minutes: number = 0;
+  @Output() emitMatchInit: EventEmitter<number> = new EventEmitter<number>();
 
   teamOneStarters: any[] = [];
   teamTwoStarters: any[] = [];
@@ -23,22 +23,35 @@ export class QuickMatchSimComponent implements OnInit {
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
   confirmedTeams: string[] = [];
   currentPossession: string[] = [];
+  matchComplete: boolean = false;
+  // setWinner: string = this.matchSimSVC.quickMatchWinner;
   matchStarted: boolean = false;
 
-  
+
   ngOnInit(): void {
     this.teamOneStarters = this.teamSheetArr.splice(0, 11);
     this.teamTwoStarters = this.teamSheetArr.splice(0, 11);
   }
 
-  ngDoCheck(){
+  ngDoCheck() {
     this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
+    if (this.matchSimSVC.matchStatus.quickMatchStatus) {
+      this.matchStarted = false;
+      this.matchComplete = true;
+    }
+    // console.log('%c matchComplete', 'color: #007acc;', this.matchComplete);
+    // console.log('%c seconds', 'color: #ff7acc;', this.seconds);
+    // console.log('%c minutes', 'color: #ff7acc;', this.minutes);
   }
 
-  emitMatchInitHandler(){
+  emitMatchInitHandler(matchId: number) {
     this.matchStarted = true;
-    this.emitMatchInit.emit();
+    this.emitMatchInit.emit(matchId);
   }
- 
+
+  postGameResetHandler(){
+    this.matchSetupSVC.leagueTypeValue = 0;
+  }
+
 
 }

@@ -3,11 +3,11 @@
     </match-introductions>
     <quick-match-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 2"
         [matchTimeMinutes]="matchMinutesVisual" [matchTimeSeconds]="matchSecondsVisual"
-        (emitMatchInit)="matchTimeHandler()">
+        (emitMatchInit)="matchTimeHandler($event)">
     </quick-match-sim>
     <cup-run-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 4"
         [matchTimeMinutes]="matchMinutesVisual" [matchTimeSeconds]="matchSecondsVisual"
-        (emitMatchInit)="matchTimeHandler()">
+        (emitMatchInit)="matchTimeHandler($event)">
     </cup-run-sim>
     <coin-toss-modal></coin-toss-modal>
 </div>

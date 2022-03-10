@@ -15,12 +15,12 @@ export class MatchSimulationComponent implements OnInit {
   confirmedTeams: string[] = this.matchSetupSVC.generatedTeamsArray;
   teamSheetArr: any[] = [];
   matchFullTimeSeconds: number = 5580; // 2min (90min + 3min ET)
-  // matchMiliSecondInterval: number = 22.2;
+  /// matchMiliSecondInterval: number = 22.2;
   matchMiliSecondInterval: number = .2;
   matchTimeTotalIncrement: number = 0;
   matchSecondsVisual: number = 0;
   matchMinutesVisual: number = 0;
-
+  
 
   ngOnInit(): void {
     console.dir(Observable);
@@ -30,26 +30,26 @@ export class MatchSimulationComponent implements OnInit {
     this.teamSheetArr = arr;
   }
 
-  matchTimeHandler() {
-    const refStartsGame = new Audio('../../../assets/audio/ref-game-start.mp3');
-    refStartsGame.play();
+  matchTimeHandler(matchId: number) {
+    this.audioHandler();
     const matchTimeIncrement = setInterval(() => {
-      console.log('%cmatch-simulation.component.ts line:42', 'color: #b00b13;', this.matchTimeTotalIncrement);
       this.matchTimeTotalIncrement += 1;
       this.matchTimeTotalIncrement % 60 === 0 ? this.matchSecondsVisual = 0 : this.matchSecondsVisual += 1;
       if (this.matchTimeTotalIncrement % 60 === 0) this.matchMinutesVisual += 1;
       if (this.matchTimeTotalIncrement >= this.matchFullTimeSeconds) {
         /// Insert winner into array
-        // if(this.matchSetupSVC.leagueTypeValue === 2) this.matchSimSVC.cupRunSemiFinalWinners.push( [winner] )
-        if (this.matchSetupSVC.leagueTypeValue === 4) {
-          this.matchTimeTotalIncrement = 0;
-          this.matchSecondsVisual = 0;
-          this.matchMinutesVisual = 0;
-          // this.matchSimSVC.cupRunSemiFinalWinners.push( [winner] )
-        }
+        if(!matchId) this.matchSimSVC.matchStatus.quickMatchStatus = true;
+        if(matchId === 1) this.matchSimSVC.matchStatus.semiFinalOne = true;
+        if(matchId === 2) this.matchSimSVC.matchStatus.semiFinalTwo = true;
         clearInterval(matchTimeIncrement);
       }
     }, this.matchMiliSecondInterval);
   }
+
+  audioHandler(){
+    const refStartsGame = new Audio('../../../assets/audio/ref-game-start.mp3');
+    refStartsGame.play();
+  }
+
 
 }

@@ -25,11 +25,13 @@ class AdditionalProperties {
     const initloading = setInterval(() => {
       this.loading = false;
       clearInterval(initloading);
-    }, 2000)
+    }, 250)
+    // }, 2000)
     const initCloseModal = setInterval(() => {
       this.closeModal = true;
       clearInterval(initCloseModal);
-    }, 5000)
+    }, 500)
+    // }, 5000)
   }
   
 }

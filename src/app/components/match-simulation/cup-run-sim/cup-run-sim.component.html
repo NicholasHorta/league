@@ -3,8 +3,8 @@
         <div class="match-simulation__team-sections fx_x-b_y-c">
             <div class="team-sections__title">Team Sheet</div>
             <div class="team-sections__current-score">0 : 0</div>
-            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchTimeMinutes === 93}">
-                {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
+            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': minutes === 93}">
+                {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}}
             </div>
             <div class="team-sections__team-one">
                 <h3 class="team-one__name fx_x-b_y-c">
@@ -69,14 +69,26 @@
             </div>
         </div>
         <cup-run-stats></cup-run-stats>
-        <div class="match-simulation__start-game" (click)="emitMatchInitHandler()" [ngClass]="{'disabled-btn': semiFinalOneStarted}">Start Game</div>
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler(1)" [ngClass]="{'disabled-btn': semiFinalOneStarted}">Start Game</div>
+        <!-- <div [ngClass]="{'disabled-btn': !matchStarted || minutes === 93, 'match-simulation__game-in-progress': matchStarted}">
+            Game in progress... 
+            <svg xmlns="http://www.w3.org/2000/svg" class="in-progress-icon" fill="none" viewBox="0 0 24 24" stroke="var(--white)" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+        </div> -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        
     </div>
     <div *ngIf="cupRunProgress.semiFinalTwo">
         <div class="match-simulation__team-sections fx_x-b_y-c">
             <div class="team-sections__title">Team Sheet</div>
             <div class="team-sections__current-score">0 : 0</div>
-            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchTimeMinutes === 93}">
-                {{matchTimeMinutes < 10 ? 0 : null}}{{matchTimeMinutes}}:{{matchTimeSeconds < 10 ? 0 : null}}{{matchTimeSeconds}}
+            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': minutes === 93}">
+                {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}}
             </div>
             <div class="team-sections__team-one">
                 <h3 class="team-one__name fx_x-b_y-c">
@@ -141,6 +153,17 @@
             </div>
         </div>
         <cup-run-stats></cup-run-stats>
-        <div class="match-simulation__start-game" (click)="emitMatchInitHandler()" [ngClass]="{'disabled-btn': semiFinalTwoStarted}">Start Game</div>
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler(2)" [ngClass]="{'disabled-btn': semiFinalTwoStarted}">Start Game</div>
+        <!-- <div [ngClass]="{'disabled-btn': !matchStarted || minutes === 93, 'match-simulation__game-in-progress': matchStarted}">
+            Game in progress... 
+            <svg xmlns="http://www.w3.org/2000/svg" class="in-progress-icon" fill="none" viewBox="0 0 24 24" stroke="var(--white)" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+        </div> -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
     </div>
 </section>

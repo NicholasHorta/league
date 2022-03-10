@@ -98,7 +98,7 @@
     border-bottom: 1px solid var(--grey25);
 }
 
-.possession-icon, .in-progress-icon {
+.possession-icon, .in-progress-icon, .home-icon {
     width: 25px;
     height: 25px;
 }
@@ -127,33 +127,58 @@
 
 .match-simulation__start-game, .match-simulation__game-in-progress, .match-simulation__game-end {
     margin: 0.5rem 2rem 5rem;
-    display: flex;
     padding: 0.75rem 2rem;
     font-size: 1.25rem;
     text-align: center;
     letter-spacing: 5px;
     background-color: var(--green);
+    border: 2px solid var(--green);
     color: var(--white); 
     cursor: pointer;
     font-family: script;
-    justify-content: center;
 }
+
 .match-simulation__game-in-progress {
-    background-color: var(--grey);
+    background-color: var(--white);
+    color: var(--green);
     cursor: not-allowed;
+    position: relative;
+    text-align: start;
 }
+
 .match-simulation__game-end {
-    background-color: var(--purple);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--red);
+    border-color: var(--red);
     cursor: not-allowed;
+    position: relative;
+    text-align: start;
 }
+
 .match-simulation__start-game:hover{
     background-color: var(--blue);
+    border-color: var(--blue);
 }
 
 .match__full-time-red {
     color: var(--red) !important;
 }
+
+.return-home, .in-progress {
+    position: absolute;
+    padding: 0 2rem;
+    background-color: var(--red);
+    right: 0;
+    top: 0;
+    color: var(--white);
+    font-size: 1.25rem;
+    height: 100%;
+}
+
+.in-progress {
+    background-color: var(--green);
+}
+
 
 @keyframes in-progress {
     0% {
