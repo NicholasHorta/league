@@ -47,8 +47,8 @@ export class CoinTossDirective implements OnInit {
   private props = new AdditionalProperties(this.matchSetupSVC, this.matchSimSVC);
 
   ngOnInit() {
-    this.viewContRef.createEmbeddedView(this.templateRef, this.props)
-    console.log(this.matchSetupSVC.generatedTeamsArray);
+    this.viewContRef.createEmbeddedView(this.templateRef, this.props);
+    window.scrollTo(0, 0);
   }
 
   ngDoCheck() {

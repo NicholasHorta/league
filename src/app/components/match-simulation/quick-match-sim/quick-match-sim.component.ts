@@ -11,8 +11,8 @@ export class QuickMatchSimComponent implements OnInit {
 
   constructor(private matchSetupSVC: MatchSetupService, private matchSimSVC: MatchSimulationService) { }
 
-  @Input() teamSheetArr: any;
   @Input() teams: any;
+  @Input('teamSheetArr') starters: any;
   @Input('matchTimeSeconds') seconds: number = 0;
   @Input('matchTimeMinutes') minutes: number = 0;
   @Output() emitMatchInit: EventEmitter<number> = new EventEmitter<number>();
@@ -21,16 +21,16 @@ export class QuickMatchSimComponent implements OnInit {
   teamTwoStarters: any[] = [];
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
-  confirmedTeams: string[] = [];
+  // confirmedTeams: string[] = [];
   currentPossession: string[] = [];
   matchComplete: boolean = false;
-  // setWinner: string = this.matchSimSVC.quickMatchWinner;
   matchStarted: boolean = false;
+  // setWinner: string = this.matchSimSVC.quickMatchWinner;
 
 
   ngOnInit(): void {
-    this.teamOneStarters = this.teamSheetArr.splice(0, 11);
-    this.teamTwoStarters = this.teamSheetArr.splice(0, 11);
+    this.teamOneStarters = this.starters.splice(0, 11);
+    this.teamTwoStarters = this.starters.splice(0, 11);
   }
 
   ngDoCheck() {

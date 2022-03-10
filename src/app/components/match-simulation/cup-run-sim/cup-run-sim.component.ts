@@ -11,46 +11,58 @@ export class CupRunSimComponent implements OnInit {
 
   constructor(private matchSetupSVC: MatchSetupService, private matchSimSVC: MatchSimulationService) { }
 
-  @Input() teamSheetArr: any;
   @Input() teams: any;
+  @Input('teamSheetArr') starters: any;
   @Input('matchTimeSeconds') seconds: number = 0;
   @Input('matchTimeMinutes') minutes: number = 0;
   @Output() emitMatchInit: EventEmitter<number> = new EventEmitter<number>();
 
-  teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
-  teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
-  teamThreeSubs: any[] = this.matchSetupSVC.teamThree[1];
-  teamFourSubs: any[] = this.matchSetupSVC.teamFour[1];
   teamOneStarters: any[] = [];
   teamTwoStarters: any[] = [];
   teamThreeStarters: any[] = [];
   teamFourStarters: any[] = [];
   confirmedTeams: string[] = [];
   currentPossession: string[] = [];
-  semiFinalOneStarted: boolean = false;
-  semiFinalTwoStarted: boolean = false;
+  // semiFinalOneStarted: boolean = false;
+  // semiFinalTwoStarted: boolean = false;
+  teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
+  teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
+  teamThreeSubs: any[] = this.matchSetupSVC.teamThree[1];
+  teamFourSubs: any[] = this.matchSetupSVC.teamFour[1];
+  matchComplete: boolean = false;
+  matchStarted: boolean = false;
 
-  cupRunProgress = {
-    // Each match will show conditionally according to semiFinalX property update
-    semiFinalOne: true,
-    semiFinalTwo: false,
-    finalMatch: false,
-    teamsInTheFinal: []
-  }
+
+  // cupRunProgress = {
+  //   // Each match will show conditionally according to semiFinalX property update
+  //   semiFinalOne: true,
+  //   semiFinalTwo: false,
+  //   finalMatch: false,
+  //   teamsInTheFinal: []
+  // }
 
   ngOnInit(): void {
-    this.teamOneStarters = this.teamSheetArr.splice(0, 11);
-    this.teamTwoStarters = this.teamSheetArr.splice(0, 11);
-    this.teamThreeStarters = this.teamSheetArr.splice(0, 11);
-    this.teamFourStarters = this.teamSheetArr.splice(0, 11);
+    this.teamOneStarters = this.starters.splice(0, 11);
+    this.teamTwoStarters = this.starters.splice(0, 11);
+    this.teamThreeStarters = this.starters.splice(0, 11);
+    this.teamFourStarters = this.starters.splice(0, 11);
   }
 
   ngDoCheck(){
     this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
+    if(this.matchSimSVC.matchStatus.semiFinalOne){
+      this.matchStarted = false;
+      this.matchComplete = true;
+    }
+    // if(this.matchSimSVC.matchStatus.semiFinalTwo){
+    //   this.matchStarted = false;
+    //   this.matchComplete = true;
+    // }
   }
 
   emitMatchInitHandler(matchId: number){
     /// Handle button disabling
+    this.matchStarted = true;
     this.emitMatchInit.emit(matchId);
   }
  
