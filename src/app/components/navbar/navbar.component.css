@@ -2,9 +2,39 @@
     padding: 3rem 8rem;
     padding-bottom: 0;
     color: var(--green);
+    position: relative;
 }
 
 .nav__title {
     font-size: 3rem;
-    font-family: 'title';
+    font-family: title;
 }
+
+.nav__home-button {
+    position: absolute;
+    font-family: script;
+    background-color: var(--purple50);
+    top: 0rem;
+    left: 2rem;
+    padding: 1rem 2rem 1rem;
+    font-size: 1.25rem;
+    transition: all 250ms;
+}
+.nav__home-icon {
+    height: 30px;
+    width: 30px;
+    stroke: var(--white);
+}
+
+.nav__home-button:hover {
+    background-color: var(--purple);
+    padding: 2rem 2rem 1rem;
+    transition: all 250ms;
+}
+.nav__home-button:hover > .nav__home-icon {
+    stroke: var(--white) !important;
+    transition: all 250ms;
+ 
+}
+
+

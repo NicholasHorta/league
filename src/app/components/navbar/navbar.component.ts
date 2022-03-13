@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  currentLocation: string = location.pathname;
+
+  ngDoCheck(){
+    console.log('%cnavbar.component.ts line:12 location.pathname', 'color: #007acc;', location.pathname);
+  }
+}
