@@ -22,14 +22,14 @@
     color: #71D0A7;
     margin-left: 50%;
     transform: translateX(-50%);
-    font-family: script;
+    font-family: digit;
     font-size: 3.5rem;
     opacity: 0.5;
 }
 
 .team-sections__current-score {
     position: absolute;
-    font-family: 'team';
+    font-family: digit;
     font-size: 3rem;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -98,7 +98,7 @@
     border-bottom: 1px solid var(--grey25);
 }
 
-.possession-icon, .in-progress-icon, .home-icon {
+.possession-icon, .in-progress-icon, .home-icon, .complete-icon {
     width: 25px;
     height: 25px;
 }
@@ -163,9 +163,10 @@
 .match__full-time-red {
     color: var(--red) !important;
     font-size: 2rem;
+    font-family: team;
 }
 
-.return-home, .in-progress {
+.return-home, .in-progress, .complete {
     position: absolute;
     padding: 0 2rem;
     background-color: var(--red);

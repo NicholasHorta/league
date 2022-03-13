@@ -109,3 +109,8 @@ ul {
     src: url('./assets/font/Poppins/Poppins-Light.ttf');
 }
 
+@font-face {
+    font-family: 'digit';
+    src: url('./assets/font/Share_Tech_Mono/ShareTechMono-Regular.ttf');
+}
+

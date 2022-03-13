@@ -7,7 +7,7 @@
     </quick-match-sim>
     <cup-run-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 4"
         [matchTimeMinutes]="matchMinutesVisual" [matchTimeSeconds]="matchSecondsVisual"
-        (emitMatchInit)="matchTimeHandler($event)">
+        (emitMatchInit)="matchTimeHandler($event)" (emitTimeReset)="resetTimeHandler($event)">
     </cup-run-sim>
     <coin-toss-modal></coin-toss-modal>
 </div>

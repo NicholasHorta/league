@@ -2,8 +2,12 @@
     <div class="match-simulation__team-sections fx_x-b_y-c">
         <div class="team-sections__title">Team Sheet</div>
         <div class="team-sections__current-score">0 : 0</div>
-        <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchComplete}">
-            {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}} </div>
+        <div *ngIf="!matchComplete" class="team-sections__init-match-time">
+            {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}} 
+        </div>
+                <div *ngIf="matchComplete" class="team-sections__init-match-time match__full-time-red">
+                    Full Time
+                </div>
                 <div class="team-sections__team-one">
                     <h3 class="team-one__name fx_x-b_y-c">
                         {{teams[0]}}
@@ -82,7 +86,8 @@
         </div>
         <div [ngClass]="{'disabled-btn': !matchComplete, 'match-simulation__game-end': matchComplete}">
             Full Time
-            <a *ngIf="matchComplete" (click)="postGameResetHandler()" routerLink="/" title="Return to home page" class="return-home fx_x-b_y-c">
+            <a *ngIf="matchComplete" (click)="postGameResetHandler()" routerLink="/" title="Return to home page"
+                class="return-home fx_x-b_y-c">
                 <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24"
                     stroke="var(--white)" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { MatchSimulationService } from 'src/app/services/match-simulation.service';
 import { MatchSetupService } from '../../../services/match-setup.service';
 
@@ -16,18 +16,21 @@ export class CupRunSimComponent implements OnInit {
   @Input('matchTimeSeconds') seconds: number = 0;
   @Input('matchTimeMinutes') minutes: number = 0;
   @Output() emitMatchInit: EventEmitter<number> = new EventEmitter<number>();
+  @Output() emitTimeReset: EventEmitter<number> = new EventEmitter<number>();
 
   teamOneStarters: any[] = [];
   teamTwoStarters: any[] = [];
   teamThreeStarters: any[] = [];
   teamFourStarters: any[] = [];
-  confirmedTeams: string[] = [];
-  currentPossession: string[] = [];
-
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
   teamThreeSubs: any[] = this.matchSetupSVC.teamThree[1];
   teamFourSubs: any[] = this.matchSetupSVC.teamFour[1];
+
+  // confirmedTeams: string[] = [];
+  currentPossession: string[] = [];
+  currentMatchId: number | null = null;
+  totalMatchMinutes: number = 93;
   semiFinalOneStarted: boolean = false;
   semiFinalTwoStarted: boolean = false;
   semiFinalOneCompleted: boolean = false;
@@ -41,23 +44,24 @@ export class CupRunSimComponent implements OnInit {
   }
 
   ngDoCheck() {
-    this.matchSimSVC.matchStatus.semiFinalOneEnd = this.semiFinalOneCompleted;
-    this.matchSimSVC.matchStatus.semiFinalTwoEnd = this.semiFinalTwoCompleted;
-    this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
-    console.log(this.semiFinalOneCompleted);
-    if (this.semiFinalOneCompleted) {
-      // this.semiFinalOneStarted = false;
-      this.semiFinalOneCompleted = true;
+    if (this.minutes === this.totalMatchMinutes) {
+      if (this.currentMatchId === 1) this.matchSimSVC.matchStatus.semiFinalOneEnd = this.semiFinalOneCompleted = true;
+      if (this.currentMatchId === 2) this.matchSimSVC.matchStatus.semiFinalTwoEnd = this.semiFinalTwoCompleted = true;
+      // Promise.resolve().then(() => this.emitTimeResetHandler(0)).catch((error) => console.error(error));
+      this.emitTimeResetHandler(0)
     }
-
+    this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
   }
 
   emitMatchInitHandler(matchId: number) {
-    /// Handle button disabling
-    if(matchId === 1)this.semiFinalOneStarted = true;
-    if(matchId === 2)this.semiFinalTwoStarted = true;
+    this.currentMatchId = matchId;
+    if (matchId === 1) this.semiFinalOneStarted = true;
+    if (matchId === 2) this.semiFinalTwoStarted = true;
     this.emitMatchInit.emit(matchId);
   }
 
+  emitTimeResetHandler(baseZero: number) {
+    this.emitTimeReset.emit(baseZero);
+  }
 
 }
