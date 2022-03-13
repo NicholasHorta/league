@@ -3,8 +3,11 @@
         <div class="match-simulation__team-sections fx_x-b_y-c">
             <div class="team-sections__title">Team Sheet</div>
             <div class="team-sections__current-score">0 : 0</div>
-            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': matchComplete}">
+            <div *ngIf="!semiFinalOneCompleted" class="team-sections__init-match-time">
                 {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}}
+            </div>
+            <div *ngIf="semiFinalOneCompleted" class="team-sections__init-match-time match__full-time-red">
+                Full Time
             </div>
             <div class="team-sections__team-one">
                 <h3 class="team-one__name fx_x-b_y-c">
@@ -71,8 +74,8 @@
         <cup-run-stats></cup-run-stats>
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
-        <div *ngIf="!matchComplete" class="match-simulation__start-game" (click)="emitMatchInitHandler(1)" [ngClass]="{'disabled-btn': matchStarted}">Start Game</div>
-        <div [ngClass]="{'disabled-btn': !matchStarted, 'match-simulation__game-in-progress': matchStarted}">
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler(1)" [ngClass]="{'disabled-btn': semiFinalOneStarted}">Start Game</div>
+        <div [ngClass]="{'disabled-btn': !semiFinalOneStarted, 'match-simulation__game-in-progress': semiFinalOneStarted}">
             Game in progress...
             <a class="in-progress fx_x-b_y-c">
                 <svg xmlns="http://www.w3.org/2000/svg" class="in-progress-icon" fill="none" viewBox="0 0 24 24"
@@ -83,9 +86,9 @@
                 </svg>
             </a>
         </div>
-        <div [ngClass]="{'disabled-btn': !matchComplete, 'match-simulation__game-end': matchComplete}">
+        <div *ngIf="semiFinalOneCompleted" class="match-simulation__game-end">
             Full Time
-            <a *ngIf="matchComplete" routerLink="/" title="Return to home page" class="return-home fx_x-b_y-c">
+            <a routerLink="/" title="Return to home page" class="return-home fx_x-b_y-c">
                 <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24"
                     stroke="var(--white)" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -95,14 +98,16 @@
         </div>
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
-        
     </div>
-    <div *ngIf="0">
+    <div *ngIf="semiFinalOneCompleted">
         <div class="match-simulation__team-sections fx_x-b_y-c">
             <div class="team-sections__title">Team Sheet</div>
             <div class="team-sections__current-score">0 : 0</div>
-            <div class="team-sections__init-match-time" [ngClass]="{'match__full-time-red': minutes === 93}">
+            <div *ngIf="!semiFinalOneCompleted" class="team-sections__init-match-time">
                 {{minutes < 10 ? 0 : null}}{{minutes}}:{{seconds < 10 ? 0 : null}}{{seconds}}
+            </div>
+            <div *ngIf="semiFinalOneCompleted" class="team-sections__init-match-time match__full-time-red">
+                Full Time
             </div>
             <div class="team-sections__team-one">
                 <h3 class="team-one__name fx_x-b_y-c">
@@ -169,8 +174,8 @@
         <cup-run-stats></cup-run-stats>
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
         <!-- ?------------------------------------------------------------------------------------------------------------------------------------------ -->
-        <div *ngIf="!matchComplete" class="match-simulation__start-game" (click)="emitMatchInitHandler(2)" [ngClass]="{'disabled-btn': matchStarted}">Start Game</div>
-        <div [ngClass]="{'disabled-btn': !matchStarted, 'match-simulation__game-in-progress': matchStarted}">
+        <div class="match-simulation__start-game" (click)="emitMatchInitHandler(2)" [ngClass]="{'disabled-btn': semiFinalTwoStarted}">Start Game</div>
+        <div [ngClass]="{'disabled-btn': !semiFinalTwoStarted, 'match-simulation__game-in-progress': semiFinalTwoStarted}">
             Game in progress...
             <a class="in-progress fx_x-b_y-c">
                 <svg xmlns="http://www.w3.org/2000/svg" class="in-progress-icon" fill="none" viewBox="0 0 24 24"
@@ -181,9 +186,9 @@
                 </svg>
             </a>
         </div>
-        <div [ngClass]="{'disabled-btn': !matchComplete, 'match-simulation__game-end': matchComplete}">
+        <div *ngIf="semiFinalTwoCompleted" class="match-simulation__game-end">
             Full Time
-            <a *ngIf="matchComplete" routerLink="/" title="Return to home page" class="return-home fx_x-b_y-c">
+            <a routerLink="/" title="Return to home page" class="return-home fx_x-b_y-c">
                 <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24"
                     stroke="var(--white)" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"

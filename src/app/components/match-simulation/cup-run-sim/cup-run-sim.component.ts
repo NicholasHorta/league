@@ -23,23 +23,15 @@ export class CupRunSimComponent implements OnInit {
   teamFourStarters: any[] = [];
   confirmedTeams: string[] = [];
   currentPossession: string[] = [];
-  // semiFinalOneStarted: boolean = false;
-  // semiFinalTwoStarted: boolean = false;
+
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
   teamThreeSubs: any[] = this.matchSetupSVC.teamThree[1];
   teamFourSubs: any[] = this.matchSetupSVC.teamFour[1];
-  matchComplete: boolean = false;
-  matchStarted: boolean = false;
-
-
-  // cupRunProgress = {
-  //   // Each match will show conditionally according to semiFinalX property update
-  //   semiFinalOne: true,
-  //   semiFinalTwo: false,
-  //   finalMatch: false,
-  //   teamsInTheFinal: []
-  // }
+  semiFinalOneStarted: boolean = false;
+  semiFinalTwoStarted: boolean = false;
+  semiFinalOneCompleted: boolean = false;
+  semiFinalTwoCompleted: boolean = false;
 
   ngOnInit(): void {
     this.teamOneStarters = this.starters.splice(0, 11);
@@ -48,23 +40,24 @@ export class CupRunSimComponent implements OnInit {
     this.teamFourStarters = this.starters.splice(0, 11);
   }
 
-  ngDoCheck(){
+  ngDoCheck() {
+    this.matchSimSVC.matchStatus.semiFinalOneEnd = this.semiFinalOneCompleted;
+    this.matchSimSVC.matchStatus.semiFinalTwoEnd = this.semiFinalTwoCompleted;
     this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
-    if(this.matchSimSVC.matchStatus.semiFinalOne){
-      this.matchStarted = false;
-      this.matchComplete = true;
+    console.log(this.semiFinalOneCompleted);
+    if (this.semiFinalOneCompleted) {
+      // this.semiFinalOneStarted = false;
+      this.semiFinalOneCompleted = true;
     }
-    // if(this.matchSimSVC.matchStatus.semiFinalTwo){
-    //   this.matchStarted = false;
-    //   this.matchComplete = true;
-    // }
+
   }
 
-  emitMatchInitHandler(matchId: number){
+  emitMatchInitHandler(matchId: number) {
     /// Handle button disabling
-    this.matchStarted = true;
+    if(matchId === 1)this.semiFinalOneStarted = true;
+    if(matchId === 2)this.semiFinalTwoStarted = true;
     this.emitMatchInit.emit(matchId);
   }
- 
+
 
 }

@@ -20,7 +20,7 @@ export class MatchSimulationComponent implements OnInit {
   matchTimeTotalIncrement: number = 0;
   matchSecondsVisual: number = 0;
   matchMinutesVisual: number = 0;
-  
+
 
   ngOnInit(): void {
     console.dir(Observable);
@@ -29,26 +29,42 @@ export class MatchSimulationComponent implements OnInit {
   emitTeamSheetToMatchSim(arr: any) {
     this.teamSheetArr = arr;
   }
-
+  /// Figure out what property is a constant end to the time function
+  /// configure object properties as completed 
   matchTimeHandler(matchId: number) {
+    console.log('%c SecondsVis', 'color: #007acc;', this.matchSecondsVisual);
+    console.log('%c MinutesVis', 'color: #007acc;', this.matchMinutesVisual);
+    console.log('%c TimeTotalIncrement', 'color: #007acc;', this.matchTimeTotalIncrement);
     this.audioHandler();
     const matchTimeIncrement = setInterval(() => {
+      console.log('%c SecondsVis', 'color: #bada55;', this.matchSecondsVisual);
+      console.log('%c MinutesVis', 'color: #bada55;', this.matchMinutesVisual);
+      console.log('%c TimeTotalIncrement', 'color: #bada55;', this.matchTimeTotalIncrement);
+      this.checkMatchInitStatusHandler(matchId);
       this.matchTimeTotalIncrement += 1;
       this.matchTimeTotalIncrement % 60 === 0 ? this.matchSecondsVisual = 0 : this.matchSecondsVisual += 1;
       if (this.matchTimeTotalIncrement % 60 === 0) this.matchMinutesVisual += 1;
       if (this.matchTimeTotalIncrement >= this.matchFullTimeSeconds) {
-        /// Insert winner into array
-        if(!matchId) this.matchSimSVC.matchStatus.quickMatchStatus = true;
-        if(matchId === 1) this.matchSimSVC.matchStatus.semiFinalOne = true;
-        if(matchId === 2) this.matchSimSVC.matchStatus.semiFinalTwo = true;
+        this.checkMatchEndStatusHandler(matchId);
         clearInterval(matchTimeIncrement);
       }
     }, this.matchMiliSecondInterval);
   }
 
-  audioHandler(){
+  audioHandler() {
     const refStartsGame = new Audio('../../../assets/audio/ref-game-start.mp3');
     refStartsGame.play();
+  }
+
+  checkMatchInitStatusHandler(matchId: number) {
+    if (matchId === 1) this.matchSimSVC.matchStatus.semiFinalOneInit = true;
+    if (matchId === 2) this.matchSimSVC.matchStatus.semiFinalTwoInit = true;
+  }
+
+  checkMatchEndStatusHandler(matchId: number) {
+    if (!matchId) this.matchSimSVC.matchStatus.quickMatchEnd = true;
+    if (matchId === 1) this.matchSimSVC.matchStatus.semiFinalOneEnd = true;
+    if (matchId === 2) this.matchSimSVC.matchStatus.semiFinalTwoEnd = true;
   }
 
 

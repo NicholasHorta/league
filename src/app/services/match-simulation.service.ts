@@ -13,9 +13,12 @@ export class MatchSimulationService implements OnInit {
   quickMatchWinner: string = '';
 
   matchStatus = {
-    quickMatchStatus: false,
-    semiFinalOne: false,
-    semiFinalTwo: false
+    quickMatchInit: false,
+    quickMatchEnd: false,
+    semiFinalOneInit: false,
+    semiFinalOneEnd: false,
+    semiFinalTwoInit: false,
+    semiFinalTwoEnd: false
   }
 
   // Start

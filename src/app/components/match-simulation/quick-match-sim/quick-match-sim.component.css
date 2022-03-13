@@ -17,13 +17,13 @@
 
 .team-sections__init-match-time {
     position: absolute;
-    top: 4rem;
+    top: 5rem;
     left: 0;
     color: #71D0A7;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: script;
-    font-size: 4rem;
+    font-size: 3.5rem;
     opacity: 0.5;
 }
 
@@ -162,6 +162,7 @@
 
 .match__full-time-red {
     color: var(--red) !important;
+    font-size: 2rem;
 }
 
 .return-home, .in-progress {

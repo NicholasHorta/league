@@ -21,11 +21,9 @@ export class QuickMatchSimComponent implements OnInit {
   teamTwoStarters: any[] = [];
   teamOneSubs: any[] = this.matchSetupSVC.teamOne[1];
   teamTwoSubs: any[] = this.matchSetupSVC.teamTwo[1];
-  // confirmedTeams: string[] = [];
   currentPossession: string[] = [];
   matchComplete: boolean = false;
   matchStarted: boolean = false;
-  // setWinner: string = this.matchSimSVC.quickMatchWinner;
 
 
   ngOnInit(): void {
@@ -35,13 +33,11 @@ export class QuickMatchSimComponent implements OnInit {
 
   ngDoCheck() {
     this.currentPossession = this.matchSimSVC.advantagePossessionTeams;
-    if (this.matchSimSVC.matchStatus.quickMatchStatus) {
+    // this.matchSimSVC.matchStatus.quickMatchInit = this.matchStarted;
+    if(this.matchSimSVC.matchStatus.quickMatchEnd) {
       this.matchStarted = false;
       this.matchComplete = true;
     }
-    // console.log('%c matchComplete', 'color: #007acc;', this.matchComplete);
-    // console.log('%c seconds', 'color: #ff7acc;', this.seconds);
-    // console.log('%c minutes', 'color: #ff7acc;', this.minutes);
   }
 
   emitMatchInitHandler(matchId: number) {
