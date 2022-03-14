@@ -1,4 +1,5 @@
 <div>
+    <navbar></navbar>
     <match-introductions (teamSheetArrEmission)="emitTeamSheetToMatchSim($event)">
     </match-introductions>
     <quick-match-sim [teamSheetArr]="teamSheetArr" [teams]="confirmedTeams" *ngIf="matchType === 2"
