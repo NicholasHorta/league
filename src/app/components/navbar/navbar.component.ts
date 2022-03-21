@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   currentLocation: string = location.pathname;
-
-  give(){
-    console.log('%cnavbar.component.ts line:12 currentLocation', 'color: #007acc;', this.currentLocation);
-    console.log('%cnavbar.component.ts line:12 currentLocation', 'color: #007acc;', location);
-  }
 }
