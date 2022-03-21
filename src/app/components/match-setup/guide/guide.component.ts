@@ -6,11 +6,7 @@ import { Component} from '@angular/core';
   styleUrls: ['./guide.component.css']
 })
 export class GuideComponent {
-
-  constructor() { }
-
   infoToggle: boolean = false;
-
   toggleMoreInfo(){
     this.infoToggle = !this.infoToggle;
   }
