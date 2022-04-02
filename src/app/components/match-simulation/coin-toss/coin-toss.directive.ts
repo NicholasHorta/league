@@ -25,11 +25,13 @@ class AdditionalProperties {
     const initloading = setInterval(() => {
       this.loading = false;
       clearInterval(initloading);
-    }, 2000)
+    }, 250)
+    // }, 2000)
     const initCloseModal = setInterval(() => {
       this.closeModal = true;
       clearInterval(initCloseModal);
-    }, 5000)
+    }, 500)
+    // }, 5000)
   }
   
 }
@@ -45,8 +47,8 @@ export class CoinTossDirective implements OnInit {
   private props = new AdditionalProperties(this.matchSetupSVC, this.matchSimSVC);
 
   ngOnInit() {
-    this.viewContRef.createEmbeddedView(this.templateRef, this.props)
-    console.log(this.matchSetupSVC.generatedTeamsArray);
+    this.viewContRef.createEmbeddedView(this.templateRef, this.props);
+    window.scrollTo(0, 0);
   }
 
   ngDoCheck() {

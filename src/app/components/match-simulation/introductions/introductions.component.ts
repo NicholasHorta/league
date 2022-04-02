@@ -15,13 +15,13 @@ export class IntroductionsComponent implements OnInit {
   matchType: Number = this.matchSetupSVC.leagueTypeValue;
   confirmedTeams: string[] = this.matchSetupSVC.generatedTeamsArray;
   confirmedQuickMatchTeamsArr: any[] = [
-    ...this.matchSetupSVC.teamOne[0], 
+    ...this.matchSetupSVC.teamOne[0],
     ...this.matchSetupSVC.teamTwo[0]
   ];
   confirmedCupRunTeamsArr: any[] = [
-    ...this.matchSetupSVC.teamOne[0], 
-    ...this.matchSetupSVC.teamTwo[0], 
-    ...this.matchSetupSVC.teamThree[0], 
+    ...this.matchSetupSVC.teamOne[0],
+    ...this.matchSetupSVC.teamTwo[0],
+    ...this.matchSetupSVC.teamThree[0],
     ...this.matchSetupSVC.teamFour[0]
   ];
   teamOneCaptain: string = "";
@@ -31,26 +31,32 @@ export class IntroductionsComponent implements OnInit {
   commentaryView: boolean = true;
 
   ngOnInit(): void {
-    if (this.matchSetupSVC.leagueTypeValue === 2) {
-      const teamCaptainsArr = this.confirmedQuickMatchTeamsArr.filter(i => i.captain ? i : null);
-      this.teamOneCaptain = teamCaptainsArr[0].name;
-      this.teamTwoCaptain = teamCaptainsArr[1].name;
-      this.outputTeamSheetArr(this.confirmedQuickMatchTeamsArr);
-    } else {
-      const teamCaptainsArr = this.confirmedCupRunTeamsArr.filter(i => i.captain ? i : null);
-      this.teamOneCaptain = teamCaptainsArr[0].name;
-      this.teamTwoCaptain = teamCaptainsArr[1].name;
-      this.teamThreeCaptain = teamCaptainsArr[2].name;
-      this.teamFourCaptain = teamCaptainsArr[3].name;
-      this.outputTeamSheetArr(this.confirmedCupRunTeamsArr);
+    try {
+      if (this.matchSetupSVC.leagueTypeValue === 2) {
+        const teamCaptainsArr = this.confirmedQuickMatchTeamsArr.filter(i => i.captain ? i : null);
+        this.teamOneCaptain = teamCaptainsArr[0].name;
+        this.teamTwoCaptain = teamCaptainsArr[1].name;
+        this.outputTeamSheetArr(this.confirmedQuickMatchTeamsArr);
+      } else {
+        const teamCaptainsArr = this.confirmedCupRunTeamsArr.filter(i => i.captain ? i : null);
+        this.teamOneCaptain = teamCaptainsArr[0].name;
+        this.teamTwoCaptain = teamCaptainsArr[1].name;
+        this.teamThreeCaptain = teamCaptainsArr[2].name;
+        this.teamFourCaptain = teamCaptainsArr[3].name;
+        this.outputTeamSheetArr(this.confirmedCupRunTeamsArr);
+      }
+    }
+    catch (error) {
+      console.log(error);
+      location.assign('/');
     }
   }
 
-  toggleCommentaryView(){
+  toggleCommentaryView() {
     this.commentaryView = !this.commentaryView;
   }
 
-  outputTeamSheetArr(teamSheetArr: any[]){
+  outputTeamSheetArr(teamSheetArr: any[]) {
     this.teamSheetArrEmission.emit(teamSheetArr);
   }
 

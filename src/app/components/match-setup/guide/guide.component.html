@@ -3,7 +3,7 @@
         <div class="guide__league-description">
             <div class="league-description__guide-header fx_x-b_y-c">
                 <h3 class="guide-header__title">Welcome to League</h3>
-                <span class="guide-header__view-toggle" (click)="toggleMoreInfo()">{{this.infoToggle ? 'less' : 'more'}} info</span>
+                <span class="guide-header__view-toggle"  (click)="toggleMoreInfo()" >{{this.infoToggle ? 'less' : 'more'}} info</span>
             </div>
             <p>
                 League is an exciting football simulator which can be used for personal or group activities when in a
@@ -22,7 +22,7 @@
                 Before being able to progress, each player MUST ensure that a captain is assigned to their team in
                 order to continue on to the Match Day simulations.
             </p>
-            <div class="league-description__options" *ngIf="this.infoToggle">
+            <div class="league-description__options" [@openClose]="infoToggle ? 'open' : 'close'">
                 <ul>
                     <li class="options__option-info">Quick Match</li>
                     <li>Consists of 2 teams.</li>

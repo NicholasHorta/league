@@ -60,5 +60,9 @@
 
 .quick-match-intro__intro-comment-text > span, .cup-run-intro__intro-comment-text > span{
     color: var(--purple);
-    text-align: center;
+}
+
+.intro-comment-text__teams {
+    display: inline-block;
+    margin: 0.5rem 0;   
 }

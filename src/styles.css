@@ -7,13 +7,15 @@
 }
 
 html, body {
-    background-color: var(--bk);
+    background-color: white;
+    /* background-color: black; */
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
-h2, h3, h4, li, p, span, label, button{
+h2, h3, h4, li, p, span, label, button, a{
     font-family: 'script';
+    text-decoration: none;
 }
 
 button {
@@ -30,6 +32,10 @@ button {
     --team-two-colors: linear-gradient(90deg, #5c5c5c 0%, #ac3cd8 100%);
     --team-three-colors: linear-gradient(90deg, #e40000 0%, #2a2a2a 100%);
     --team-four-colors: linear-gradient(90deg, #fcea46  0%, #56c000 100%);
+    --team-one-kit-colors: linear-gradient(180deg, #3a47d5 0%, #00d2ff 100%);
+    --team-two-kit-colors: linear-gradient(180deg, #5c5c5c 0%, #ac3cd8 100%);
+    --team-three-kit-colors: linear-gradient(180deg, #e40000 0%, #2a2a2a 100%);
+    --team-four-kit-colors: linear-gradient(180deg, #fcea46  0%, #56c000 100%);
     --yellow: #F4A439;
     --orange: #F46E39;
     --red: #ED3744;
@@ -49,6 +55,10 @@ button {
 
 ul {
     list-style: none;
+}
+
+.disabled-btn {
+    display: none !important;
 }
 
 .fx_x-c {
@@ -97,5 +107,10 @@ ul {
 @font-face {
     font-family: 'team';
     src: url('./assets/font/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'digit';
+    src: url('./assets/font/Share_Tech_Mono/ShareTechMono-Regular.ttf');
 }
 
