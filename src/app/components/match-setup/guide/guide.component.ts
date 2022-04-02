@@ -10,7 +10,6 @@ export class GuideComponent {
   constructor() { }
 
   infoToggle: boolean = false;
-
   toggleMoreInfo(){
     this.infoToggle = !this.infoToggle;
   }
