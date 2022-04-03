@@ -9,6 +9,7 @@ export class MatchSimulationService implements OnInit {
 
   advantagePossessionTeams: string[] = [];
   cupRunSemiFinalWinners: string[] = [];
+  possession: string[] = [];
 
   quickMatchWinner: string = '';
 
@@ -21,9 +22,15 @@ export class MatchSimulationService implements OnInit {
     semiFinalTwoEnd: false
   }
 
+  teamPossession: object[] = [
+    {team: '', possession: false},
+    {team: '', possession: false},
+    {team: '', possession: false},
+    {team: '', possession: false},
+  ] 
+
   // Start
   ngOnInit(){
-    
   }
 
 }

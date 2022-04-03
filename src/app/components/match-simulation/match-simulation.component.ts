@@ -18,7 +18,6 @@ export class MatchSimulationComponent implements OnInit {
   // matchMiliSecondInterval: number = 22.2; //! Production value
   matchMiliSecondInterval: number = .2; //! Testing Value
   matchTimeTotalIncrement: number = 0;
-  // matchTimeTotalIncrement: number = 0;
   matchSecondsVisual: number = 0;
   matchMinutesVisual: number = 0;
 
@@ -39,6 +38,7 @@ export class MatchSimulationComponent implements OnInit {
   matchTimeHandler(matchId: number) {
     this.audioHandler();
     const matchTimeIncrement = setInterval(() => {
+      this.matchLogicFunctionality(this.matchTimeTotalIncrement);
       this.checkMatchInitStatusHandler(matchId);
       this.matchTimeTotalIncrement += 1;
       this.matchTimeTotalIncrement % 60 === 0 ? this.matchSecondsVisual = 0 : this.matchSecondsVisual += 1;
@@ -72,5 +72,11 @@ export class MatchSimulationComponent implements OnInit {
     this.childChanges.detectChanges();
   }
 
+  matchLogicFunctionality(matchTime: number){
+    console.log('%c MATCH END IN FUNCTION ', 'color: white; background: #ae00cc;', this.matchSimSVC.matchStatus.quickMatchEnd);
+    if(!this.matchSimSVC.matchStatus.quickMatchEnd){
+      console.log('%cmatch-simulation.component.ts line:78 object', 'color: #007acc;', );
+    }
+  }
 
 }
