@@ -79,9 +79,10 @@
                 </a>
             </div>
             <div
+            *ngIf="!init.isMatchStarted && init.isMatchComplete"
                 [ngClass]="{'hidden': !init.isMatchStarted && !init.isMatchComplete, 'match-simulation__game-end': !init.isMatchStarted && init.isMatchComplete}">
                 Full Time
-                <a routerLink="/" *ngIf="!init.isMatchStarted && init.isMatchComplete" title="Return to home page"
+                <a routerLink="/"  title="Return to home page"
                     class="return-home fx_x-b_y-c">
                     <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24"
                         stroke="var(--white)" stroke-width="2">

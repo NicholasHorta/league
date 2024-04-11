@@ -89,7 +89,7 @@ export class LeagueSetupComponent implements OnInit {
     // FOR amount of teams - 2 -> FOR amount of positions - 5 -> FOR each position total - 1-kp, 5-df, 4-dm, 3-da, 2-at ->
     for (let x = 0; x < 2; x++) {
       for (let i = 0; i < playersPerPositionAllocation.length; i++) {
-        // Each iteration checks amount of teams then positions amt, 
+        // Each iteration checks amount of teams then positions amt,
         // then Splices from the [AvailablePlayers] copy above on each iteration amount 1, 5, 4, 3, 2
         for (let j = 0; j < playersPerPositionAllocation[i]; j++) {
           playersArrayToPopulate.push(
@@ -104,8 +104,8 @@ export class LeagueSetupComponent implements OnInit {
   };
 
   allocateFullTeamsheetsHandler(genPlayersArray: {}[]) {
-    // subSpliceValuesArr array decreases with every number due to splice reduction within array on every execution 
-    // Leaving us with one less in the array on each iteration 
+    // subSpliceValuesArr array decreases with every number due to splice reduction within array on every execution
+    // Leaving us with one less in the array on each iteration
     // which we account for in the provided SubPositionSpliceValues array for each sub position
     const allocateStarterAndSubHandler = (totalPlayersArr: {}[], subSpliceValues: number[]) => {
       let subs: any[] = [];
