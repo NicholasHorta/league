@@ -1,0 +1,20 @@
+<li *ngFor="let sub of subProps; let i = index" class="sub right" [ngClass]="{'subbed__true': sub.subbed}">
+    <span class="fx_x-b_y-c"
+        [ngClass]="{'symbol__goal-team-two': sub.goals, 'hidden': !sub.goals, 'hat-trick': sub.goals >= 3}">
+        {{sub.goals > 1 ? sub.goals : null}}
+        <i title="{{sub.name}} scored {{sub.goals}} goal/s" [ngClass]="{'hat-trick': sub.goals >= 3}"
+            class="fa-solid fa-futbol"></i>
+    </span>
+    <span class="fx_x-b_y-c" [ngClass]="{'symbol__save-team-two': sub.saves, 'hidden': !sub.saves}">
+        <i title="{{sub.name}} saved {{sub.saves}} penalty/s" class="fa-solid fa-hand-dots"></i>
+        {{sub.saves > 1 ? sub.saves : null}}
+    </span>
+    <span class="fx_x-c_y-c" title="{{sub.name}} given {{sub.yellowCards}} yellow card/s"
+        [ngClass]="{'symbol__yellow-cards-team-two': sub.yellowCards, 'hidden': !sub.yellowCards}">
+        {{sub.yellowCards}}
+    </span>
+    {{sub.name}}
+    <span class="sub__position right init__substitution" (click)="initSubstitutionRequest(i, 1)">
+        {{sub.position}}
+    </span>
+</li>

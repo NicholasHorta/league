@@ -1,0 +1,24 @@
+<li title="Play sub into game" *ngFor="let sub of subProps; let i = index" class="sub"
+    [ngClass]="{'subbed__true': sub.subbed}">
+    <span class="sub__position init__substitution" (click)="initSubstitutionRequest(i, 0)">
+        {{sub.position}}
+    </span>
+    {{sub.name}}
+    <span class="fx_x-b_y-c"
+        [ngClass]="{'symbol__goal-team-one': sub.goals, 'hidden': !sub.goals, 'hat-trick': sub.goals >= 3}">
+        <i title="{{sub.name}} scored {{sub.goals}} goal/s" [ngClass]="{'hat-trick': sub.goals >= 3}"
+            class="fa-solid fa-futbol"></i>
+        {{sub.goals > 1 ? sub.goals : null}}
+    </span>
+    <span class="fx_x-b_y-c" [ngClass]="{'symbol__save-team-one': sub.saves, 'hidden': !sub.saves}">
+        <i title="{{sub.name}} saved {{sub.saves}} penalty/s" class="fa-solid fa-hand-dots"></i>
+        {{sub.saves > 1 ? sub.saves : null}}
+    </span>
+    <span class="fx_x-c_y-c" title="{{sub.name}} red carded"
+        [ngClass]="{'symbol__red-card-team-one': sub.redCard, 'hidden': !sub.redCard}">
+    </span>
+    <span class="fx_x-c_y-c" title="{{sub.name}} given {{sub.yellowCards}} yellow card/s"
+        [ngClass]="{'symbol__yellow-cards-team-one': sub.yellowCards, 'hidden': !sub.yellowCards}">
+        {{sub.yellowCards}}
+    </span>
+</li>

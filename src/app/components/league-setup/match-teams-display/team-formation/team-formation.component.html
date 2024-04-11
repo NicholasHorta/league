@@ -1,0 +1,127 @@
+<div class="player-positions" >
+  <div class="player-positions__keeper xxy">
+      <div class="keeper position__player">
+          <i class="fas fa-tshirt player-icon player-icon-team-{{teamIndex}}"></i>
+          <span class="player__position" [ngClass]="{'captain': players[0].captain}">
+              {{ players[0].captain ? 'Captain' : 'GK' }}
+          </span>
+          <div class="player__bio">
+              <div class="container--bio">
+                  <h3 class="bio__name">{{players[0].name}}</h3>
+                  <img [src]="players[0].imgPath" alt="player image" class="bio__img">
+                  <div class="bio__info">
+                      <div class="info__items">
+                          <span class="item__label">Position :</span>
+                          <span class="item__position">{{players[0].position}}</span>
+                      </div>
+                      <div class="info__items">
+                          <span class="item__label">Country :</span>
+                          <span class="item__desc">{{players[0].country.name}}</span>
+                      </div>
+                      <img width="50px" [src]=" '../../../../../assets/img/flags/' + players[0].country.flag + '.png'">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="player-positions__def xxy">
+      <div class="defence outer-position-y position__player" *ngFor="let dm of defs; let dmi = index;">
+          <i class="fas fa-tshirt player-icon player-icon-team-{{teamIndex}}"></i>
+          <span class="player__position" [ngClass]="{'captain': players[dmi + 1].captain}">
+              {{ players[dmi + 1].captain ? 'Captain' : 'DEF' }}
+          </span>
+          <div class="player__bio">
+              <div class="container--bio">
+                  <h3 class="bio__name">{{players[dmi + 1].name}}</h3>
+                  <img [src]="players[dmi + 1].imgPath" alt="player image" class="bio__img">
+                  <div class="bio__info">
+                      <div class="info__items">
+                          <span class="item__label">Position :</span>
+                          <span class="item__position">{{players[dmi + 1].position}}</span>
+                      </div>
+                      <div class="info__items">
+                          <span class="item__label">Country :</span>
+                          <span class="item__desc">{{players[dmi + 1].country.name}}</span>
+                      </div>
+                      <img width="50px" [src]=" '../../../../../assets/img/flags/' + players[dmi + 1].country.flag + '.png'">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="player-positions__def-mid xxy">
+      <div class="defensive-mid outer-position-y position__player" *ngFor="let md of mids; let mdi = index;">
+          <i class="fas fa-tshirt player-icon player-icon-team-{{teamIndex}}"></i>
+          <span class="player__position" [ngClass]="{'captain': players[mdi + 5].captain}">
+              {{ players[mdi + 5].captain ? 'Captain' : 'MID' }}
+          </span>
+          <div class="player__bio">
+              <div class="container--bio">
+                  <h3 class="bio__name">{{players[mdi + 5].name}}</h3>
+                  <img [src]="players[mdi + 5].imgPath" alt="player image" class="bio__img">
+                  <div class="bio__info">
+                      <div class="info__items">
+                          <span class="item__label">Position :</span>
+                          <span class="item__position">{{players[mdi + 5].position}}</span>
+                      </div>
+                      <div class="info__items">
+                          <span class="item__label">Country :</span>
+                          <span class="item__desc">{{players[mdi + 5].country.name}}</span>
+                      </div>
+                      <img width="50px" [src]=" '../../../../../assets/img/flags/' + players[mdi + 5].country.flag + '.png'">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="player-positions__att-mid xxy">
+      <div class="attacking-mid outer-position-x-l position__player" *ngFor="let am of ams; let ami = index;">
+          <i class="fas fa-tshirt player-icon player-icon-team-{{teamIndex}}"></i>
+          <span class="player__position" [ngClass]="{'captain': players[ami + 8].captain}">
+              {{ players[ami + 8].captain ? 'Captain' : 'AM' }}
+          </span>
+          <div class="player__bio">
+              <div class="container--bio">
+                  <h3 class="bio__name">{{players[ami + 8].name}}</h3>
+                  <img [src]="players[ami + 8].imgPath" alt="player image" class="bio__img">
+                  <div class="bio__info">
+                      <div class="info__items">
+                          <span class="item__label">Position :</span>
+                          <span class="item__position">{{players[ami + 8].position}}</span>
+                      </div>
+                      <div class="info__items">
+                          <span class="item__label">Country :</span>
+                          <span class="item__desc">{{players[ami + 8].country.name}}</span>
+                      </div>
+                      <img width="50px" [src]=" '../../../../../assets/img/flags/' + players[ami + 8].country.flag + '.png'">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="player-positions__att xxy">
+      <div class="attack outer-position-y-st position__player">
+          <i class="fas fa-tshirt player-icon player-icon-team-{{teamIndex}}"></i>
+          <span class="player__position" [ngClass]="{'captain': players[10].captain}">
+              {{ players[10].captain ? 'Captain' : 'ST' }}
+          </span>
+          <div class="player__bio">
+              <div class="container--bio">
+                  <h3 class="bio__name">{{players[10].name}}</h3>
+                  <img [src]="players[10].imgPath" alt="player image" class="bio__img">
+                  <div class="bio__info">
+                      <div class="info__items">
+                          <span class="item__label">Position :</span>
+                          <span class="item__position">{{players[10].position}}</span>
+                      </div>
+                      <div class="info__items">
+                          <span class="item__label">Country :</span>
+                          <span class="item__desc">{{players[10].country.name}}</span>
+                      </div>
+                      <img width="50px" [src]=" '../../../../../assets/img/flags/' + players[10].country.flag + '.png'">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

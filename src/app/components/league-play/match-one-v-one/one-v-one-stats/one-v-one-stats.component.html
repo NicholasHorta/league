@@ -1,0 +1,53 @@
+<div class="stats__container fx_x-b_y-c">
+    <span class="stats__title">Match Statistics</span>
+    <div class="stats__section-one">
+        <span class="title">Possession</span>
+        <div class="section-one__possession fx_x-b_y-c">
+            <span class="possession__team-one">
+                <span class="team-one__possession-stats" #possessionTeamOne></span>
+                {{teamOneStats.totalPossession | percentageTo: 465 }} %
+            </span>
+            <span class="possession__team-two">
+                <span class="team-two__possession-stats" #possessionTeamTwo></span>
+                % {{teamTwoStats.totalPossession | percentageTo: 465 }}
+            </span>
+        </div>
+        <span class="title">Keeper Saves</span>
+        <div class="section-one__shots fx_x-b_y-c">
+            <span class="shots__team-one">{{teamOneStats.keeperSaves}}</span>
+            <span class="shots__team-two">{{teamTwoStats.keeperSaves}}</span>
+        </div>
+        <span class="title">Shots on Target</span>
+        <div class="section-one__shots-on-target fx_x-b_y-c">
+            <span class="shots-on-target__team-one">{{teamOneStats.shotsOnTarget}}</span>
+            <span class="shots-on-target__team-two">{{teamTwoStats.shotsOnTarget}}</span>
+        </div>
+        <span class="title">Total passes</span>
+        <div class="section-one__passes fx_x-b_y-c">
+            <span class="passes__team-one">{{teamOneStats.totalPasses}}</span>
+            <span class="passes__team-two">{{teamTwoStats.totalPasses}}</span>
+        </div>
+    </div>
+    <div class="stats__section-two">
+        <span class="title">Yellow Cards</span>
+        <div class="section-two__yellow-cards fx_x-b_y-c">
+            <span class="yellow-cards__team-one">{{teamOneStats.yellowCards}}</span>
+            <span class="yellow-cards__team-two">{{teamTwoStats.yellowCards}}</span>
+        </div>
+        <span class="title">Red Cards</span>
+        <div class="section-two__red-cards fx_x-b_y-c">
+            <span class="red-cards__team-one">{{teamOneStats.redCards}}</span>
+            <span class="red-cards__team-two">{{teamTwoStats.redCards}}</span>
+        </div>
+        <span class="title">Successful Tackles</span>
+        <div class="section-two__tackles fx_x-b_y-c">
+            <span class="tackles__team-one">{{teamOneStats.successfulTackles}}</span>
+            <span class="tackles__team-two">{{teamTwoStats.successfulTackles}}</span>
+        </div>
+        <span class="title">Corners</span>
+        <div class="section-two__corners fx_x-b_y-c">
+            <span class="corners__team-one">{{teamOneStats.corners}}</span>
+            <span class="corners__team-two">{{teamTwoStats.corners}}</span>
+        </div>
+    </div>
+</div>

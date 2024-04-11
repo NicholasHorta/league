@@ -1,0 +1,26 @@
+
+.guide__container {
+    padding: var(--section-space);
+}
+
+.guide__league-description {
+    color: var(--grey);
+    border-bottom: 1px solid var(--grey25);
+}
+
+.league-description__guide-header {
+    padding-bottom: 1.5rem;
+}
+
+.league-description__guide-header .guide-header__title {
+    font-size: 1.5rem;    
+    color: var(--green);
+}
+
+.guide__league-description > p{
+    padding-bottom: 1.5rem;
+}
+
+.league-description__options > ul:first-of-type{
+    margin-bottom: 1.5rem;
+}

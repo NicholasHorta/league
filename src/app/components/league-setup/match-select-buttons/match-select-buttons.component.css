@@ -1,0 +1,150 @@
+/* SOME CSS IN THIS COMPONENT IS SHARED WITH MATCH-FIXTURES */
+/* THIS CSS CAN BE FOUND IN SRC/STYLES.CSS */
+
+.match-setup {
+    padding: var(--section-space);
+    border-radius: var(--radius);
+    margin: 0 auto;
+}
+
+
+.match-setup__options div>input {
+    display: none;
+}
+
+.regenerate__btn, .classic__btn {
+    background-color: var(--grey50);
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: 7px 7px 0px var(--grey);
+    min-width: 200px;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.match-setup__team-bars {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--grey25);
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+}
+
+.two-team-setup__team {
+    padding: 1rem 2rem;
+    color: var(--white);
+    width: 300px;
+    letter-spacing: 0.05rem;
+    font-size: 1.15rem;
+}
+
+.two-team-setup__team.left {
+    background: var(--team-one-colors);
+}
+
+.two-team-setup__team.right {
+    background: var(--team-two-colors);
+}
+
+.two-team-setup__team.left {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+
+.two-team-setup__team.right {
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+    text-align: end;
+}
+
+.two-team-setup__team.success {
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: var(--grey);
+    text-align: center;
+    border-radius: 20px;
+    flex: 0;
+    margin: 0 1rem;
+}
+
+.exe__message {
+    font-size: 1.15rem;
+    text-align: center;
+    color: var(--grey);
+}
+
+.two-team-setup__team.success {
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: var(--grey);
+    text-align: center;
+    border-radius: 20px;
+    flex: 0;
+    margin: 0 1rem;
+}
+
+.options__btns {
+    position: relative;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--white);
+    box-shadow: 0px 0px 0px var(--grey);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    font-family: 'script';
+    max-width: 200px;
+    text-decoration: none;
+}
+
+.options__btns:hover {
+    transition: box-shadow 250ms ease-in-out;
+    box-shadow: 7px 7px 0px var(--grey);
+}
+
+.regenerate__btn{
+    background-color: var(--white);
+    border: 3px solid var(--green);
+    color: var(--green);
+}
+
+.regenerate__btn:hover {
+    background-color: var(--green);
+    border: 3px solid var(--green);
+    color: var(--white);
+    transition: all 250ms ease-in-out;
+}
+
+.classic__btn{
+    border: 3px solid var(--black);
+    color: var(--black);
+}
+
+.classic-active {
+    color: white;
+    background-color: var(--black);
+}
+
+@keyframes btn-select {
+    0% {
+        box-shadow: 7px 7px 0px var(--grey);
+        background-color: var(--grey50);
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px var(--grey);
+        background-color: #71D0A7;
+        transform: translate(5px, 5px);
+    }
+    100% {
+        box-shadow: 7px 7px 0px var(--grey);
+        transform: translate(0px, 0px);
+    }
+}

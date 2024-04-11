@@ -1,0 +1,16 @@
+<div class="coin-toss-component fx_x-c_y-c"
+    *MatchCoinToss="null as init; let matchProps = matchProperties; 
+    let load = tossInit; let msg = message; let winner = coinTossWinners; 
+    let initToss = flipCoin; let isWinner = winnerAssigned;">
+    <div class="coin-toss__container">
+        <img *ngIf="load" class="coin-toss__loader" src="../../../../assets/img/load_blue.gif" alt="loading">
+        <div *ngIf="!load" class="coin-toss__teams-decider">
+            <div class="teams-decider__teams">
+                <h2 class="team">{{isWinner ? winner[0] : msg}}</h2>
+            </div>
+        </div>
+        <button class="coin-toss__init fx_x-b" [ngClass]="{'hidden': isWinner }" (click)="initToss();">
+            Flip Coin!
+        </button>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="teams__team-sheets">
+    <div class="team-sheets__team fx_x-b">
+        <h2 class="club-title team-one">{{matchSetupProps.teamSetOne[0]}}</h2>
+        <div class="team-sheet__options">
+            <span (click)="toggleTeamSheetViewHandler(1)">
+                {{teamDisplayToggleTeamOne ? 'Hide': 'Show'}}
+            </span>
+            <span (click)="toggleTeamListHandler(viewTeamOneSubs, 1)">
+                View {{viewTeamOneSubs ? 'Starters' : 'Subs'}}
+            </span>
+        </div>
+        <div class="player-listing" *ngIf="teamDisplayToggleTeamOne">
+            <div *ngIf="!viewTeamOneSubs">
+                <ul id="team-one-list" *ngFor="let player of matchSetupProps.generatedTeamOne[0]"
+                    [ngClass]="{'captain__select': player.captain}">
+                    <li class="player-listing__starters" (click)="assignCaptainHandler(player.name, 1)">{{player.name}}
+                    </li>
+                    <span class="player-listing__position-key">{{player.position}}</span>
+                </ul>
+            </div>
+            <div *ngIf="viewTeamOneSubs">
+                <ul id="team-one-list" *ngFor="let player of matchSetupProps.generatedTeamOne[1]">
+                    <li class="player__sub">{{player.name}}</li>
+                    <span class="player-listing__position-key">{{player.position}}</span>
+                </ul>
+                <span class="substitute__key">Substitutes</span>
+            </div>
+        </div>
+        <team-formation *ngIf="teamDisplayToggleTeamOne" [teamIndex]="teamSheetIndex[0]"
+            [players]="matchSetupProps.generatedTeamOne[0]">
+        </team-formation>
+    </div>
+    <hr class="team-divider"/>
+    <div class="team-sheets__team fx_x-b">
+        <h2 class="club-title team-two">{{matchSetupProps.teamSetOne[1]}}</h2>
+        <div class="team-sheet__options">
+            <span (click)="toggleTeamSheetViewHandler(2)">
+                {{teamDisplayToggleTeamTwo ? 'Hide': 'Show'}}
+            </span>
+            <span (click)="toggleTeamListHandler(viewTeamTwoSubs, 2)">
+                View {{viewTeamTwoSubs ? 'Starters' : 'Subs'}}
+            </span>
+        </div>
+        <div class="player-listing" *ngIf="teamDisplayToggleTeamTwo">
+            <div *ngIf="!viewTeamTwoSubs">
+                <ul id="team-two-list" *ngFor="let player of matchSetupProps.generatedTeamTwo[0]"
+                    [ngClass]="{'captain__select': player.captain}">
+                    <li class="player-listing__starters" (click)="assignCaptainHandler(player.name, 2)">{{player.name}}
+                    </li>
+                    <span class="player-listing__position-key">{{player.position}}</span>
+                </ul>
+            </div>
+            <div *ngIf="viewTeamTwoSubs">
+                <ul id="team-two-list" *ngFor="let player of matchSetupProps.generatedTeamTwo[1]">
+                    <li class="player__sub">{{player.name}}</li>
+                    <span class="player-listing__position-key">{{player.position}}</span>
+                </ul>
+                <span class="substitute__key">Substitutes</span>
+            </div>
+        </div>
+        <team-formation *ngIf="teamDisplayToggleTeamTwo" [teamIndex]="teamSheetIndex[1]"
+            [players]="matchSetupProps.generatedTeamTwo[0]">
+        </team-formation>
+    </div>
+</div>

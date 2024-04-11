@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+h2, h3, h4, li, p, span, label, button, a{
+    font-family: 'script';
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    /* Colors */
+    --blue: #2C6C9D;
+    --cyan: #00d2ff;
+    --green: #27a770 ;
+    --green50: #71D0A7;
+    --green25: #cef0e1;
+    --team-one-colors: linear-gradient(90deg, var(--blue) 0%, var(--cyan) 100%);
+    --team-two-colors: linear-gradient(90deg, var(--red) 0%, var(--dark-grey) 100%);
+    --team-one-kit-colors: linear-gradient(180deg, var(--blue) 0%, var(--cyan) 100%);
+    --team-two-kit-colors: linear-gradient(180deg, var(--red) 0%, var(--dark-grey) 100%);
+    --yellow: #ffd700;
+    --orange: #F46E39;
+    --red: #ED3744;
+    --purple: #BE2C88;
+    --purple50: #e49dc9;
+    --white: #fff;
+    --grey: #646464;
+    --dark-grey: #2a2a2a;
+    --grey50: #50484799;
+    --grey25: #e9e9e9;
+    --black: #000;
+    /* Technicals */
+    --radius: 5px;
+    --section-space: 6rem 2rem 0 2rem;
+    --inner-section-space-y: 4rem 0;
+    --max-width: 1000px;
+    --texture: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23ffffff' fill-opacity='0.46' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fx_x-c {
+    display: flex;
+    justify-content: center;
+}
+
+.fx_x-b {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fx_x-c_y-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fx_x-b_y-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fx_x-e_y-c {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fx_x-s_y-c {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fx_x-a_y-c {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('./assets/font/Bungee_Shade/BungeeShade-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'script';
+    src: url('./assets/font/Nunito/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'team';
+    src: url('./assets/font/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'digit';
+    src: url('./assets/font/Share_Tech_Mono/ShareTechMono-Regular.ttf');
+}
+

@@ -1,0 +1,357 @@
+.match-simulation__team-sections {
+    padding: 2rem;
+    margin: 0rem 2rem;
+    border: 2px solid var(--green);
+    position: relative;
+}
+
+.team-sections__title {
+    position: absolute;
+    top: -16px;
+    background-color: var(--green);
+    color: var(--white);
+    left: 2rem;
+    font-family: script;
+    padding: 0.25rem 0.75rem;
+}
+
+.team-sections__init-match-time {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    color: #71D0A7;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: digit;
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+.team-sections__current-score {
+    position: absolute;
+    font-family: digit;
+    font-size: 3rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: var(--blue);
+    top: 1rem;
+    left: 0;
+}
+
+.team-one__starting-11,
+.team-two__starting-11,
+.team-one__subs,
+.team-two__subs {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--grey25);
+}
+
+.team-one__subs-title,
+.team-two__subs-title,
+.team-one__manager-title, 
+.team-two__manager-title {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--grey25);
+    margin-bottom: 1rem;
+    font-family: 'team';
+    color: var(--grey50);
+}
+
+.starter__position,
+.sub__position,
+.manager__position {
+    margin-right: 1rem;
+    min-width: 50px;
+    display: inline-block;
+    background-color: var(--purple);
+    color: var(--white);
+    text-align: center;
+    padding: 0.25rem 0;
+}
+
+.starter__captain {
+    color: var(--grey50);
+    font-size: 0.5rem;
+    font-style: italic;
+    padding: 0 0.25rem;
+}
+
+.starter__position.right,
+.sub__position.right,
+.manager__position.right {
+    margin-right: 0rem;
+    margin-left: 1rem;
+}
+
+.sub__position {
+    background-color: var(--grey) !important;
+}
+
+.starter,
+.sub {
+    margin-bottom: 0.25rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.team-one__name,
+.team-two__name {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: var(--blue);
+    font-size: 1.25rem;
+    font-family: 'team';
+    border-bottom: 1px solid var(--grey25);
+}
+.team-two__name {
+    flex-direction: row-reverse;
+}
+
+.possession-icon, .in-progress-icon, .home-icon, .complete-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.possession-icon.right {
+    margin-right: 1rem;
+}
+.possession-icon.left {
+    margin-left: 1rem;
+}
+
+.in-progress-icon {
+    animation: in-progress 2s 250ms infinite cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.team-two__name,
+.team-two__subs .sub,
+.team-two__subs-title,
+.team-two__manager-title,
+.team-two__starting-11 .starter {
+    text-align: end;
+}
+
+.team-sections__team-one,
+.team-sections__team-two {
+    flex: 1;
+}
+
+.manager__position {
+    background: var(--blue);
+}
+
+.manager__right {
+    justify-content: flex-end;
+}
+.manager__left {
+    justify-content: flex-start;
+}
+
+.starter.right,
+.sub.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.captain {
+    color: var(--purple);
+}
+
+.match-simulation__start-game, .match-simulation__game-in-progress, .match-simulation__game-end {
+    margin: 0.5rem 2rem 5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    color: var(--white); 
+    cursor: pointer;
+    font-family: script;
+}
+
+.match-simulation__game-in-progress {
+    background-color: var(--white);
+    color: var(--green);
+    cursor: not-allowed;
+    position: relative;
+    text-align: start;
+}
+
+.match-simulation__game-end {
+    background-color: var(--white);
+    color: var(--red);
+    border-color: var(--red);
+    cursor: not-allowed;
+    position: relative;
+    text-align: start;
+}
+
+.match-simulation__start-game:hover{
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.match__full-time-red {
+    color: var(--red) !important;
+    font-size: 2rem;
+    font-family: team;
+    top: 8.5rem;
+}
+
+.return-home, .in-progress, .complete {
+    position: absolute;
+    padding: 0 2rem;
+    background-color: var(--red);
+    right: 0;
+    top: 0;
+    color: var(--white);
+    font-size: 1.25rem;
+    height: 100%;
+}
+
+.in-progress {
+    background-color: var(--green);
+}
+
+.symbol__yellow-cards-team-one {
+    position: absolute;
+    top: 0px;
+    left: 58%;
+    padding: 1px 8px;
+    border-radius: 5px;
+    color: var(--blue);
+    box-shadow: 2px 2px 3px #ccc;
+    background: var(--yellow);
+    font-family: 'team';
+    width: 20px;
+}
+
+.symbol__yellow-cards-team-two {
+    position: absolute;
+    top: 0px;
+    right: 58%;
+    padding: 1px 8px;
+    border-radius: 5px;
+    color: var(--blue);
+    box-shadow: 2px 2px 3px #ccc;
+    background: var(--yellow);
+    font-family: 'team';
+    width: 20px;
+}
+
+.symbol__red-card-team-one {
+    position: absolute;
+    top: 0px;
+    left: 73.5%;
+    padding: 12.5px 8px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 2px 2px 3px #ccc;
+    background: var(--red);
+    width: 20px;
+}
+
+.symbol__red-card-team-two {
+    position: absolute;
+    top: 0px;
+    right: 73.5%;
+    padding: 12.5px 8px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 2px 2px 3px #ccc;
+    background: var(--red);
+    width: 20px;
+}
+.symbol__goal-team-one {
+    position: absolute;
+    top: 0px;
+    left: 63.5%;
+    color: var(--blue);
+    font-size: 1.15rem;
+    font-family: 'digit';
+}
+
+.symbol__goal-team-two {
+    position: absolute;
+    top: 0px;
+    right: 63.5%;
+    color: var(--blue);
+    font-size: 1.15rem;
+    font-family: 'digit';
+}
+.symbol__save-team-one {
+    position: absolute;
+    top: 0px;
+    left: 63.5%;
+    color: var(--blue);
+    font-size: 1.15rem;
+    font-family: 'digit';
+}
+
+.symbol__save-team-two {
+    position: absolute;
+    top: 0px;
+    right: 63.5%;
+    color: var(--blue);
+    font-size: 1.15rem;
+    font-family: 'digit';
+}
+
+.symbol__motm-team-one {
+    position: absolute;
+    top: 0px;
+    left: -14.5%;
+    font-size: 1.15rem;
+}
+
+.symbol__motm-team-two {
+    position: absolute;
+    top: 0px;
+    right: -14.5%;
+    font-size: 1.15rem;
+}
+
+.fa-futbol, .fa-hand-dots {
+    font-size: 1.25rem;
+    color: var(--blue);
+    margin: 0.25rem;
+}
+
+.is__motm {
+    background: var(--green);
+}
+
+.hat-trick {
+    color: var(--green) !important;
+}
+
+.starter__sent-off {
+    opacity: 0.5;
+}
+
+.init__substitution:hover {
+    cursor: pointer;
+    background-color: var(--blue) !important;
+}
+
+.subbed__true {
+    color: var(--blue);
+    font-style: italic;
+}
+
+@keyframes in-progress {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

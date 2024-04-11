@@ -1,0 +1,10 @@
+<match-setup-help >
+</match-setup-help>
+<match-select-buttons [classicMode]="classicMode" (classicMatch)="classicMatchToggleHandler()" (reset)="reGenerateHandler()" >
+</match-select-buttons>
+<match-fixtures [matchSetupProps]="matchSetupProperties">
+</match-fixtures>
+<match-teams-display [matchSetupProps]="matchSetupProperties" (captaincyAssignment)="captaincyHandler($event)">
+</match-teams-display>
+<match-setup-complete [matchSetupProps]="matchSetupProperties" (confirmMatchPropsSettings)="confirmMatchPropertiesHandler()">
+</match-setup-complete>

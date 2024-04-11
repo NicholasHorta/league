@@ -1,0 +1,6 @@
+<match-pre-commentary [matchProps]="confirmedMatchProps">
+</match-pre-commentary>
+<match-one-v-one [matchProgress]="matchProgression" [matchProps]="confirmedMatchProps" (initGameplay)="matchTimeHandler()" [teamOneStats]="teamOneStats" [teamTwoStats]="teamTwoStats" (fulfillSubRequest)="substitutionHandler($event)">
+</match-one-v-one>
+<match-coin-toss-modal>
+</match-coin-toss-modal>

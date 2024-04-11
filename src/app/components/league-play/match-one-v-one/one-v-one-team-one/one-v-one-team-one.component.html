@@ -1,0 +1,24 @@
+<li *ngFor="let player of playerProps" class="starter" [ngClass]="{'captain': player.captain, 'subbed__true': player.subbed}">
+    <span class="starter__position" [title]="player.motm ? 'Man of the match: ' + player.name : ''" [ngClass]="{'is__motm': player.motm}">
+        {{player.position}}
+    </span>
+    <span [ngClass]="{'starter__sent-off': player.redCard}">{{player.name}}</span>
+    <span class="fx_x-b_y-c"
+        [ngClass]="{'symbol__goal-team-one': player.goals, 'hidden': !player.goals, 'hat-trick': player.goals >= 3}">
+        <i title="{{player.name}} scored {{player.goals}} goal/s" [ngClass]="{'hat-trick': player.goals >= 3}"
+            class="fa-solid fa-futbol"></i>
+        {{player.goals > 1 ? player.goals : null}}
+    </span>
+    <span class="fx_x-b_y-c" [ngClass]="{'symbol__save-team-one': player.saves, 'hidden': !player.saves}">
+        <i title="{{player.name}} saved {{player.saves}} penalty/s" class="fa-solid fa-hand-dots"></i>
+        {{player.saves > 1 ? player.saves : null}}
+    </span>
+    <span class="fx_x-c_y-c" title="{{player.name}} red carded"
+        [ngClass]="{'symbol__red-card-team-one': player.redCard, 'hidden': !player.redCard}">
+    </span>
+    <span class="fx_x-c_y-c" title="{{player.name}} given {{player.yellowCards}} yellow card/s"
+        [ngClass]="{'symbol__yellow-cards-team-one': player.yellowCards, 'hidden': !player.yellowCards}">
+        {{player.yellowCards}}
+    </span>
+    <span class="starter__captain" *ngIf="player.captain">CPT</span>
+</li>

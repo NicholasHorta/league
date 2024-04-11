@@ -1,0 +1,95 @@
+<section class="match-simulation__container">
+    <div class="one-v-one">
+        <div class="match-simulation__team-sections fx_x-b_y-c">
+            <div class="team-sections__title">Team Sheet</div>
+            <div class="team-sections__current-score">{{teamOneStats.goals}} : {{teamTwoStats.goals}}</div>
+            <div class="team-sections__init-match-time">
+                {{init.matchMinutesVisual < 10 ? 0 : null}}{{init.matchMinutesVisual}}:{{init.matchSecondsVisual < 10 ?
+                    0 : null}}{{init.matchSecondsVisual}} </div>
+                    <div *ngIf="!init.matchStarted && init.matchTimeTotalIncrement === init.matchFullTimeSeconds"
+                        class="team-sections__init-match-time match__full-time-red">
+                        Full Time
+                    </div>
+                    <div class="team-sections__team-one">
+                        <h3 class="team-one__name fx_x-s_y-c">
+                            {{matchProps.teamSetOne[0]}}
+                            <svg *ngIf="matchProps.possessionIndexMatchOne === 0" xmlns="http://www.w3.org/2000/svg"
+                                class="possession-icon left" fill="none" viewBox="0 0 24 24" stroke="var(--green50)"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </h3>
+                        <ul class="team-one__starting-11">
+                            <one-v-one-team-one [playerProps]="matchProps.generatedTeamOne[0]"></one-v-one-team-one>
+                        </ul>
+                        <p class="team-one__subs-title">Substitutes</p>
+                        <ul class="team-one__subs">
+                            <one-v-one-team-one-subs (sendSubRequestToParent)="receivedSubRequest($event)"
+                                [subProps]="matchProps.generatedTeamOne[1]"></one-v-one-team-one-subs>
+                        </ul>
+                        <p class="team-one__manager-title">Manager</p>
+                        <ul class="fx_x-b_y-c manager__left">
+                            <span class="manager__position">
+                                MAN
+                            </span>
+                            <li>{{matchProps.managerSetOne[0]}}</li>
+                        </ul>
+                    </div>
+                    <div class="team-sections__team-two">
+                        <h3 class="team-two__name fx_x-s_y-c">
+                            {{matchProps.teamSetOne[1]}}
+                            <svg *ngIf="matchProps.possessionIndexMatchOne === 1" xmlns="http://www.w3.org/2000/svg"
+                                class="possession-icon right" fill="none" viewBox="0 0 24 24" stroke="var(--green50)"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </h3>
+                        <ul class="team-two__starting-11">
+                            <one-v-one-team-two [playerProps]="matchProps.generatedTeamTwo[0]"></one-v-one-team-two>
+                        </ul>
+                        <p class="team-two__subs-title">Substitutes</p>
+                        <ul class="team-two__subs">
+                            <one-v-one-team-two-subs (sendSubRequestToParent)="receivedSubRequest($event)"
+                                [subProps]="matchProps.generatedTeamTwo[1]"></one-v-one-team-two-subs>
+                        </ul>
+                        <p class="team-two__manager-title">Manager</p>
+                        <ul class="fx_x-b_y-c manager__right">
+                            <li>{{matchProps.managerSetOne[1]}}</li>
+                            <span class="manager__position right">
+                                MAN
+                            </span>
+                        </ul>
+                    </div>
+            </div>
+            <one-v-one-stats [teamOneStats]="teamOneStats" [teamTwoStats]="teamTwoStats"></one-v-one-stats>
+            <div *ngIf="!init.isMatchStarted && !init.isMatchComplete" class="match-simulation__start-game"
+                (click)="initGameplayCall()">Start Game</div>
+            <div
+                [ngClass]="{'hidden': !init.isMatchStarted, 'match-simulation__game-in-progress': init.isMatchStarted && !init.isMatchComplete}">
+                Game in progress...
+                <a class="in-progress fx_x-b_y-c">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="in-progress-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="var(--white)" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </a>
+            </div>
+            <div
+                [ngClass]="{'hidden': !init.isMatchStarted && !init.isMatchComplete, 'match-simulation__game-end': !init.isMatchStarted && init.isMatchComplete}">
+                Full Time
+                <a routerLink="/" *ngIf="!init.isMatchStarted && init.isMatchComplete" title="Return to home page"
+                    class="return-home fx_x-b_y-c">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="var(--white)" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+</section>

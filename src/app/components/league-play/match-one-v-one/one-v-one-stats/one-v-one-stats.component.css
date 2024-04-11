@@ -1,0 +1,147 @@
+.stats__container {
+    padding: 2rem;
+    margin: 0rem 2rem;
+    border: 2px solid var(--green);
+    border-top: 0px;
+    position: relative;
+}
+
+.stats__title {
+    position: absolute;
+    top: -16px;
+    background-color: var(--green);
+    color: var(--white);
+    left: 2rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.stats__section-one,
+.stats__section-two {
+    flex: 1;
+}
+
+.stats__section-one {
+    margin-right: 0.5rem;
+}
+
+.stats__section-two {
+    margin-left: 0.5rem;
+}
+
+.title {
+    color: var(--blue);
+}
+
+.section-one__possession {
+    padding: 0.5rem 0;
+    border: 2px solid var(--white);
+    margin-bottom: 1rem;
+    flex: 1;
+    position: relative;
+}
+
+.section-one__shots {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-one__shots-on-target {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-one__passes {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    flex: 1;
+}
+
+.section-two__yellow-cards {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__red-cards {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__tackles {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-two__corners {
+    padding: 0.5rem 0;
+    border: 2px solid var(--grey25);
+    flex: 1;
+}
+
+.possession__team-one,
+.shots__team-one,
+.shots-on-target__team-one,
+.passes__team-one,
+.yellow-cards__team-one,
+.red-cards__team-one,
+.tackles__team-one,
+.corners__team-one {
+    margin-left: 1rem;
+    color: var(--grey50);
+    padding: 0 0.75rem;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+
+.possession__team-two,
+.shots__team-two,
+.shots-on-target__team-two,
+.passes__team-two,
+.yellow-cards__team-two,
+.red-cards__team-two,
+.tackles__team-two,
+.corners__team-two {
+    margin-right: 1rem;
+    color: var(--grey50);
+    padding: 0 0.75rem;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+
+
+.team-one__possession-stats {
+    height: 100%;
+    width: 0%;
+    background:var(--team-one-colors);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 250ms all ease-in-out;
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.team-two__possession-stats {
+    height: 100%;
+    width: 0%;
+    background: var(--team-two-colors);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
+    transition: 250ms all ease-in-out;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

@@ -1,0 +1,14 @@
+<div class="match-setup">
+    <div class="match-setup__options fx_x-a_y-c">
+        <div>
+            <button class="options__btns regenerate__btn" (click)="resetHandler()">
+                Regenerate
+            </button>
+        </div>
+        <div>
+            <button class="options__btns classic__btn" (click)="classicMatchHandler()" [ngClass]="{'classic-active': classicMode}">
+                {{classicMode ? 'Classic Mode' : 'Go Classic'}}
+            </button> 
+        </div>
+    </div>
+</div>

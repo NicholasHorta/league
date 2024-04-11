@@ -1,0 +1,79 @@
+* {
+    color: var(--white);
+}
+
+.coin-toss-component {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(237, 55, 68, 0.75);
+}
+
+.coin-toss__container {
+    width: 700px;
+    height: 342px;
+    background: url('../../../../assets/img/ronaldo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--white);
+    background-color: rgba(237, 55, 68, 0.5);
+    position: relative;
+}
+
+.coin-toss__loader {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coin-toss__teams-decider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams-decider__teams {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.team {
+    font-family: 'team' !important;
+    font-size: 1.75rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--grey50);
+}
+
+.coin-toss__init {
+    background: none;
+    border: 3px solid var(--white);
+    background-color: var(--green);
+    padding: 1rem 4rem;
+    margin: 2rem auto;
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all 250ms ease-in-out;
+}
+
+.coin-toss__init:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--green);
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 3px 5px var(--grey50);
+}
+
+

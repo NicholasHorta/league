@@ -1,0 +1,44 @@
+<div>
+    <div class="match-intro__match-container">
+        <p class="match-intro__title" title="toggle commentary view">
+            Welcome to Final Match Day
+            <span class="title__commentary" (click)="toggleCommentaryView()">view</span>
+        </p>
+        <div *ngIf="commentaryView" class="match__match-intro fx_x-b">
+            <p class="match-intro__intro-comment-text">
+                Hello and good evening to everyone joining us. It's the moment we've all been waiting for and the
+                excitement in the stadium is palpable! Everyone is on their feet with baited breath as to what the
+                outcome of the final match today will be between...<br>
+                <span class="intro-comment-text__teams">{{matchProps.teamSetOne[0]}}</span> & <span
+                    class="intro-comment-text__teams">{{matchProps.teamSetOne[1]}}</span> <br>
+                No doubt the support for either team will be deafening today, as the winner here will be crowned
+                champions.
+            </p>
+            <p class="match-intro__intro-comment-text">
+                The teams have taken to the pitch and are in position. The stadium is electric as the two team captains
+                <span>{{matchProps.teamOneCaptain}}</span> and <span>{{matchProps.teamTwoCaptain}}</span> exchange
+                pleasantries and take their
+                positions.
+            </p>
+        </div>
+        <div *ngIf="commentaryView" class="fx_x-b section-margin">
+            <p class="match-intro__intro-comment-text">
+                Now let’s get ready to put predictions aside and for the next 90 minutes let the quality and
+                performance
+                of these two super clubs and their world-class footballers decide what is written in history on this
+                day.
+            </p>
+            <p class="match-intro__intro-comment-text">
+                Finally we wait for the
+                referee to blow the whistle and start the game off...
+            </p>
+        </div>
+        <div class="match-setup__team-bars">
+            <div class="team-bars__two-team-setup fx_x-b_y-c">
+                <p class="two-team-setup__team left">{{matchProps.teamSetOne[0]}}</p>
+                <p class="two-team-setup__team success">🏆</p>
+                <p class="two-team-setup__team right">{{matchProps.teamSetOne[1]}}</p>
+            </div>
+        </div>
+    </div>
+</div>
