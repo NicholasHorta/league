@@ -1,5 +1,5 @@
-<nav class="nav__nav">
-    <div class="nav__title fx_x-c">
+<nav [ngClass]="isDesktop ? 'nav__nav' : 'nav__nav-mobile'">
+    <div [ngClass]="isDesktop ? 'nav__title' : 'nav__title-mobile'" class="fx_x-c">
         <a routerLink="/">
             <h1>
                 [ League ]

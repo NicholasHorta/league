@@ -16,6 +16,5 @@ export class MatchPropertiesService {
       .indexOf(
         possessionHolders[0]
       );
-      console.log(this.completedMatchProperties);
   };
 }

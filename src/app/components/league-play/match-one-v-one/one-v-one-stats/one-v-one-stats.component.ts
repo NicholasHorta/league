@@ -19,7 +19,7 @@ export class OneVOneStatsComponent {
       this.render.setStyle(this.possessionTeamOne!.nativeElement, 'width', `${this.teamOneStats.totalPossession / 465 * 100}%`);
       this.render.setStyle(this.possessionTeamTwo!.nativeElement, 'width', `${this.teamTwoStats.totalPossession / 465 * 100}%`);
     } catch (error) {
-      console.warn('Pre-view Loaded');
+      console.info('Pre-view Loaded');
     }
   }
 }

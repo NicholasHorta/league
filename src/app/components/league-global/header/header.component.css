@@ -10,3 +10,14 @@
     color: var(--green);
 }
 
+.nav__title-mobile > a > h1 {
+    font-size: 2.75rem;
+    font-family: title;
+    color: var(--green);
+}
+
+.nav__nav-mobile {
+  padding: 3rem 2rem;
+  padding-bottom: 0;
+  position: relative;
+}

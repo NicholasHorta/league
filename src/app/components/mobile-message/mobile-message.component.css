@@ -1,0 +1,12 @@
+.mobile-message__container {
+  padding: 1rem 2rem;
+}
+.mobile-message__header {
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.mobile-message__message {
+ text-align: center;
+ font-size: 1.25rem;
+}

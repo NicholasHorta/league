@@ -25,6 +25,7 @@ import { OneVOneTeamOneComponent } from './components/league-play/match-one-v-on
 import { OneVOneTeamOneSubsComponent } from './components/league-play/match-one-v-one/one-v-one-team-one-subs/one-v-one-team-one-subs.component';
 import { OneVOneTeamTwoSubsComponent } from './components/league-play/match-one-v-one/one-v-one-team-two-subs/one-v-one-team-two-subs.component';
 import { OneVOneTeamTwoComponent } from './components/league-play/match-one-v-one/one-v-one-team-two/one-v-one-team-two.component';
+import { MobileMessageComponent } from './components/mobile-message/mobile-message.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { OneVOneTeamTwoComponent } from './components/league-play/match-one-v-on
     OneVOneTeamOneSubsComponent,
     OneVOneTeamTwoSubsComponent,
     OneVOneTeamTwoComponent,
+    MobileMessageComponent
   ],
   imports: [
     BrowserModule,

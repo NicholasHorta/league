@@ -5,10 +5,13 @@
                 Regenerate
             </button>
         </div>
+        <div class="options__regen">
+          <img width="100%" src="../../../../assets/img/load_blue.gif" alt="spinner" *ngIf="regenerating">
+        </div>
         <div>
             <button class="options__btns classic__btn" (click)="classicMatchHandler()" [ngClass]="{'classic-active': classicMode}">
                 {{classicMode ? 'Classic Mode' : 'Go Classic'}}
-            </button> 
+            </button>
         </div>
     </div>
 </div>
