@@ -1,0 +1,32 @@
+.footer-container {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--green);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.footer-container div  {
+  display: flex;
+  gap: 2rem;
+}
+.footer-container a  {
+  color: var(--green);
+}
+.footer-container a:hover  {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.footer-break {
+  margin-top: 8rem;
+}
+
+
+hr {
+  padding: 1px;
+  margin: 0 2rem;
+  height: 1px;
+  background-color: var(--green);
+  color: var(--green);
+  border: none;
+}
